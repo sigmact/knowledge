@@ -1,5 +1,3 @@
-
-
 .sns_parent {
     text-align: center;
   }
@@ -81,3 +79,26 @@
     -webkit-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
   }
+
+.author {
+  &Icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    margin-bottom: 0;
+    border-radius: 50%;
+  }
+  &Name {
+    display: inline-block;
+    line-height: 40px;
+    @include fz(11);
+  }
+}
+
+.hanchor {
+  .fas {
+    margin-left: .5em;
+    font-size: .6em;
+  }
+}

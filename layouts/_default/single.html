@@ -55,14 +55,17 @@
         <div class="p-5 bg-white">
             <h1>{{ .Title }}</h1>
             <!-- 著者 -->
-            {{ range $values := .Params.authors }}
-            <div>{{ index $values 0 }}</div>
-            <div><img src="/{{ index $values 1 }}" alt="{{ index $values 0 }}" width="40" height="40"  /> </div>
-            {{ end }}
-
+            <div class="mb-40">
+              {{ range $values := .Params.authors }}
+              <div class="author">
+                <img class="authorIcon" src="/{{ index $values 1 }}" alt="{{ index $values 0 }}" width="40" height="40"/>
+                <span class="authorName">{{ index $values 0 }}</span>
+              </div>
+              {{ end }}
+            </div>
             <!-- ページ内リンクを作りながらコンテンツをレンダリングする -->
             {{- with .Content -}}
-              {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor"> 🔗&#xFE0E;</a> ${3}` | safeHTML }}
+              {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor"><i class="fas fa-link"></i></a> ${3}` | safeHTML }}
             {{- end -}}
 
             <p class="post-meta border-bottom pb-3 mb-0">Updated on {{ .PublishDate.Format "02 Jan 2006" }}</p>

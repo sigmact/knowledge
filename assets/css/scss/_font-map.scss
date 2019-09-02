@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+// 基準サイズ設定
+$baseFontSizePx:10;
+$baseFontSizePercent:62.5%; // 1.0rem ≒ 10px
+
+// 基準行間設定
+$baseLineHeight:1.6;
+
+// 外部フォント読み込み
+@import url(https://use.fontawesome.com/releases/v5.9.0/css/all.css);
+
+// フォント設定
+$fontFamily-Yu:"ヒラギノ角ゴシック Pro","Hiragino Kaku Gothic Pro","游ゴシック体","Yu Gothic",YuGothic,Helvetica,Arial,Roboto,"Droid Sans","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif !important;
+$fontFamily-Meiryo:"ヒラギノ角ゴシック Pro","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Helvetica,Arial,Roboto,"Droid Sans",Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif !important;
+$fontFamily-Noto:"Noto Sans Japanese","ヒラギノ角ゴシック Pro","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Helvetica,Arial,Roboto,"Droid Sans","游ゴシック体","Yu Gothic",YuGothic,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif !important;
+$fontFamily:$fontFamily-Meiryo;
+
+// フォントサイズを指定するミックスイン
+@mixin fz($size:$baseFontSizePx) {
+  font-size:$size + px;
+  font-size:($size / 10) + rem;
+}
