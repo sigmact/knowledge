@@ -14,6 +14,8 @@ textColor = "#636363"
 textColorDark = "#242738"
 whiteColor = "#ffffff"
 
+articleToCLevel = 3
+
 [blackfriday]
   hrefTargetBlank = true
 

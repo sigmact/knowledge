@@ -1,7 +1,7 @@
 {{ partial "head.html" . }}
 
 {{ "<!-- navigation -->" | safeHTML }}
-<header class="shadow-bottom sticky-top bg-white">
+<header class="shadow-bottom bg-white">
   <div class="container">
     {{ partial "navigation.html" . }}
   </div>
@@ -13,42 +13,13 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-3">
-        <div class="p-4 bg-white sticky-top top-100">
-            {{$currentNode := .}}
-            <nav class="sidebar-menu">
-              <ul class="list-styled">
-                {{- range .Site.Sections.ByWeight -}}
-                  {{template "menu" dict "sect" . "currentnode" $currentNode}}
-                {{- end -}}
-              </ul>
-            </nav>
-
-            {{define "menu"}}
-            {{- $currentNode := .currentnode -}}
-            {{ with .sect }}
-            {{ if in .Site.Params.menu_exclusion .Section }}
-            {{- else -}}
-              {{- safeHTML .Params.head -}}
-            <li class="{{ if .IsAncestor $currentNode }}parent d-block {{ end }}{{ if eq .File.UniqueID $currentNode.File.UniqueID }} active {{ end }}{{ if .Params.alwaysopen }} parent {{ end }}"><a href="{{ .Permalink }}">{{ .Title }}</a>
-              {{- $numberOfPages := (add (len .Pages) (len .Sections)) -}}
-              {{if ne $numberOfPages 0}}
-              <ul class="{{ if .IsAncestor $currentNode }}sub-menu{{ end }}">
-              {{- .Scratch.Set "pages" .Data.Pages -}}
-              {{- $pages := (.Scratch.Get "pages") -}}
-                {{- range $pages.ByWeight -}}
-                  {{template "menu" dict "sect" . "currentnode" $currentNode}}
-                {{- end -}}
-              </ul>
-              {{end}}
-            </li>
-            {{- end -}}
-            {{- else -}}
-              {{- if not .Params.Hidden -}}
-              <li class="{{ if eq .File.UniqueID $currentNode.File.UniqueID }}active{{ end }}"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-              {{- end -}}
-            {{ end -}}
-            {{ end }}
-            ★音無さんにサイドメニューをJS化してもらう予定
+        <div class="p-2 ">
+          {{ $tocLevels := default (default 6 .Site.Params.ArticleToCLevel) .Params.ToCLevel }}
+          {{ if and $tocLevels .Page.TableOfContents }}
+            <aside class="articleToC level-{{$tocLevels}}">
+              {{ .Page.TableOfContents }}
+            </aside>
+          {{ end }}
         </div>
       </div>
       <div class="col-lg-9">

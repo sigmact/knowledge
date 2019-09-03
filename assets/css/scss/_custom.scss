@@ -1,84 +1,119 @@
+.navigationWrapper {
+  background-color: var(--white-color);
+  opacity: .6;
+}
+
+.btn-primary {
+  background: var(--primary-color);  
+  background: -webkit-linear-gradient(to top, #9320EB, #b177dd); 
+  background: linear-gradient(to top, #9320EB, #b177dd);
+}
+
+// SNS
 .sns_parent {
-    text-align: center;
-  }
-  
+  text-align: center;
+}
+
+.sns_section {
+  display: inline-block;
+  text-align: left;
+}
+.sns_button {
+  float: left;
+  box-shadow: inset 0 0 0 2px #42464c;
+  border-radius: 100%;
+  -moz-transition: all 280ms ease;
+  -o-transition: all 280ms ease;
+  -webkit-transition: all 280ms ease;
+  transition: all 280ms ease;
+}
+.sns_button a {
+  display: table-cell;
+  width: 44px;
+  height: 44px;
+  color: #42464c;
+  text-align: center;
+  vertical-align: middle;
+  -moz-transition: all 280ms ease;
+  -o-transition: all 280ms ease;
+  -webkit-transition: all 280ms ease;
+  transition: all 280ms ease;
+}
+.sns_button i {
+  font-size: 20px;
+  vertical-align: middle;
+}
+.sns_button:hover {
+  box-shadow: inset 0 0 0 22px #eaeaea;
+}
+
+.sns_button + .sns_button {
+  margin: 0 0 0 12px;
+}
+
+.twitter:hover a {
+  color: #1B95E0;
+}
+
+.facebook:hover a {
+  color: #3B5999;
+}
+
+.google:hover a {
+  color: #dd4b39;
+}
+
+.instagram:hover a {
+  color: #2b5c84;
+}
+
+.pocket:hover a {
+  color: #EE4056;
+}
+
+.hatena:hover a {
+  color: #4BA3D9;
+}
+
+.fa-hatena:before {
+    content: "B!";
+    font-family: Verdana;
+    font-weight: bold
+}
+
+.sns_parent {
+  position: relative;
+}
   .sns_section {
-    display: inline-block;
-    text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+
+//article
+.articleToC {
+  a {
+    color: #007bff;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0;
   }
-  .sns_button {
-    float: left;
-    box-shadow: inset 0 0 0 2px #42464c;
-    border-radius: 100%;
-    -moz-transition: all 280ms ease;
-    -o-transition: all 280ms ease;
-    -webkit-transition: all 280ms ease;
-    transition: all 280ms ease;
+
+  li > ul {
+    padding-left: 1em;
   }
-  .sns_button a {
-    display: table-cell;
-    width: 44px;
-    height: 44px;
-    color: #42464c;
-    text-align: center;
-    vertical-align: middle;
-    -moz-transition: all 280ms ease;
-    -o-transition: all 280ms ease;
-    -webkit-transition: all 280ms ease;
-    transition: all 280ms ease;
+
+  &.level-1 ul ul,
+  &.level-2 ul ul ul,
+  &.level-3 ul ul ul ul,
+  &.level-4 ul ul ul ul ul,
+  &.level-5 ul ul ul ul ul ul,
+  &.level-6 ul ul ul ul ul ul ul {
+    display: none; 
   }
-  .sns_button i {
-    font-size: 20px;
-    vertical-align: middle;
-  }
-  .sns_button:hover {
-    box-shadow: inset 0 0 0 22px #eaeaea;
-  }
-  
-  .sns_button + .sns_button {
-    margin: 0 0 0 12px;
-  }
-  
-  .twitter:hover a {
-    color: #1B95E0;
-  }
-  
-  .facebook:hover a {
-    color: #3B5999;
-  }
-  
-  .google:hover a {
-    color: #dd4b39;
-  }
-  
-  .instagram:hover a {
-    color: #2b5c84;
-  }
-  
-  .pocket:hover a {
-    color: #EE4056;
-  }
-  
-  .hatena:hover a {
-    color: #4BA3D9;
-  }
-  
-  .fa-hatena:before {
-      content: "B!";
-      font-family: Verdana;
-      font-weight: bold
-  }
-  
-  .sns_parent {
-    position: relative;
-  }
-   .sns_section {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translateY(-50%) translateX(-50%);
-    transform: translateY(-50%) translateX(-50%);
-  }
+}
 
 .author {
   &Icon {

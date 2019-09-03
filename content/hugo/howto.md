@@ -13,6 +13,7 @@ keywords:
   - "word2"
   - "word3"
 eyecatch: "/images/hugo/hugo.png"
+tocLevel: 3
 ---
 
 
@@ -83,6 +84,17 @@ eyecatch: "/images/hugo/hugo.png"
 - Hugo のテンプレートエンジンは、コンパイルの際に HTML タグをエスケープした文字列として取得する。
 - このsafeHTML関数を使用することで、 HTML タグがエスケープされない状態で取得されます。
 - 例：関数を使用しない場合、<は&lt;、>は&gt;にエスケープされる
+
+## Front Matter 
+### tocLevel
+
+- 記事ページ内の目次に表示する見出しの階層レベルを指定する
+```html
+---
+tocLevel: 3 //H3まで目次に表示する
+---
+```
+- 指定しない場合はデフォルト値：6　(H6まで)
 
 ## TODO
 
