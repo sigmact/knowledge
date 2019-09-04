@@ -94,7 +94,11 @@ tocLevel: 3
 tocLevel: 3 //H3まで目次に表示する
 ---
 ```
-- 指定しない場合はデフォルト値：6　(H6まで)
+- tocLevelを設定していない場合は、config.toml のarticleToCLevelの値が適用される
+```html
+[params]
+articleToCLevel: 3 //H3まで目次に表示する
+```
 
 ## TODO
 
