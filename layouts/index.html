@@ -5,15 +5,15 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
-              {{with .Site.Params.topics.title}} <h2 class="section-title">{{ . }}</h2> {{ end }}
+              {{with .Site.Params.topics.title}} <h2 class="section-title mt-0">{{ . }}</h2> {{ end }}
             </div>
             {{ "<!-- topic-item -->" | safeHTML }}
             {{ range (where .Site.Pages "Type" "article") }}
-            <div class="col-lg-4 col-sm-6 mb-4">
+            <div class="col-md-12 col-lg-10 mb-4">
               <a href="{{ .Permalink }}" class="px-4 py-5 bg-white shadow text-center d-block">
-                <i class="{{ .Params.Icon }} icon text-dark d-block mb-4"></i>
-                <h3 class="mb-3">{{ .Title }}</h3>
-                <p class="mb-0">{{ .Params.Description }}</p>
+                {{/*  <i class="{{ .Params.Icon }} icon text-dark d-block mb-4"></i>  */}}
+                <h3 class="mt-0 mb-0">{{ .Title }}</h3>
+                <p class="mt-3">{{ .Params.Description }}</p>
               </a>
             </div>
             {{ end }}
