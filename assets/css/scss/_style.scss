@@ -529,6 +529,7 @@ ul li a {
   font-style: italic;
   font-size: 14px;
   font-weight: bold;
+  margin-bottom: 0;
 } 
 
 blockquote {
@@ -559,11 +560,13 @@ blockquote {
 
 .pagination {
   justify-content: space-between;
-}
 
-.pagination i{
-  font-size: 12px;
-  line-height: 2.9;
+  .nav {
+    display: inline-block;
+    position: relative;
+    max-width: 30%;
+    font-size: 13px;
+  }
 }
 
 .sidebar-menu li {
