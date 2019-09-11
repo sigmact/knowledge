@@ -1,23 +1,35 @@
 {{ define "main" }}
-
+  
   {{ "<!-- topics -->" | safeHTML }}
-  <section class="section bg-gray">
+  <section class="section bg-gray pt-5">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 text-center">
-              {{with .Site.Params.topics.title}} <h2 class="section-title mt-0">{{ . }}</h2> {{ end }}
-            </div>
-            {{ "<!-- topic-item -->" | safeHTML }}
-            {{ range (where .Site.Pages "Type" "article") }}
-            <div class="col-md-12 col-lg-10 mb-4">
-              <a href="{{ .Permalink }}" class="px-4 py-5 bg-white shadow text-center d-block">
-                {{/*  <i class="{{ .Params.Icon }} icon text-dark d-block mb-4"></i>  */}}
-                <h3 class="mt-0 mb-0">{{ .Title }}</h3>
-                <p class="mt-3">{{ .Params.Description }}</p>
-              </a>
-            </div>
-            {{ end }}
-        </div>
+      <div class="row justify-content-center bg-white p-3">
+        <ul class="list-style-none">
+          {{ range first 3 .Site.RegularPages.ByLastmod.Reverse }}
+          <li>
+            <a href="{{.RelPermalink}}" class="d-flex p-1">
+              <time class="mr-3 flex-shrink-0" datetime="{{.Date.Format "2006-01-02"}}">{{.Date.Format "2006-01-02"}}</time>
+              <span>{{.Title}}</span>
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="row justify-content-center mt-5">
+          <div class="col-12 text-center">
+            {{with .Site.Params.topics.title}} <h2 class="section-title mt-0">{{ . }}</h2> {{ end }}
+          </div>
+          {{ "<!-- topic-item -->" | safeHTML }}
+          {{ range (where .Site.Pages "Type" "article") }}
+          <div class="col-md-12 col-lg-10 mb-4">
+            <a href="{{ .Permalink }}" class="px-4 py-5 bg-white shadow text-center d-block">
+              {{/*  <i class="{{ .Params.Icon }} icon text-dark d-block mb-4"></i>  */}}
+              <h3 class="mt-0 mb-0">{{ .Title }}</h3>
+              <p class="mt-3">{{ .Params.Description }}</p>
+            </a>
+          </div>
+          {{ end }}
+      </div>
     </div>
   </section>
   {{ "<!-- /topics -->" | safeHTML }}
