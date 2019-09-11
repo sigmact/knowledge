@@ -1,3 +1,20 @@
+table {
+  width:100%;
+  table-layout: auto;
+  th,
+  td {
+    padding: 10px;
+    border:1px solid #ccc;
+    vertical-align: top;
+  }
+  th {
+    background-color:var(--secondary-color);
+  }
+  td {
+    background-color:var(--white-color);
+  }
+}
+
 .navigationWrapper {
   background-color: var(--white-color);
   opacity: .6;
@@ -98,6 +115,11 @@
     color: #007bff;
     font-size: 14px;
     font-weight: 400;
+    padding: 0;
+  }
+
+  ul {
+    list-style: none;
     padding: 0;
   }
 

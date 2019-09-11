@@ -8,13 +8,7 @@ publishDir = "public/production"
 googleAnalytics = "UA-139325091-1"
 
 [params]
-primaryColor = "#9320EB"
-secondaryColor = "#f9f9f9"
-textColor = "#333"
-textColorDark = "#242738"
-whiteColor = "#ffffff"
-
-articleToCLevel = 3
+  articleToCLevel = 3
 
 [blackfriday]
   hrefTargetBlank = true

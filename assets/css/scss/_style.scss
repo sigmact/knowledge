@@ -4,9 +4,10 @@ body {
   line-height: 1.8;
   font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-size: 18px;
+  font-size: 16px;
   color: var(--text-color);
   background-color: var(--secondary-color);
+  word-break:break-all;
 }
 
 p,
@@ -133,10 +134,8 @@ body {
   justify-content: center;
 }
 
-ol,
 ul {
-  list-style-type: none;
-  margin: 0px;
+  padding-inline-start: 40px;
 }
 
 img {
@@ -517,11 +516,6 @@ img {
   margin-bottom: 15px;
 }
 
-ul {
-  padding-left: 0;
-  margin-bottom: 20px;
-}
-
 ul li a {
   color: var(--text-color-dark);
   display: block;
@@ -565,10 +559,6 @@ blockquote {
 
 .pagination {
   justify-content: space-between;
-}
-
-.pagination a {
-  color: var(--primary-color);
 }
 
 .pagination i{
