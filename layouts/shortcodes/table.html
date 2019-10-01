@@ -1,0 +1,7 @@
+{{ $htmlTable := .Inner | markdownify }}
+{{ $class := .Get 0 }}
+{{ $old := "<table>" }}
+{{ $new := printf "<div class=\"table-responsive\"><table class=\"table table-bordered \">" }}
+{{ $htmlTable := replace $htmlTable "<table>" "<div class=\"table-responsive\"><table class=\"table table-bordered \">" }}
+{{ $htmlTable := replace $htmlTable "</table>" "</table></div>" }}
+{{ $htmlTable | safeHTML }}
