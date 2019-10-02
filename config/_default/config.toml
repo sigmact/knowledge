@@ -20,10 +20,11 @@ googleAnalytics = "UA-139325091-1"
   languageName = "ja"
   weight = 1
   languageCode = "ja-JP"
-  title = "シグマUPDATED!"
+  title = "SIGMA UPDATED"
   dateFormat = "2006 January 2"
   home = "企業サイトへ"
-  logo = "シグマ知識庫(UPDATED!)"
+  #logo = "シグマ知識庫(UPDATED!)"
+  logo = "SIGMA UPDATED"
   copyright = "Sigma Consulting Co.,Ltd. All rights reserved."
 
     # navigation
@@ -65,9 +66,9 @@ googleAnalytics = "UA-139325091-1"
 
     # banner
     [Languages.ja.params.banner]
-      title = "UPDATED!"
+      title = "UPDATED"
       description = "Azure、DevOps(開発、運用)、デザイン、マネジメント、文化等シグマコンサルティングで突き詰めている事の「更新情報」です。"
-      image = "images/banner.jpg"
+      image = "images/sigma_girl.png"
       placeholder = "２階層目のTOPにお試しで出している文章。"
 
     # Topics

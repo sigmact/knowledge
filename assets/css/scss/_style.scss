@@ -1,21 +1,26 @@
-
+html {
+  font-size: $baseFontSizePercent;
+}
 
 body {
   line-height: 1.8;
-  font-family: "Lato", sans-serif;
+  font-family: $fontFamily;
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
   color: var(--text-color);
   background-color: var(--secondary-color);
-  word-break:break-all;
+  word-wrap: break-word;
+}
+
+div,h1,h2,h3,h4,h5,h6,p,dl,dt,dd,ol,ul,li,form,input,textarea,button,table,tr,th,td,article,aside,footer,header,hgroup,nav,section,img {
+  box-sizing:border-box;
 }
 
 p,
 .paragraph {
   color: var(--text-color);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.8;
-  font-family: "Lato", sans-serif;
 }
 
 h1,
@@ -25,46 +30,43 @@ h4,
 h5,
 h6 {
   color: var(--text-color-dark);
-  font-family: "Lato", sans-serif;
   font-weight: 700;
   line-height: 1.2;
 }
 
 h1,
 .h1 {
-  font-size: 28px;
-  
+  font-size: 26px;
 }
 
 h2,
 .h2 {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 h3,
 .h3 {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 h4,
 .h4 {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 h5,
 .h5 {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 h6,
 .h6 {
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /* Button style */
 .btn {
   font-size: 14px;
-  font-family: "Lato", sans-serif;
   text-transform: uppercase;
   padding: 16px 44px;
   border-radius: 0px;
@@ -181,12 +183,14 @@ select:focus {
 }
 
 .section-title {
-  margin-bottom: 40px;
+  @include fz(16);
+  margin-bottom: 24px;
+  font-weight: bold;
 }
 
 .bg-cover {
-  background-size: cover;
-  background-position: center center;
+  background-size: contain;
+  // background-position: center center;
   background-repeat: no-repeat;
 }
 
@@ -212,7 +216,7 @@ pre {
   width: 100%;
   top: 0;
   left: 0;
-  // background: var(--primary-color);
+  //background: var(--primary-color);
   opacity: .8;
 }
 
@@ -230,6 +234,10 @@ pre {
 
 .bg-gray {
   background-color: var(--secondary-color);
+}
+
+.bg-darkGray {
+  background-color: $paleGray;
 }
 
 .text-primary {
@@ -296,12 +304,11 @@ pre {
   top: 100px;
 }
 
-.hero-section {
-  padding-bottom: 150px;
-}
-
 .navbar {
   padding: 0;
+  &-brand {
+    @include fz(20);
+  }
 }
 
 .navbar .nav-item .nav-link {
@@ -326,10 +333,10 @@ pre {
   display: block;
   visibility: hidden;
   transition: .3s ease;
-  opacity: 0;
+  //opacity: 0;
   -webkit-transform: translateY(20px);
   transform: translateY(20px);
-  background: var(--white-color);
+  background: var(--black-color);
 }
 
 @media (max-width: 991px) {
@@ -372,9 +379,8 @@ pre {
 
 .navbar .dropdown-item {
   position: relative;
-  color: var(--text-color-dark);
+  color: var(--text-color-white);
   transition: .2s ease;
-  font-family: "Lato", sans-serif;
 }
 
 @media (max-width: 991px) {
@@ -407,9 +413,6 @@ pre {
 //   color: var(--white-color) !important;
 // }
 
-// .banner .navbar-brand{
-//   color: var(--white-color) !important;
-// }
 
 /* search */
 
@@ -537,7 +540,7 @@ ul li a {
 } 
 
 blockquote {
-  font-size: 20px !important;
+  font-size: 14px !important;
   color: var(--text-color-dark);
   padding: 10px 40px;
   border-left: 2px solid var(--primary-color);

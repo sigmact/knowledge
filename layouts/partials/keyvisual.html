@@ -1,0 +1,18 @@
+{{ "<!-- keyvisual -->" | safeHTML }}
+<div class="keyvisualBg">
+    <div class="container">
+        {{/*  <img class="keyvisualImage" src="{{ .Site.Params.banner.image | absURL }}" alt="">  */}}
+        <div class="row">
+           
+            <div class="col-lg-4 text-center mx-auto keyvisualText">
+                <p class="text-white mb-3">Cloud + Code + Design</p>
+                <h1 class="keyTitleText text-white mb-3">{{ .Site.Params.banner.title}}</h1>
+                <p class="text-white mb-0">Azure　DevOps　Design</p>
+                <p class="text-white">Text text text ...</p>
+                {{/*  <p class="text-white mb-4">{{ .Site.Params.banner.description }}</p>  */}}
+            </div>
+           
+        </div>
+    </div>
+</div>
+{{ "<!-- /keyvisual -->" | safeHTML }}

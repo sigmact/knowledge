@@ -1,0 +1,16 @@
+/**************************************************
+ *
+ *　Media Query
+ *
+ **************************************************/
+@mixin mq($num, $mode:0) {
+  @if $mode == 0 {
+    @media screen and (max-width:$num + px) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width:($num + 1) + px) {
+      @content;
+    }
+  }
+}

@@ -1,8 +1,8 @@
 {{ partial "head.html" . }}
-
+<body>
 {{ "<!-- navigation -->" | safeHTML }}
-<header class="shadow-bottom bg-white">
-  <div class="container">
+<header class="shadow-bottom">
+  <div class="container pl-4 pr-4">
     {{ partial "navigation.html" . }}
   </div>
 </header>
@@ -101,5 +101,6 @@
   </div>
 </section>
 <!-- /details page -->
-
+<a href="#" class="btn-fab fabPageTop" data-role="internalLink">TOP</a>
 {{ partial "footer.html" . }}
+</body>

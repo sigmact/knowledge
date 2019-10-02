@@ -2,9 +2,10 @@
   
   {{ "<!-- topics -->" | safeHTML }}
   <section class="section bg-gray pt-5">
-    <div class="container">
-      <div class="row justify-content-center bg-white p-3">
-        <ul class="list-style-none">
+    <div class="row justify-content-center bg-white p-3">
+      <div class="updateListContainer">
+        <p class="updateListLabel">更新情報</p>
+        <ul class="updateList list-style-none mb-0">
           {{ range first 3 .Site.RegularPages.ByLastmod.Reverse }}
           <li>
             <a href="{{.RelPermalink}}" class="d-flex p-1">
@@ -15,16 +16,18 @@
           {{ end }}
         </ul>
       </div>
+    </div>
+    <div class="container">
       <div class="row justify-content-center mt-5">
-          <div class="col-12 text-center">
-            {{with .Site.Params.topics.title}} <h2 class="section-title mt-0">{{ . }}</h2> {{ end }}
+          <div class="col-lg-12 text-center">
+            {{with .Site.Params.topics.title}} <h2 class="section-title mt-0 text-primary">{{ . }}</h2> {{ end }}
           </div>
           {{ "<!-- topic-item -->" | safeHTML }}
           {{ range (where .Site.Pages "Type" "article") }}
-          <div class="col-md-12 col-lg-10 mb-4">
+          <div class="topicTile col-lg-8 mb-4">
             <a href="{{ .Permalink }}" class="px-4 py-5 bg-white shadow text-center d-block">
               {{/*  <i class="{{ .Params.Icon }} icon text-dark d-block mb-4"></i>  */}}
-              <h3 class="mt-0 mb-0">{{ .Title }}</h3>
+              <h3 class="topicTileTitle mt-0 mb-0">{{ .Title }}</h3>
               <p class="mt-3">{{ .Params.Description }}</p>
             </a>
           </div>
@@ -36,17 +39,12 @@
 
   {{ if .Site.Params.cta.enable }}
   {{ "<!-- call to action -->" | safeHTML }}
-  <section class="bg-gray">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="section bg-white shadow text-center">
-          {{ with .Site.Params.cta.title }} <h2 class="mb-4">{{ . }}</h2> {{ end }}
-          {{ with .Site.Params.cta.description }} <p class="mb-4">{{ . }}</p> {{ end }}
-          <a href="{{ with .Site.Params.cta.btnURL}}{{ . | absURL }}{{ end }}" class="btn btn-primary">{{ with .Site.Params.cta.btnText}}{{ . }}{{ end }}</a>
-          </div>
-        </div>
-      </div>
+  <section class="section bg-gray pt-5">
+    <div class="text-center bg-white p-5">
+      {{ with .Site.Params.cta.title }} <p class="section-title mb-4">{{ . }}</p> {{ end }}
+      {{ with .Site.Params.cta.description }} <p class="mb-4">{{ . }}</p> {{ end }}
+      <a href="{{ with .Site.Params.cta.btnURL}}{{ . | absURL }}{{ end }}"
+        class="btn btn-primary">{{ with .Site.Params.cta.btnText}}{{ . }}{{ end }}</a>
     </div>
   </section>
   {{ "<!-- /call to action -->" | safeHTML }}

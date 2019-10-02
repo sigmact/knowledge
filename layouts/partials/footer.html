@@ -1,17 +1,15 @@
 {{ "<!-- footer -->" | safeHTML }}
-<footer class="section bg-gray pb-0">
+<footer>
   <div class="container">
     <div class="row">
-      <div class="col-md-8 text-md-left text-center">
-       {{ with .Site.Params.copyright }} <p>{{ .}}</p> {{ end }}
-      </div>
-      <div class="col-md-4 text-md-right text-center">
-        <ul class="list-inline mb-3">
-          {{ range .Site.Params.socialIcon }}
-          <li class="list-inline-item"><a class="text-color d-inline-block p-2" href="{{ .linkURL }}"><i class="{{ .icon }}"></i></a></li>
-          {{ end }}
-        </ul>
-      </div>
+      {{ with .Site.Params.copyright }} <p class="copyright col-md-8 text-md-left text-center text-white">&copy;{{ .}}</p>
+      {{ end }}
+      <ul class="footerSns col-md-4 text-md-right text-center list-inline">
+        {{ range .Site.Params.socialIcon }}
+        <li class="list-inline-item"><a class="text-white d-inline-block p-1" href="{{ .linkURL }}"><i
+              class="{{ .icon }}"></i></a></li>
+        {{ end }}
+      </ul>
     </div>
   </div>
 </footer>

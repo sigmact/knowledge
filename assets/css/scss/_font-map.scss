@@ -8,13 +8,18 @@ $baseFontSizePercent:62.5%; // 1.0rem ≒ 10px
 $baseLineHeight:1.6;
 
 // 外部フォント読み込み
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700&display=swap);
 @import url(https://use.fontawesome.com/releases/v5.9.0/css/all.css);
+
+
+
 
 // フォント設定
 $fontFamily-Yu:"ヒラギノ角ゴシック Pro","Hiragino Kaku Gothic Pro","游ゴシック体","Yu Gothic",YuGothic,Helvetica,Arial,Roboto,"Droid Sans","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif !important;
 $fontFamily-Meiryo:"ヒラギノ角ゴシック Pro","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Helvetica,Arial,Roboto,"Droid Sans",Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif !important;
 $fontFamily-Noto:"Noto Sans Japanese","ヒラギノ角ゴシック Pro","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Helvetica,Arial,Roboto,"Droid Sans","游ゴシック体","Yu Gothic",YuGothic,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif !important;
-$fontFamily:$fontFamily-Meiryo;
+$fontFamily:"Lato",$fontFamily-Noto;
 
 // フォントサイズを指定するミックスイン
 @mixin fz($size:$baseFontSizePx) {
