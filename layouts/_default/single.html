@@ -51,7 +51,7 @@
             
         </div>
         {{- $currentNode := . -}}
-        <nav class="pagination mt-3">
+        <nav class="pagination mt-3 mb-5">
           {{- template "pagination" dict "menu" .Site.Home "currentnode" $currentNode "menu_exclusion" .Site.Params.menu_exclusion -}}
           {{- with ($.Scratch.Get "prevPage") -}}
           <a class="nav nav-prev" href="{{ .Permalink }}" title="{{ .Title }}"><i

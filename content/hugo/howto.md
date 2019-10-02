@@ -5,7 +5,7 @@ authors: [
     ["Takekazu Omi","images/author/omi.png"]
 ]
 weight: 1
-date: 2019-08-24
+date: 2019-10-2
 description: Hugoのカスタマイズ方法をまとめる
 type : "article"
 keywords:
@@ -16,6 +16,8 @@ eyecatch: "/images/hugo/hugo.png"
 tocLevel: 3
 ---
 
+## 記事の記述方法
+- [記事の書き方補足](/hugo/article_template)
 
 ## 開発の進め方
 
@@ -74,9 +76,9 @@ tocLevel: 3
 - banner.htmlという名前ではなくて、heroimageという部品でもよいかも。
   
 ### shortcodes
-
-- shortcodesフォルダに独自のshortcodesを置く(今回は、TODOやメモを記載するpageinfo.htmlを用意)
-- 
+- [Shortcodes](https://gohugo.io/content-management/shortcodes/#shortcodes-with-markdown)
+- shortcodesフォルダに独自のshortcodesを置く
+- Markdown文章内で以下のように記述
 
 ### ソースコードに散見されるsafeHTML関数
 
@@ -86,9 +88,9 @@ tocLevel: 3
 - 例：関数を使用しない場合、<は&lt;、>は&gt;にエスケープされる
 
 ## Front Matter 
-### tocLevel
+### 記事の目次を表示する
 
-- 記事ページ内の目次に表示する見出しの階層レベルを指定する
+- 記事ページの目次に表示する見出しの階層レベルを指定する
 ```html
 ---
 tocLevel: 3 //H3まで目次に表示する
