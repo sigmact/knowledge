@@ -6,7 +6,7 @@ body {
   line-height: 1.8;
   font-family: $fontFamily;
   -webkit-font-smoothing: antialiased;
-  font-size: 16px;
+  font-size: 15px;
   color: var(--text-color);
   background-color: var(--secondary-color);
   word-wrap: break-word;
@@ -19,8 +19,6 @@ div,h1,h2,h3,h4,h5,h6,p,dl,dt,dd,ol,ul,li,form,input,textarea,button,table,tr,th
 p,
 .paragraph {
   color: var(--text-color);
-  font-size: 14px;
-  line-height: 1.8;
 }
 
 h1,
@@ -183,7 +181,7 @@ select:focus {
 }
 
 .section-title {
-  @include fz(16);
+  @include fz(20);
   margin-bottom: 24px;
   font-weight: bold;
 }
