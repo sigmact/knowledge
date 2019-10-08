@@ -22,16 +22,6 @@
   {{ "<!-- fonts -->" | safeHTML }}
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
  
-  <!-- <style>
-  :root{
-    --primary-color:{{ .Site.Params.primaryColor }};
-    --secondary-color:{{ .Site.Params.secondaryColor }};
-    --text-color:{{ .Site.Params.textColor }};
-    --text-color-dark:{{ .Site.Params.textColorDark }};
-    --white-color:{{ .Site.Params.whiteColor }};
-  }  
-  </style> -->
-
   {{ "<!-- Main Stylesheet -->" | safeHTML }}
   {{ $style := resources.Get "css/scss/style.scss" | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">

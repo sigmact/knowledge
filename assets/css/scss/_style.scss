@@ -6,7 +6,10 @@ body {
   line-height: 1.8;
   font-family: $fontFamily;
   -webkit-font-smoothing: antialiased;
-  font-size: 15px;
+  @include fz(16);
+  @media (max-width: 768px) {
+    @include fz(14);
+  }
   color: var(--text-color);
   background-color: var(--secondary-color);
   word-wrap: break-word;
@@ -518,7 +521,6 @@ h4 {
 img {
   width: 100%;
   height: auto;
-  margin-bottom: 15px;
 }
 
 ul li a {

@@ -9,8 +9,6 @@ header, footer {
   }
 }
 
-
-
 .row {
   margin: 0;
 }
@@ -20,6 +18,13 @@ table {
   td {
     @include fz(13);
   }
+}
+
+figure {
+  margin: 20px 0;
+}
+figcaption {
+  margin-top: 10px;
 }
 
 .keyvisual {
@@ -113,7 +118,7 @@ table {
 .updateList {
   flex: 1 1 0%;
   & > li a {
-    @include fz(14);
+    @include fz(15);
     font-weight: bold;
   }
   &Container {
@@ -125,7 +130,7 @@ table {
     padding: 5px 20px;
     margin-right: 20px;
     margin-bottom: 0;
-    font-size: 13px;
+    @include fz(15);
     font-weight: bold;
   }
   @media (max-width: 991px) {
@@ -146,11 +151,35 @@ table {
 }
 
 .topicTile {
+  &Text {
+    margin-top: 30px;
+    padding: 0 30px 30px;
+  }
   &Title {
     @include fz(16);
   }
   &Lead {
+    margin-top: 20px;
     @include fz(14);
+    
+  }
+  &Image {
+  //   position:relative;
+  //   width:100%;
+  //   height:auto;
+  //  padding-top:65.57%;
+  //   text-align: center;
+  //   img {
+  //     border-radius: 10px;
+  //     position:absolute;
+  //     top:50%;
+  //     left:50%;
+  //     max-width:100%;
+  //     max-height:100%;
+  //     width:auto;
+  //     height:auto;
+  //     transform:translate(-50%, -50%);
+  //   }
   }
 }
 
