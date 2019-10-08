@@ -5,7 +5,7 @@ date: 2019-10-06
 description: ""
 authors: [
 ["Sunao Tomita","images/author/k1hash.png"],
-["Yuka Abuno","images/author/k1hash.png"],
+["Yuka Abuno","images/author/yu_ka1984.jpeg"],
 ["Keiichi Hashimoto","images/author/k1hash.png"]
 ]
 type : "article"
