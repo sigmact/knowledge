@@ -12,7 +12,7 @@ keywords:
   - "word1"
   - "word2"
   - "word3"
-eyecatch: "/images/pcidss.png"
+eyecatch: "images/pcidss.png"
 ---
 
 ## ベストプラクティスを突き詰め続ける

@@ -12,7 +12,7 @@ keywords:
   - "word1"
   - "word2"
   - "word3"
-eyecatch: "/images/keyvault.png"
+eyecatch: "images/keyvault.png"
 ---
 
 ## はじめに
