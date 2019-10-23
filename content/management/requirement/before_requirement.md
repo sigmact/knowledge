@@ -13,7 +13,7 @@ keywords:
 - "word1"
 - "word2"
 - "word3"
-eyecatch: "/images/eyecatch/before_requirement.png"
+eyecatch: "/images/before_requirement.png"
 ---
 
 ## はじめに

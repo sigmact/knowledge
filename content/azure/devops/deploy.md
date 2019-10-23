@@ -12,7 +12,7 @@ keywords:
   - "word1"
   - "word2"
   - "word3"
-eyecatch: "/images/eyecatch/deploy.png"
+eyecatch: "/images/deploy.png"
 ---
 
 ## 業務上の背景

@@ -11,7 +11,7 @@ keywords:
 - "word1"
 - "word2"
 - "word3"
-eyecatch: "/images/eyecatch/about_updated.png"
+eyecatch: "images/about_updated.png"
 ---
 
 ## はじめに
