@@ -36,6 +36,18 @@
               </div>
               {{ end }}
             </div>
+
+            <!-- アイキャッチ画像 -->
+            <div class="mt-5">
+              {{ if (isset .Params "eyecatch") }}
+              {{ $sectionRoot := .Dir}}
+              {{ $eyecatchImage := .Params.Eyecatch }}
+              <img src="/{{ $sectionRoot }}{{ $eyecatchImage }}" alt="{{ .Params.title }}"/>
+              {{ else }}
+              <img class="topicTitleImages" src="/images/eyecatch/default.png" alt="{{ .Params.title }}">
+              {{ end }}
+            </div>
+
             <!-- ページ内リンクを作りながらコンテンツをレンダリングする -->
             {{- with .Content -}}
               {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor"><i class="fas fa-link"></i></a> ${3}` | safeHTML }}
