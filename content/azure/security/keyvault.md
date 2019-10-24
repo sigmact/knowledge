@@ -32,6 +32,7 @@ eyecatch: "images/keyvault.png"
 - 変更管理：バージョン管理、もしくはスナップショットのサポート
 - 変更通知：変更を通知で受け取れるか
 
+{{< table >}}
 |方式|暗号化|ACL|監査ログ|共有|変更管理|変更通知|備考|
 |---|----|----|----|----|----|----|----|
 |ローカルファイル|✕|✕|✕|✕|✕|✕|※1|
@@ -39,6 +40,7 @@ eyecatch: "images/keyvault.png"
 |App Configuration|◯|◯|✕|◯|◯|◯|※3|
 |Key Vault|◯|◯|◯|◯|◯|✕||
 |Blob Storage|◯|△|✕|◯|✕|✕|※4|
+{{< /table >}}
 
 - ※1 管理はSCMで実施。App Serviceではaspnet_regiis.exeによる暗号化は利用できず。独自実装が必要
 - ※2 共有は、Web Apps/Web Job/Functions等で同一WebSite内のみ。変更した場合はサイトが再起動される
