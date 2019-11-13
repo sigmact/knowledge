@@ -90,9 +90,9 @@ googleAnalytics = "UA-139325091-1"
 
     # footer social icon
     [[Languages.ja.socialIcon]]
-      icon = "ti-facebook"
+      icon = "fab fa-facebook"
       linkURL = "https://www.facebook.com/sigmact/"
             
     [[Languages.ja.socialIcon]]
-      icon = "ti-instagram"
+      icon = "fab fa-instagram"
       linkURL = "https://www.instagram.com/sigmaconsulting/"

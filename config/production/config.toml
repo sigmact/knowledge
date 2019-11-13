@@ -1,5 +1,5 @@
 DefaultContentLanguage = "ja"
-baseURL = "https://sigmactwwwupdated.z11.web.core.windows.net/"
+baseURL = "https://updated.sigmact.com/"
 theme = "dot-hugo-documentation-theme"
 
 # HTMLを生成するディレクトリ
@@ -89,9 +89,9 @@ googleAnalytics = "UA-139325091-1"
 
     # footer social icon
     [[Languages.ja.socialIcon]]
-      icon = "ti-facebook"
+      icon = "fab fa-facebook"
       linkURL = "https://www.facebook.com/sigmact/"
             
     [[Languages.ja.socialIcon]]
-      icon = "ti-instagram"
+      icon = "fab fa-instagram"
       linkURL = "https://www.instagram.com/sigmaconsulting/"
