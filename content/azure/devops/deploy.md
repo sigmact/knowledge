@@ -1,8 +1,8 @@
 ---
 title: "自社にとって最適なデプロイを突き詰める"
 authors: [
-    ["Keiichi Hashimoto","images/author/k1hash.png"],
-    ["Takekazu Omi","images/author/omi.png"]
+    ["Hiroyuki Kinoshita",""],
+    ["Tsubasa Yoshino",""]
 ]
 weight: 10
 date: 2019-08-18
