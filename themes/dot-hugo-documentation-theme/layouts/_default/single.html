@@ -16,7 +16,7 @@
         <div class="p-4 bg-white sticky-top top-100">
             {{$currentNode := .}}
             <nav class="sidebar-menu">
-              <ul class="list-styled">
+              <ul class="">
                 {{- range .Site.Sections.ByWeight -}}
                   {{template "menu" dict "sect" . "currentnode" $currentNode}}
                 {{- end -}}

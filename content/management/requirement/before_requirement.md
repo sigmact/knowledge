@@ -13,6 +13,7 @@ keywords:
 - "word1"
 - "word2"
 - "word3"
+tags: ["ビジネス", "マネジメント"]
 eyecatch: "images/before_requirement.png"
 ---
 

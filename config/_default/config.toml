@@ -25,7 +25,7 @@ googleAnalytics = "UA-139325091-1"
   home = "企業サイトへ"
   #logo = "シグマ知識庫(UPDATED!)"
   logo = "SIGMA UPDATED"
-  copyright = "Sigma Consulting Co.,Ltd. All rights reserved."
+  copyright = "2020 Sigma Consulting Co.,Ltd. All rights reserved."
 
     # navigation
     [Languages.ja.menu]
@@ -66,9 +66,9 @@ googleAnalytics = "UA-139325091-1"
 
     # banner
     [Languages.ja.params.banner]
-      title = "UPDATED"
+      title = "SIGMA UPDATED"
       description = "Azure、DevOps(開発、運用)、デザイン、マネジメント、文化等シグマコンサルティングで突き詰めている事の「更新情報」です。"
-      image = "images/sigma_girl.png"
+      image = "images/hero.jpg"
       placeholder = "２階層目のTOPにお試しで出している文章。"
 
     # Topics

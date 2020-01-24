@@ -12,6 +12,7 @@ keywords:
   - "word1"
   - "word2"
   - "word3"
+tags: ["Azure", "セキュリティ"]
 eyecatch: "images/pcidss.png"
 ---
 

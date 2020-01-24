@@ -1,15 +1,14 @@
 {{ define "main" }}
-  
   {{ "<!-- topics -->" | safeHTML }}
-  <section class="section bg-gray pt-5">
-    <div class="row justify-content-center bg-white p-3">
-      <div class="updateListContainer">
-        <p class="updateListLabel">更新情報</p>
+  <section class="section pt-0">
+    <div class="updateListContainer">
+      <div class="container">
+        <p class="updateListTitle">更新情報</p>
         <ul class="updateList list-style-none mb-0">
           {{ range first 3 .Site.RegularPages.ByLastmod.Reverse }}
           <li>
             <a href="{{.RelPermalink}}" class="d-flex p-1">
-              <time class="mr-3 flex-shrink-0" datetime="{{.Date.Format "2006-01-02"}}">{{.Date.Format "2006-01-02"}}</time>
+              <time class="mr-3 flex-shrink-0" datetime="{{.Date.Format "2006/1/2"}}">{{.Date.Format "2006/1/2"}}</time>
               <span>{{.Title}}</span>
             </a>
           </li>
@@ -20,24 +19,33 @@
     <div class="container">
       <div class="row mt-5">
           <div class="col-12 text-center">
-            {{with .Site.Params.topics.title}} <h2 class="section-title mt-0 text-primary">{{ . }}</h2> {{ end }}
+            {{with .Site.Params.topics.title}} <h2 class="section-title mt-0">{{ . }}</h2> {{ end }}
           </div>
           {{ "<!-- topic-item -->" | safeHTML }}
           {{ range (where .Site.Pages "Type" "article") }}
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="topicTile bg-white shadow">
-            <a href="{{ .Permalink }}" class="d-block">
-              {{ if (isset .Params "eyecatch") }}
-              {{ $sectionRoot := .Dir}}
-              {{ $eyecatchImage := .Params.Eyecatch }}
-              <img class="topicTitleImages" src="{{ $sectionRoot }}{{ $eyecatchImage }}" alt="{{ .Params.title }}">
-              {{ else }}
-              <img class="topicTitleImages" src="/images/eyecatch/default.png" alt="{{ .Params.title }}">
-              {{ end }}
-              <div class="topicTileText">
-                <h3 class="title mt-0 mb-0">{{ .Title }}</h3>
-              </div>
-            </a>
+              <a href="{{ .Permalink }}" class="d-block">
+                <p class="date text-right">{{ .PublishDate.Format "2006/1/2" }}</p>
+
+                {{ if (isset .Params "eyecatch") }}
+                {{ $sectionRoot := .Dir}}
+                {{ $eyecatchImage := .Params.Eyecatch }}
+                <img class="topicTitleImages" src="{{ $sectionRoot }}{{ $eyecatchImage }}" alt="{{ .Params.title }}">
+                {{ else }}
+                <img class="topicTitleImages" src="/images/eyecatch/default.png" alt="{{ .Params.title }}">
+                {{ end }}
+                <div class="topicTileText">
+                  <h3 class="title mt-0 mb-0">{{ .Title }}</h3>
+                </div>
+               
+                <ul class="tagList">
+                  {{ range .Params.Tags }}
+                  <li>#{{ . }}</li>
+                  {{ end }}
+                </ul>
+                
+              </a>
             </div>
           </div>
           {{ end }}
@@ -48,15 +56,16 @@
 
   {{ if .Site.Params.cta.enable }}
   {{ "<!-- call to action -->" | safeHTML }}
-  <section class="section bg-gray pt-5">
+  {{/*  <section class="section bg-gray pt-5">
     <div class="text-center bg-white p-5">
       {{ with .Site.Params.cta.title }} <p class="section-title mb-4">{{ . }}</p> {{ end }}
       {{ with .Site.Params.cta.description }} <p class="mb-4">{{ . }}</p> {{ end }}
       <a href="{{ with .Site.Params.cta.btnURL}}{{ . | absURL }}{{ end }}"
         class="btn btn-primary">{{ with .Site.Params.cta.btnText}}{{ . }}{{ end }}</a>
     </div>
-  </section>
+  </section>  */}}
   {{ "<!-- /call to action -->" | safeHTML }}
   {{ end }}
 
 {{ end }}
+

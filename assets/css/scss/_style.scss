@@ -11,8 +11,9 @@ body {
     @include fz(14);
   }
   color: var(--text-color);
-  background-color: var(--secondary-color);
+  background-color: $baseColor;
   word-wrap: break-word;
+  overflow-x: hidden;
 }
 
 div,h1,h2,h3,h4,h5,h6,p,dl,dt,dd,ol,ul,li,form,input,textarea,button,table,tr,th,td,article,aside,footer,header,hgroup,nav,section,img {
@@ -21,7 +22,8 @@ div,h1,h2,h3,h4,h5,h6,p,dl,dt,dd,ol,ul,li,form,input,textarea,button,table,tr,th
 
 p,
 .paragraph {
-  color: var(--text-color);
+  color: $textColor;
+  //letter-spacing: .05em;
 }
 
 h1,
@@ -30,7 +32,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--text-color-dark);
+  color: $textColor;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -108,10 +110,6 @@ h6,
   border-color: var(--primary-color);
 }
 
-body {
-  background-color: var(--white-color);
-  overflow-x: hidden;
-}
 
 ::-moz-selection {
   background: var(--primary-color);
@@ -138,7 +136,7 @@ body {
 }
 
 ul {
-  padding-inline-start: 40px;
+  padding-inline-start: 20px;
   &.list-style-none {
     list-style: none;
     padding-inline-start: 0;
@@ -184,9 +182,13 @@ select:focus {
 }
 
 .section-title {
-  @include fz(20);
   margin-bottom: 24px;
+  padding: 10px 20px;
+  background-color: $primaryColor;
+  color: #fff;
+  @include fz(20);
   font-weight: bold;
+  text-align: left;
 }
 
 .bg-cover {
@@ -307,13 +309,18 @@ pre {
 
 .navbar {
   padding: 0;
+  display: flex;
+  justify-content: space-between;
   &-brand {
+    letter-spacing: .1em;
+    margin-left: 15px;
     @include fz(20);
   }
 }
 
 .navbar .nav-item .nav-link {
-  text-transform: uppercase;
+  //text-transform: uppercase;
+  @include fz(13);
   padding: 18px 15px !important;
 }
 
@@ -337,7 +344,7 @@ pre {
   //opacity: 0;
   -webkit-transform: translateY(20px);
   transform: translateY(20px);
-  background: var(--black-color);
+  background: $primaryColor;
 }
 
 @media (max-width: 991px) {
@@ -380,7 +387,7 @@ pre {
 
 .navbar .dropdown-item {
   position: relative;
-  color: var(--text-color-white);
+  color: $white;
   transition: .2s ease;
 }
 
@@ -505,12 +512,12 @@ textarea.form-control {
 
 /* single page */
 h2 {
-  margin-top: 50px;
+  margin-top: 80px;
   margin-bottom: 30px;
 }
 
 h3 {
-  margin-top: 30px;
+  margin-top: 40px;
   margin-bottom: 15px;
 }
 
@@ -533,9 +540,7 @@ ul li a {
 
 .post-meta {
   color: var(--text-color);
-  font-style: italic;
   font-size: 14px;
-  font-weight: bold;
   margin-bottom: 0;
 } 
 
@@ -548,6 +553,10 @@ blockquote {
   font-weight: bold;
 }
 
+
+.list-styled {
+  list-style-type: none;
+}
 .list-styled li {
   padding-left: 20px;
   position: relative;
@@ -559,7 +568,7 @@ blockquote {
   height: 8px;
   width: 8px;
   border-radius: 50%;
-  background: var(--primary-color);
+  background: $primaryColor;
   opacity: .3;
   left: 0;
   top: 18px;

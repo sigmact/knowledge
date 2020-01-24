@@ -11,6 +11,7 @@ keywords:
 - "word1"
 - "word2"
 - "word3"
+tags: ["general"]
 eyecatch: "images/about_updated.png"
 ---
 

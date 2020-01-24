@@ -65,10 +65,10 @@ googleAnalytics = "UA-139325091-1"
 
     # banner
     [Languages.ja.params.banner]
-      title = "UPDATED"
+      title = "SIGMA UPDATED"
       description = "Azure、DevOps(開発、運用)、デザイン、マネジメント、文化等シグマコンサルティングで突き詰めている事の「更新情報」です。"
-      image = "images/banner.jpg"
-      placeholder = "２階層目のTOPにお試しで出している文章。"
+      image = "images/hero.jpg"
+      placeholder = ""
 
     # Topics
     [Languages.ja.params.topics]

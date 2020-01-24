@@ -2,42 +2,44 @@
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
     {{- partial "head.html" . -}}
     <body>
+        <div class="wrapper">
+
         {{ if .IsHome }}
         {{ "<!-- header -->" | safeHTML }}
-        <header class="overlay">   
+        <header class="shadow-bottom">   
             <div class="container pl-4 pr-4">
                 {{ "<!-- navigation -->" | safeHTML }}
                 {{ partial "navigation.html" . }}
                 {{ "<!-- /navigation -->" | safeHTML }}
             </div>
-          
         </header>
         {{ "<!-- /header -->" | safeHTML }}
-        {{ partial "keyvisual.html" . }}
-        {{ else if .IsNode }}
-        <header class="shadow-bottom sticky-top" data-background="{{ .Params.bannerimage }}">
-            <div class="container">
-                {{ partial "navigation.html" . }}
+        <main class="isHome">
+            {{ partial "keyvisual.html" . }}
+            <div class="homeMain">
+                {{- block "main" . }}{{- end }}
             </div>
-        </header>    
+        </main>
 
-        {{ else }}
-        {{ "<!-- navigation -->" | safeHTML }}
-        <header class="shadow-bottom sticky-top bg-white">
+        {{ else if .IsNode }}
+        <header class="shadow-bottom" data-background="{{ .Params.bannerimage }}">
             <div class="container">
                 {{ partial "navigation.html" . }}
             </div>
-        </header>
-        {{ "<!-- /navigation -->" | safeHTML }}
+            
+        </header>    
+        <main>
+            <div id="container">
+                {{- block "main" . }}{{- end }}
+            </div>
+        </main>
+        {{ else }}
+
         {{ end }}
 
-        <!-- content -->
-        <div id="content">
-        {{- block "main" . }}{{- end }}
-        </div>
-
+    
         <!-- footer -->
         {{- partial "footer.html" . -}}
-
+        </div>  
     </body>
 </html>

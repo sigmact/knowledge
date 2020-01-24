@@ -1,5 +1,5 @@
 $white:#fff;
-$black:#393939;
+$black:#333;
 $gray:#9a9a9a;
 $paleGray:#f0f0f0;
 $charcoalGray:#6f6f6f;
@@ -7,20 +7,21 @@ $red:#ce6672;
 $blue:#167ac6; 
 
 
-$baseColor:#fff;
-$primaryColor:#765482;
+$baseColor:#f9f9f9;
+$primaryColor:#71567F;
 $secondaryColor:#f9f9f9;
-$accentColor:#ff001a;
 $specialColor:#ba50a3;
+$accentColor:#ff001a;
+$textColor: $black;
   
 :root{
-  --primary-color: #765482;
-  --secondary-color: #f9f9f9;
-  --text-color: #333;
-  --text-color-dark: #333;
-  --text-color-white: #fff;
-  --text-color-light: #6c6c6c;
-  --white-color: #ffffff;
-  --black-color: #242738;
+  --primary-color: $primaryColor;
+  --secondary-color: $secondaryColor;
+  --text-color: $black;
+  --text-color-dark: $black;
+  --text-color-white: $white;
+  --text-color-light: $charcoalGray;
+  --white-color: #fff;
+  --black-color: $black;
 }  
 
