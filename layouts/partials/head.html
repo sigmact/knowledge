@@ -1,7 +1,12 @@
 <head>
   <meta charset="utf-8">
   <title>{{ .Title }}</title>
-  <meta name="description" content="{{ .Description }}">
+  {{ if (isset .Params "description") }}
+  <meta name="description" content="{{ .Description }}"/>
+  {{ else }}
+  <meta name="description" content="{{ .Site.Params.banner.description }}"/>
+  {{ end }}
+
   <!-- ogp -->
   {{ partial "ogp.html" . }}
 

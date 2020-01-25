@@ -4,10 +4,9 @@ authors: [
     ["Hiroyuki Kinoshita","images/author/kinoshita.png"],
     ["Tsubasa Yoshino","images/author/yoshinotsubasa.jpg"]
 ]
-
 weight: 10
-date: 2019-08-18
-description: 自社にとって最適なデプロイを突き詰める
+date: 2020-01-18
+description: "弊社では少数精鋭によるパブリッククラウドを利用した SI の提供を前提とした DevOps に取り組んでいます。取り組みの中では弊社にとってベストプラクティスに到達している要素もあれば、継続的に検証と改善を繰り返している要素もあり、まだまだ未成熟な状態です。"
 type: "article"
 eyecatch: "images/eyecatch/deploy.png"
 ---
