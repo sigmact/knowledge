@@ -4,7 +4,7 @@ weight: 11
 date: 2019-10-06
 description: ""
 authors: [
-["Sunao Tomita","images/author/k1hash.png"],
+["Sunao Tomita","images/author/sunaotomita.jpg"],
 ["Yuka Abuno","images/author/yu_ka1984.jpeg"],
 ["Keiichi Hashimoto","images/author/k1hash.png"]
 ]

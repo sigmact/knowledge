@@ -6,7 +6,7 @@ authors: [
 ]
 weight: 10
 date: 2019-08-18
-description: PCI DSS要件をAzure PaaS上で実現した実例をもとに
+description: "Azure 上でアプリケーションを構築する開発者向け(元々は社内向け)に、セキュア・アプリケーションを構築する際のベストプラクティス的な内容をアップデートし続けていく事を目指しています。"
 type : "article"
 tags: ["Azure", "セキュリティ"]
 eyecatch: "images/eyecatch/pcidss.png"

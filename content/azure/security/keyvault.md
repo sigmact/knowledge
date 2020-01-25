@@ -3,7 +3,7 @@ title: "セキュリティを高めるためにセンシティブ情報をどう
 linkTitle: "Key Vault の利用"
 weight: 20
 date: 2019-08-22
-description: "KeyVaultを中心に"
+description: "Microsoft Azureで、アプリケーションで使われるセンシティブ情報(パスワード等)の保護のベストプラクティスについて書いています。以下に、アプリケーションの設定情報を外部に保持する複数の方法について比較し、その後センシティブ情報をKey Vaultに保存する利点を論じています。"
 type : "article"
 authors: [
     ["Takekazu Omi","images/author/omi.png"]

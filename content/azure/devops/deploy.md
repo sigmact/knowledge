@@ -1,6 +1,10 @@
 ---
 title: "自社にとって最適なデプロイを突き詰める"
-authors: [["Hiroyuki Kinoshita", ""], ["Tsubasa Yoshino", ""]]
+authors: [
+    ["Hiroyuki Kinoshita","images/author/kinoshita.png"],
+    ["Tsubasa Yoshino","images/author/yoshinotsubasa.jpg"]
+]
+
 weight: 10
 date: 2019-08-18
 description: 自社にとって最適なデプロイを突き詰める
