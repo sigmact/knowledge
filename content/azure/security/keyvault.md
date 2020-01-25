@@ -8,10 +8,6 @@ type : "article"
 authors: [
     ["Takekazu Omi","images/author/omi.png"]
 ]
-keywords:
-  - "word1"
-  - "word2"
-  - "word3"
 tags: ["Azure", "セキュリティ"]
 eyecatch: "images/eyecatch/keyvault.png"
 ---

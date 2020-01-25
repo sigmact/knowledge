@@ -5,10 +5,6 @@ weight: 10
 date: 2019-08-18
 description: 自社にとって最適なデプロイを突き詰める
 type: "article"
-keywords:
-  - "word1"
-  - "word2"
-  - "word3"
 eyecatch: "images/eyecatch/deploy.png"
 ---
 

@@ -7,10 +7,6 @@ authors: [
 ["Keiichi Hashimoto","images/author/k1hash.png"],
 ]
 type : "article"
-keywords:
-- "word1"
-- "word2"
-- "word3"
 tags: ["general"]
 eyecatch: "images/eyecatch/about_updated.png"
 ---

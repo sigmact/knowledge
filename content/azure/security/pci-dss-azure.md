@@ -8,10 +8,6 @@ weight: 10
 date: 2019-08-18
 description: PCI DSS要件をAzure PaaS上で実現した実例をもとに
 type : "article"
-keywords:
-  - "word1"
-  - "word2"
-  - "word3"
 tags: ["Azure", "セキュリティ"]
 eyecatch: "images/eyecatch/pcidss.png"
 ---

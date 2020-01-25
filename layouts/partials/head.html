@@ -2,7 +2,6 @@
   <meta charset="utf-8">
   <title>{{ .Title }}</title>
   <meta name="description" content="{{ .Description }}">
-  <meta name="keywords" content="{{ delimit .Keywords ", " }}">
   <!-- ogp -->
   {{ partial "ogp.html" . }}
 
@@ -26,10 +25,10 @@
   {{ $style := resources.Get "css/scss/style.scss" | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 
-  {{ "<!-- jquiry -->" | safeHTML }}
+  {{ "<!-- jquery -->" | safeHTML }}
   <script src="{{ .Site.BaseURL }}plugins/jquery/jquery-1.12.4.js"></script>
 
-  {{ "<!-- jquary ui -->" | safeHTML }}
+  {{ "<!-- jquery ui -->" | safeHTML }}
   <script src="{{ .Site.BaseURL }}plugins/jquery/jquery-ui.js"></script>
 
   {{ "<!--Favicon-->" | safeHTML }}
