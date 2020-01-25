@@ -13,7 +13,7 @@ keywords:
   - "word2"
   - "word3"
 tags: ["Azure", "セキュリティ"]
-eyecatch: "images/pcidss.png"
+eyecatch: "images/eyecatch/pcidss.png"
 ---
 
 ## ベストプラクティスを突き詰め続ける

@@ -9,7 +9,7 @@ keywords:
   - "word1"
   - "word2"
   - "word3"
-eyecatch: "images/deploy.png"
+eyecatch: "images/eyecatch/deploy.png"
 ---
 
 ## はじめに

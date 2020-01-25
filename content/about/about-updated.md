@@ -12,7 +12,7 @@ keywords:
 - "word2"
 - "word3"
 tags: ["general"]
-eyecatch: "images/about_updated.png"
+eyecatch: "images/eyecatch/about_updated.png"
 ---
 
 ## はじめに

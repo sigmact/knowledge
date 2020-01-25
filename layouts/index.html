@@ -29,9 +29,8 @@
                 <p class="date text-right">{{ .PublishDate.Format "2006/1/2" }}</p>
 
                 {{ if (isset .Params "eyecatch") }}
-                {{ $sectionRoot := .Dir}}
                 {{ $eyecatchImage := .Params.Eyecatch }}
-                <img class="topicTitleImages" src="{{ $sectionRoot }}{{ $eyecatchImage }}" alt="{{ .Params.title }}">
+                <img class="topicTitleImages" src="{{ $eyecatchImage }}" alt="{{ .Params.title }}">
                 {{ else }}
                 <img class="topicTitleImages" src="/images/eyecatch/default.png" alt="{{ .Params.title }}">
                 {{ end }}

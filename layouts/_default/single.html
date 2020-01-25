@@ -41,9 +41,8 @@
               <!-- アイキャッチ画像 -->
               <div class="mt-5">
                 {{ if (isset .Params "eyecatch") }}
-                {{ $sectionRoot := .Dir}}
                 {{ $eyecatchImage := .Params.Eyecatch }}
-                <img src="/{{ $sectionRoot }}{{ $eyecatchImage }}" alt="{{ .Params.title }}"/>
+                <img src="/{{ $eyecatchImage }}" alt="{{ .Params.title }}"/>
                 {{ else }}
                 <img class="topicTitleImages" src="/images/eyecatch/default.png" alt="{{ .Params.title }}">
                 {{ end }}

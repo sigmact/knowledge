@@ -13,7 +13,7 @@ keywords:
   - "word2"
   - "word3"
 tags: ["Azure", "セキュリティ"]
-eyecatch: "images/keyvault.png"
+eyecatch: "images/eyecatch/keyvault.png"
 ---
 
 ## はじめに
