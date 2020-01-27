@@ -1,21 +1,21 @@
 
   <!-- Twitter Card data -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@k1hash" />
+  <meta name="twitter:site" content="@k1hash">
   <!-- The Open Graph protocol data -->
-  <meta property="og:url" content="{{ $.Permalink }}"/>
-  <meta property="og:type" content="article"/>
-  <meta property="og:title" content="{{ .Title }}"/>
+  <meta property="og:url" content="{{ $.Permalink }}">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ .Title }}">
 
   {{ if (isset .Params "description") }}
-  <meta property="og:description" content="{{ .Description }}"/>
+  <meta property="og:description" content="{{ .Description }}">
   {{ else }}
-  <meta property="og:description" content="{{ .Site.Params.banner.description }}"/>
+  <meta property="og:description" content="{{ .Site.Params.banner.description }}">
   {{ end }}
 
   {{ if (isset .Params "eyecatch") }}
   {{ $eyecatchImage := .Params.Eyecatch }}
-  <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.eyecatch }}" />
+  <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.eyecatch }}">
   {{ else }}
-  <meta property="og:image" content="{{ .Site.BaseURL }}images/hero.jpg" />
+  <meta property="og:image" content="{{ .Site.BaseURL }}images/hero.jpg">
   {{ end }}

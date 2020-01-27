@@ -66,7 +66,7 @@ googleAnalytics = "UA-139325091-1"
     # banner
     [Languages.ja.params.banner]
       title = "SIGMA UPDATED"
-      description = "Azure、DevOps(開発、運用)、デザイン、マネジメント、文化等シグマコンサルティングで突き詰めている事の「更新情報」です。"
+      description = "このサイトでは、シグマコンサルティングで突き詰めている、Azure、DevOps(開発、運用)、デザイン、マネジメント、文化等の情報を「更新(UPDATE)」してお伝えします。"
       image = "images/hero.jpg"
       placeholder = ""
 
