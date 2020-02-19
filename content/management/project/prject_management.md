@@ -6,8 +6,8 @@ description: ""
 authors: [
 ["mukai"],
 ["kinoshita"],
-["omagari"]
-["hamamoto"]
+["omagari"],
+["hamamoto"],
 ["nishimura"]
 ]
 type : "article"
