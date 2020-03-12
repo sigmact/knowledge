@@ -10,14 +10,14 @@ authors: [
 ]
 type : "article"
 tags: ["インタービュー"]
-eyecatch: "images/eyecatch/gatebox.webp"
+eyecatch: "images/eyecatch/gatebox.jpg"
 ---
 
 好きなキャラクターが自分の部屋に現れて、いっしょに暮らす。Gatebox はそんな「キャラクター召喚装置」です。  
 Gatebox では、スマートフォンのアプリケーションと同じように、キャラクターなどのアプリケーションをストアで購入したり、自分で開発してストアで公開したりできるようになっています。そのためのプラットフォームの開発を、われわれシグマコンサルティングが担当しました。
 開発にあたってどう考え、少数精鋭で実装したのか。Gatebox 株式会社 取締役 CSAO (Chief Service Architecture Officer) の久森達郎氏と、シグマコンサルティングの CTO の冨田順、CRO / リードエンジニアの鈴木孝明、アーキテクトの阿武野悠香が振り返りました。
 
-{{< figure src="../images/member.jpg" title="(左から)シグマコンサルティングの CTO の冨田順、Gatebox 株式会社 取締役 CSAO (Chief Service Architecture Officer) の久森達郎氏と、、シグマコンサルティングの CRO / リードエンジニアの鈴木孝明、アーキテクトの阿武野悠香" width="400" >}}
+{{< figure src="../images/member.jpg" title="(左から)シグマコンサルティングの CTO の冨田順、Gatebox 株式会社 取締役 CSAO (Chief Service Architecture Officer) の久森達郎氏と、シグマコンサルティングの CRO / リードエンジニアの鈴木孝明、アーキテクトの阿武野悠香" width="400" >}}
 
 ## プラットフォーム構想に参画
 
