@@ -92,10 +92,120 @@ Devops には正解がないのでそれぞれの組織、プロジェクト、�
 インフラは専任にお任せというのは一昔前の話で、非機能要件もコントロールできてこそ、強いクラウドネイティブエンジニアでは？
 という意見もあり、楽はしたいものの、専任を立てず自分でコントロールする方が望んでいる人が多く、現状は、経済的効果でデプロイと運用監視の選任は立てないこととなった。(専任が必要になるラインは近いかもしれないとは考えておく。)
 
-## (今のベストプラクティス)AzureDevOps でまとめる
+## Azure DevOps
+### はじめに
+DevOps は、ツールでは、ありません。
 
-一番イケてると思われるやり方を公開し、公開したコンテンツをアップデートしていくことによって維持する。
+DevOps とは、顧客へ継続的に価値を提供するために人、プロセス、プロダクトといったものをまとめ上げる事を指します。
+いわば一種の思考方法と捉えることが出来ます。
 
+Azure DevOps は、その思考を助けるための補助ツールとしての役割でしかありません。
+そのため、Azure DevOps を使用している = DevOps が出来ている、DevOps をしているというような考えは、完全な誤りです。
+その点を頭の片隅に置いておくことが重要です。
+
+### 本章について
+本章は、主に Azure DevOps の一つの機能である Azure Pipelines について解説を行います。
+
+本章に置ける主たる目的は、Azure Pipelines を用いた CICD パイプラインの構築を学習することと定めます。
+
+はじめに C#、ASP.NET Core を用いてアプリケーションの自動ビルドの方法について解説します。
+
+その次に、アプリケーションを Azure Web App、Function App へリリースする方法について解説を行います。
+
+最後に、承認フローなど実際にシステム開発、運用で用いるような周辺機能についての解説を行います。
+
+### 用語解説
+本題の前にこの後に登場する用語、関連する用語の解説を行います。
+#### Continuous Integration (CI)
+CI は、開発者がコードを中央のリポジトリにマージし、その後に自動ビルド、自動テストを行うという手法です。
+日本語では、継続的インテグレーションを訳されます。
+
+この手法の主たる目的は、継続的なビルド、テストによりソースコードに潜むバグを早期に発見、対処することです。
+#### Continuous Delivery (CD)
+Continuous Delivery は、CI を拡張し、ビルド、テストしたソースコードを検証環境や本番環境にデプロイする流れまでを組み込んだ手法です。
+日本語では、継続的デリバリーと訳されます。
+
+この手法では、テスト完了後にソフトウェアをリリースする直前の状態の状態まで持っていき、あとは、ボタン一つでリリースが完了するという状態までを自動化します。。
+
+#### Continuous Deployment (CD)
+Continuous Deployment は、Continuous Delivery をより拡張した手法であり、本番リリースまでをすべて自動化する手法です。
+日本語では、継続的デプロイ、継続的デプロイメントと訳されます。
+
+この手法では、リポジトリにマージされたコードが常に本番環境で動く事を目的とするため、より細かい粒度でのソースの変更、網羅性の高い幅広い自動テストを用意する必要があります。
+
+### パイプラインを構築する
+ここから、Azure Pipelines を用いたパイプラインの構築方法を記述していきます。
+
+Azure DevOps は、当初ビルドとリリースがそれぞれビルドパイプライン、リリースパイプラインと機能的に分離されていました。
+ですが現在は、一つのパイプラインで全てを賄う Multi Stage Pipelines という機能が登場し、一つに統合される流れがあります。
+そのため本章でも Multi Stage Pipelines を用いて解説を行います。
+
+また各パイプラインの構築は、主に YAML による記述によって構築を行います。
+一部の例外(Azure Reposや、GitHub、Bitbukect Cloud を除く外部の Gitリポジトリ、Subversionなど) を除いて全て YAML が用いられます。。
+YAML で記述するメリットとしては、定義のテンプレート化や、再利用性の向上、バージョン管理などが挙げられます。
+
+#### アプリケーションをビルドする
+はじめにアプリケーションのビルド設定です。
+今回は、以下のアプリケーションをビルドします。
+
+* 言語 : C#
+* アプリケーションの種類 : ASP.NET Core 3.1
+
+```YAML
+## 本番用
+
+# このブランチにコミットされたら起動する
+trigger:
+- master
+
+# パイプラインで使う変数
+variables:
+  # Function app name
+  functionAppName: 'Production-SendPointExpireMail'
+  # Agent VM image name
+  vmImageName: 'windows-2019'
+  # Working Directory
+  workingDirectory: '$(System.DefaultWorkingDirectory)/SendPointExpireMail/SendPointExpireMail'
+  # ビルド設定(Release or Debug)
+  buildConfiguration: 'Release'
+  # ビルドするプロジェクト
+  projects: '**/*.csproj'
+  # Environment
+  environment: 'Production'
+  # 成果物の名前
+  artifactName: 'SendPointExpireMail.zip'  
+
+# パイプラインの実処理
+stages:
+- stage: Build
+  jobs:
+  - template: build-pipelines.yml
+    parameters:
+      imageName: $(vmImageName)
+      buildConfiguration: $(buildConfiguration)
+      projects: $(projects)
+
+- stage: Release
+  dependsOn:
+  - Build
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master')) # Build ステージが成功した場合だけ実行する
+  jobs:
+    - template: release-pipelines.yml
+      parameters:
+        imageName: $(vmImageName)
+        azureSubscription: $(azureSubscription)
+        functionAppsName: $(functionAppName)
+        environment: $(environment)
+        artifactName: $(artifactName)
+```
+
+#### アプリケーションをリリースする
+
+#### パイプラインに承認フローを取り入れる
+
+#### より再利用性の高い YAML の記述方法
+
+<!--
 ### AzureDevOps の課題
 
 - リポジトリが１つの時に１コミットで全部が回っちゃって AzureDevOps がつまっちゃう。
@@ -106,13 +216,6 @@ Devops には正解がないのでそれぞれの組織、プロジェクト、�
 - GitTag とか使う
 - Dev 環境は面倒
 
-### AzureDevOps の使い方
-
-##### OverView
-
-- Summary
-- Dashboards
-- Wiki
 
 ##### Boards
 
@@ -148,7 +251,7 @@ Devops には正解がないのでそれぞれの組織、プロジェクト、�
 - Runs
 
 #### Artifacts
-
+-->
 <!--
 ### 必要なことや TODO(残課題)
 
