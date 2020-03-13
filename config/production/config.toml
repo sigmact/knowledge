@@ -60,6 +60,12 @@ googleAnalytics = "UA-139325091-1"
           url = "management"
           weight = 4
 
+           [[Languages.ja.menu.main]]
+          parent = "カテゴリ"
+          name = "インタビュー"
+          url = "interview"
+          weight = 5
+
 
 
 
