@@ -26,6 +26,7 @@ googleAnalytics = "UA-139325091-1"
   #logo = "シグマ知識庫(UPDATED!)"
   logo = "SIGMA UPDATED"
   copyright = "2020 Sigma Consulting Co.,Ltd. All rights reserved."
+  blobURL = "http://localhost:1313/"
 
     # navigation
     [Languages.ja.menu]

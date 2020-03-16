@@ -25,6 +25,7 @@ googleAnalytics = "UA-139325091-1"
   home = "企業サイトへ"
   logo = "SIGMA UPDATED"
   copyright = "Sigma Consulting Co.,Ltd. All rights reserved."
+  blobURL = "https://sigmactwwwupdated.z11.web.core.windows.net/"
 
     # navigation
     [Languages.ja.menu]
