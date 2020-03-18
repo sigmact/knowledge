@@ -10,6 +10,9 @@
   <!-- ogp -->
   {{ partial "ogp.html" . }}
 
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+
   {{ hugo.Generator }}
 
   {{ "<!-- mobile responsive meta -->" | safeHTML }}

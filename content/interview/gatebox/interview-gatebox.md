@@ -9,7 +9,7 @@ authors: [
 ["Sunao Tomita","images/author/sunaotomita.jpg"]
 ]
 type : "article"
-tags: ["インタービュー"]
+tags: ["インタビュー"]
 eyecatch: "images/eyecatch/gatebox.jpg"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "シグマのコンサルティング"
 weight: 11
-date: 2020-02-01
+date: 2021-02-01
 description: ""
 authors: [
 ["mukai"],
