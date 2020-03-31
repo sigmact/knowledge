@@ -5,7 +5,7 @@ authors: [
     ["Tsubasa Yoshino","images/author/yoshinotsubasa.jpg"]
 ]
 weight: 10
-date: 2020-01-18
+date: 2020-04-10
 description: "弊社では少数精鋭によるパブリッククラウドを利用した SI の提供を前提とした DevOps に取り組んでいます。取り組みの中では弊社にとってベストプラクティスに到達している要素もあれば、継続的に検証と改善を繰り返している要素もあり、まだまだ未成熟な状態です。"
 type: "article"
 draft: true
@@ -144,66 +144,237 @@ Azure DevOps は、当初ビルドとリリースがそれぞれビルドパイ�
 一部の例外(Azure Reposや、GitHub、Bitbukect Cloud を除く外部の Gitリポジトリ、Subversionなど) を除いて全て YAML が用いられます。。
 YAML で記述するメリットとしては、定義のテンプレート化や、再利用性の向上、バージョン管理などが挙げられます。
 
+### 注意点
+YAML を使用したパイプラインの構築は、
+* Azure Rep
+* GitHub
+* GitHub enterprise
+
 #### アプリケーションをビルドする
 はじめにアプリケーションのビルド設定です。
 今回は、以下のアプリケーションをビルドします。
 
 * 言語 : C#
-* アプリケーションの種類 : ASP.NET Core 3.1
+* アプリケーションの種類 : ASP.NET Core
+* ランタイムバージョン : .NET Core 3.1
+
+以下の yaml 定義がアプリケーションビルド用の一番シンプルな定義です。
+steps の一段下にある項目がそれぞれビルド時に実行される処理の一塊です。
+最初の task:DotNetCoreCLI@2 は、アプリケーションのビルドを行います。
+次の task:DotNetCoreCLI@2 は、ビルドして出来た成果物を zip にしてアップロードできる形に変換します。
+最後の publish は、先ほど生成した成果物を Pipeline Artifact にアップロードします
+今回は、webApp という名前で成果物をアップロードします
 
 ```YAML
-## 本番用
-
-# このブランチにコミットされたら起動する
 trigger:
-- master
+  branches:
+    include:
+      - '*'
 
-# パイプラインで使う変数
 variables:
-  # Function app name
-  functionAppName: 'Production-SendPointExpireMail'
-  # Agent VM image name
-  vmImageName: 'windows-2019'
-  # Working Directory
-  workingDirectory: '$(System.DefaultWorkingDirectory)/SendPointExpireMail/SendPointExpireMail'
-  # ビルド設定(Release or Debug)
+  # ビルド設定
+  # e.g.) Release, Debug
   buildConfiguration: 'Release'
-  # ビルドするプロジェクト
-  projects: '**/*.csproj'
-  # Environment
-  environment: 'Production'
-  # 成果物の名前
-  artifactName: 'SendPointExpireMail.zip'  
-
-# パイプラインの実処理
+  # ターゲットプロジェクト名
+  project: '**/*.csproj'
+  # ビルドに使用するマシンのイメージ
+  # e.g) windows-latest, ubuntu-latest
+  vmImage: 'windows-latest'
+  
+# アプリケーションをビルドする
 stages:
 - stage: Build
   jobs:
-  - template: build-pipelines.yml
-    parameters:
-      imageName: $(vmImageName)
-      buildConfiguration: $(buildConfiguration)
-      projects: $(projects)
+  - job: Build
+    pool:
+      vmImage: $(vmImage)
+    steps:
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'build'
+        projects: $(project)
+    - task: DotNetCoreCLI@2
+      displayName: 'Publish'
+      inputs:
+        command: 'publish'
+        publishWebProjects: true
+        projects: $(project)
+        arguments: '--configuration $(buildConfiguration) --output $(System.DefaultWorkingDirectory)/publish'
+        zipAfterPublish: true
+    - publish: 
+      displayName: 'Publish artifact'
+      artifact: webApp
+```
+
+#### アプリケーションをリリースする
+次にアプリケーションのリリース設定です。
+今回は、Azure Web App にリリースする方法を説明します。
+先ほどのテンプレートにリリース用の設定を追加します。
+リリースまで記述したテンプレートは、以下のようになります。
+
+``` YAML
+# ASP.NET Core
+# Build and test ASP.NET Core projects targeting .NET Core.
+# Add steps that run tests, create a NuGet package, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+  branches:
+    include:
+      - '*'
+
+variables:
+  buildConfiguration: 'Release'
+  project: '**/*.csproj'
+  vmImage: 'windows-latest'
+  environment: 'Production'
+  azureSubscription: ''
+  appName: ''
+  artifactName: '*.zip'
+
+stages:
+- stage: Build
+  jobs:
+  - job: Build
+    pool:
+      vmImage: $(vmImage)
+    steps:
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'build'
+        projects: $(project)
+    - task: DotNetCoreCLI@2
+      displayName: 'Publish'
+      inputs:
+        command: 'publish'
+        publishWebProjects: true
+        projects: $(project)
+        arguments: '--configuration $(buildConfiguration) --output $(System.DefaultWorkingDirectory)/publish'
+        zipAfterPublish: true
+    - publish: 
+      displayName: 'Publish artifact'
+      artifact: webApp
 
 - stage: Release
   dependsOn:
   - Build
-  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master')) # Build ステージが成功した場合だけ実行する
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
   jobs:
-    - template: release-pipelines.yml
-      parameters:
-        imageName: $(vmImageName)
-        azureSubscription: $(azureSubscription)
-        functionAppsName: $(functionAppName)
-        environment: $(environment)
-        artifactName: $(artifactName)
+  - deployment: WebApp
+    displayName: 'Release'
+    pool:
+      vmImage: $(vmImage)
+    environment: $(production)
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureWebApp@1
+            displayName: 'Deploy to Azure Web App'
+            inputs:
+              azureSubscription: $(azureSubscription)
+              appName: $(appName)
+              package: '$(Pipeline.Workspace)/**/$(artifactName)'
 ```
 
-#### アプリケーションをリリースする
+stages の下に、新たに stage の項目を追加しました。
+ビルド時よりも少し複雑な構成になっているのでそれぞれの項目を見ていきます。
+
+``` YAML
+  dependsOn:
+  - Build
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+```
+
+dependsOn は、テンプレート内の stage を指定して設定する項目です。
+この項目に指定された stage が終了したら実行するといった形を設定できます。
+細かい動作は、condition に指定します。
+今回は、Build の stage が成功状態で完了し、且つトリガーされたブランチが master の場合に実行するという設定になっています。
+
+``` YAML
+environment: $(production)
+```
+
+environment は、Azure Pipelines の Environments で作成したリソースを指定します。(後述)
+Environments は、デプロイ履歴や承認などリリースを管理するための機能です。
+environment は、指定しない場合、自動で作成され Environments に追加されます。
+
+``` YAML
+strategy:
+  runOnce:
+```
+
+strategy は、ロールアウト方法を指定する項目です。
+* runOnce
+* rolling
+* canary
+
+の 3パターンを定義できます。
+
+runOnce は、シンプルなデプロイ処理です。
+デプロイ前処理、デプロイ、デプロイ後処理、成功・失敗後処理がそれぞれ一度実行される方法です。
+Web App を使う場合は、基本的にこれを指定します。
+
+rolling は、複数のインスタンスに順次デプロイするために使用します。
+並列に複数のインスタンスにデプロイし、問題があった場合は、切り戻しを行うといった仕組みが構築できます。
+現在は、仮想マシンのみサポートしています。
+
+canary は、カナリアリリース用の設定です。
+最初に 10% のインスタンスにリリース、次に 20% にリリース、それが成功したら全てに展開といった方法を取ることが出来ます。
+主に k8s を使う場合に使用します。
+
+``` YAML
+deploy:
+  steps:
+  - task: AzureWebApp@1
+    displayName: 'Deploy to Azure Web App'
+    inputs:
+      azureSubscription: $(azureSubscription)
+      appName: $(appName)
+      package: '$(Pipeline.Workspace)/**/$(artifactName)'
+```
+
+deploy 以降が、デプロイ用の実際のタスクになります。
+ここでは、Azure Web App にデプロイするためのシンプルなタスクを使用します。
+このタスクは、サブスクリプションId、アプリケーション名、デプロイするパッケージ(先ほど作成したzip)を指定するとデプロイが実行されます。
+これにより zip デプロイが実行されます。
+
 
 #### パイプラインに承認フローを取り入れる
+先ほどのリリース処理は、ビルドが成功するとそのまま Web App にデプロイされます。
+リリース時には、リリース承認を設定することが出来ます。
+リリース承認は、先述の Environments 機能を使用します。
 
-#### より再利用性の高い YAML の記述方法
+Web App 用の Environment は、以下の画像のように Resource を None に設定して作成するか、Environment を指定せずに Pipeline でリリース処理を実行すると作成されます。
+{{< figure src="../images/Environment-01.png" title="Environment 作成例" width="300" >}}
+
+Environment 作成後、画面右上のメニューから Approvals and checks を選択します。
+{{< figure src="../images/Environment-02.png" title="Approval トップ" width="300" >}}
+
+Approvals and checks 画面中央の Approvals を選択すると誰に承認刺せるかを選択するメニューが開きます。
+{{< figure src="../images/Environment-03.png" title="承認設定メニュー" width="300" >}}
+
+設定画面の Add users and groups へ、承認するユーザを指定すると、リリース時に指定したユーザに承認依頼が送られます。
+
+承認は、Pipelines の画面や、Slack などのツールから実行できます。
+承認待ち状態になると、Pipeline 画面には、Review ボタンが表示されます。
+{{< figure src="../images/Environment-04.png" title="承認待ち状態の Pipeline 画面" width="300" >}}
+
+承認メニューでは、Approve と Reject のボタンがあるので、適宜コメントを付けて処理しましょう
+
+#### ステージングスロットを活用する
+先ほどは、承認されたら本番にデプロイされるという流れでしたが、その場合本番環境にて、アプリケーションの再起動が実行されるためアプリケーションが起動するまでの間にダウンタイムが発生します。
+そこでステージングスロットを活用し、ステージングスロットにデプロイ → 承認されたらスワップして本番に展開
+という流れを設定する方法を説明します。
+
+#### より再利用性の高い YAML を書く
+いままで一つの YAML ファイルで記述してきましたが、この場合似たような設定を何度も書いたりと再利用性が高くありません。
+そこで再利用性向上のために、一部の記述をまとめて外部ファイル化し、ファイル呼び出しにより処理を追加する方法を説明します。
+
+#### YAML のテストをローカルから実行する
+YAML を書いてパイプラインを作る場合、毎回コミット → テスト を行うとトライ&エラーで不要なコミット履歴が積み重なったりといったことが発生します。
+Azure Pipelines には、それを見越して REST API 経由で YAML のテストを行う機能が備わっています。
+ここでは、その API の使用方法について説明します。
 
 <!--
 ### AzureDevOps の課題
