@@ -1,14 +1,15 @@
 ---
 title: "日々の運用監視からアプリケーションの状態を把握する重要性について"
-weight: 10
-date: 2020-03-31
-description: "アプリケーションを作成した後の運用監視は欠かせませんが、重要性の認識や具体的な手法についての手法についてご紹介します。"
+weight: 100
+date: 2021-04-03
+description: "アプリケーションを作成した後の運用監視は欠かせませんが、運用監視する際のポイントをご紹介します。"
 authors: [
-["Kazunori Hamamoto","images/author/khamamoto.jpg"],
+  ["Kazunori Hamamoto","images/author/khamamoto.jpg"],
 ]
 type : "article"
+tags: ["運用監視"]
+eyecatch: "images/eyecatch/monitoring.jpg"
 draft: true
-eyecatch: "images/eyecatch/monitoring.png"
 ---
 
 # はじめに
@@ -23,7 +24,7 @@ eyecatch: "images/eyecatch/monitoring.png"
 
 弊社で実際にあったECサイトでの障害を例として運用監視のライフサイクルをご紹介したいと思います。以下で記述するサイクルを実施する事により**アプリケーションを成長**させることができます。
 
-![運用監視のライフサイクル](../images/images01.png)
+![運用監視のライフサイクル](../images/monitoring01.png)
 
 1. 障害が発生する
    - システムに何かしらの異常が発生します
@@ -88,6 +89,11 @@ eyecatch: "images/eyecatch/monitoring.png"
   - How：どうやって発生したのか。ユーザー操作が絡むような場合はURLなどを記載する
 
 # 結果
+
+システムの運用監視ライフサイクルを日々、循環させていくと様々な結果が出ました。ライフサイクルを進めていくと下図のような状態となり、様々なメリットが発生します。また、少なからず今後の課題も発生しました。
+
+![運用監視のライフサイクルを進めた後の流れ](../images/monitoring02.png)
+
 ## システムと組織の成長に繋がった
 
 当初はシステムの障害に自分たちで気が付くこともできず、顧客からのインシデント発生から認知していた段階から、システム運用者自らが発見し、自発的に修正していく事が可能になってきました。
