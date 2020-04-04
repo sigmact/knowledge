@@ -17,7 +17,7 @@ eyecatch: "images/eyecatch/sigma-brewing.png"
 厳密にいうと、酒造免許を持っていないので、ビールを社外のブルワリーさんで作ってもらっています。自分たちで消費する、福利厚生のためにブルワリーに製造を依頼しています。
 酒販免許自体は持っているので、販売は可能ですが、現時点では検討段階というところです。
 
-## ビールを作り始めるまで
+## 第一回ビール作り(ロトブルワリー)
 
 **▼スライドをタップすると進みます**
 
@@ -26,7 +26,7 @@ eyecatch: "images/eyecatch/sigma-brewing.png"
 <script async src="https:&#x2F;&#x2F;sdk.canva.com&#x2F;v1&#x2F;embed.js"></script>
 Kazuki Terukinaさんによる<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAD2SXxJ_08&#x2F;view?utm_content=DAD2SXxJ_08&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Brewing Beer</a>{{< /rawhtml >}}
 
-## 第二回
+## 第二回ビール作り(フジヤマハンターズビール)
 
 **▼スライドをタップすると進みます**
 
