@@ -306,18 +306,18 @@ steps は、先述の通りです。
 リリース承認は、先述の Environments 機能を使用します。
 
 Web App 用の Environment は、以下の画像のように Resource を None に設定して作成するか、Environment に適当な値を指定してリリース処理を実行すると作成されます。
-{{< figure src="../images/environment01.gif" title="Environment 作成" width="300" >}}
+{{< figure src="/azure/devops/images/environment01.gif" title="Environment 作成" width="300" >}}
 
 Environment 作成後、画面右上のメニューから Approvals and checks を選択します。
 Approvals and checks の画面では、承認者を誰にするかを設定することが出来ます。
 この際、承認者を複数にする事も可能です。
 
-{{< figure src="../images/environment02.gif" title="承認設定" width="300" >}}
+{{< figure src="/azure/devops/images/environment02.gif" title="承認設定" width="300" >}}
 
 承認は、Pipelines の画面や、Slack などのツールから実行できます。
 承認待ち状態になると、Pipeline 画面には、Review ボタンが表示されます。
 承認メニューでは、Approve と Reject のボタンがあるので、適宜コメントを付けて処理しましょう
-{{< figure src="../images/environment03.gif" title="承認待ち状態の Pipeline 画面" width="300" >}}
+{{< figure src="/azure/devops/images/environment03.gif" title="承認待ち状態の Pipeline 画面" width="300" >}}
 
 ### 最後に
 本章では、ASP.NET Core MVC のアプリケーションをビルド、Azure Web App へリリースする一連の流れを YAML で構築する方法を説明しました。
