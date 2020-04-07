@@ -33,7 +33,7 @@ Azure DevOps は、その思考を助けるための補助ツールとしての�
 
 はじめに C#、ASP.NET Core を用いてアプリケーションの自動ビルドの方法について解説します。
 
-その次に、アプリケーションを Azure Web App へリリースする方法について解説を行います。
+その次に、アプリケーションを Azure Web Apps へリリースする方法について解説を行います。
 
 最後に、承認フローなど実際にシステム開発、運用で用いそうな周辺機能についての解説を行います。
 
@@ -173,7 +173,7 @@ stages の中には、少なくとも一つの stage が含まれます。
 
 ### アプリケーションをリリースする
 次にアプリケーションのリリース設定です。
-今回は、Azure Web App にリリースする方法を説明します。
+今回は、Azure Web Apps にリリースする方法を説明します。
 先ほどのテンプレートにリリース用の設定を追加します。
 リリースまで記述したテンプレートは、以下のようになります。
 
@@ -231,7 +231,7 @@ stages:
         deploy:
           steps:
           - task: AzureWebApp@1
-            displayName: 'Deploy to Azure Web App'
+            displayName: 'Deploy to Azure Web Apps'
             inputs:
               azureSubscription: $(azureSubscription)
               appName: $(appName)
@@ -286,7 +286,7 @@ canary は、カナリアリリース用の設定です。
 ``` YAML
 steps:
 - task: AzureWebApp@1
-  displayName: 'Deploy to Azure Web App'
+  displayName: 'Deploy to Azure Web Apps'
   inputs:
     azureSubscription: $(azureSubscription)
     appName: $(appName)
@@ -295,7 +295,7 @@ steps:
 
 deploy には、steps が含まれます。
 steps は、先述の通りです。
-ここでは、Azure Web App にデプロイするためのタスクを設定しています。
+ここでは、Azure Web Apps にデプロイするためのタスクを設定しています。
 このタスクは、サブスクリプションId、アプリケーション名、デプロイするパッケージ(先ほど作成したzip)を指定するとデプロイが実行されます。
 これにより zip デプロイが実行されます。
 
@@ -320,7 +320,7 @@ Approvals and checks の画面では、承認者を誰にするかを設定す�
 {{< figure src="/azure/devops/images/environment03.gif" title="承認待ち状態の Pipeline 画面" width="300" >}}
 
 ### 最後に
-本章では、ASP.NET Core MVC のアプリケーションをビルド、Azure Web App へリリースする一連の流れを YAML で構築する方法を説明しました。
+本章では、ASP.NET Core MVC のアプリケーションをビルド、Azure Web Apps へリリースする一連の流れを YAML で構築する方法を説明しました。
 今回は、ミニマムな構成にしたため扱っていない処理がいくつかあります。
 そのため実際に業務で使用する際は、一例として以下のような処理を追加することをお勧めします。
 
