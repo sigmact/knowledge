@@ -1,7 +1,7 @@
 ---
 title: "日々の運用監視からアプリケーションの状態を把握する重要性について"
-weight: 100
-date: 2020-04-03
+weight: 10
+date: 2020-04-07
 description: "アプリケーションを作成した後の運用監視は欠かせませんが、運用監視する際のポイントをご紹介します。"
 authors: [
   ["Kazunori Hamamoto","images/author/khamamoto.jpg"],
@@ -9,7 +9,6 @@ authors: [
 type : "article"
 tags: ["運用監視"]
 eyecatch: "images/eyecatch/monitoring.jpg"
-draft: true
 ---
 
 ## はじめに
