@@ -19,7 +19,7 @@ eyecatch: "images/eyecatch/days.png"
 
 ## 作った曲　Days feat.Orca
 
-聴いてください、この素晴らしい歌声。testtest
+聴いてください、この素晴らしい歌声。
 
 ### YouTube
 
