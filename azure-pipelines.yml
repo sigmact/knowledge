@@ -35,6 +35,6 @@ steps:
   inputs:
     # ServiceConnectorにて設定
     azureSubscription: "シグマコンサルティング(eee9046c-f7c0-4e03-98e0-3660ae9224fc)"
-    scriptType: "bash"
+    scriptType: "ps"
     scriptLocation: "inlineScript"
     inlineScript: 'az storage blob upload-batch -d test -s $(Build.SourcesDirectory)\public --account-name sigmactwwwupdated --account-key $(accountkey)'
