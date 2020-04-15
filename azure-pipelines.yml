@@ -22,14 +22,6 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
-# - task: AzureFileCopy@4
-#   inputs:
-#     SourcePath: '$(Build.SourcesDirectory)\public\'
-#     azureSubscription: 'シグマコンサルティング(eee9046c-f7c0-4e03-98e0-3660ae9224fc)'
-#     Destination: 'AzureBlob'
-#     storage: 'sigmactwwwupdated'
-#     ContainerName: 'test'
-
 - task: AzureCLI@2
   displayName: 'Upload Prod'
   inputs:
@@ -37,4 +29,4 @@ steps:
     azureSubscription: "シグマコンサルティング(eee9046c-f7c0-4e03-98e0-3660ae9224fc)"
     scriptType: "ps"
     scriptLocation: "inlineScript"
-    inlineScript: 'az storage blob upload-batch -d test -s $(Build.SourcesDirectory)\public --account-name sigmactwwwupdated --account-key $(accountkey)'
+    inlineScript: 'az storage blob upload-batch -d $web -s $(Build.SourcesDirectory)\public --account-name sigmactwwwupdated --account-key $(accountkey)'
