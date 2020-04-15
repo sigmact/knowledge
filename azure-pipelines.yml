@@ -21,3 +21,11 @@ steps:
     PathtoPublish: '$(Build.SourcesDirectory)\public'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+
+- task: AzureFileCopy@4
+  inputs:
+    SourcePath: '$(Build.SourcesDirectory)\public'
+    azureSubscription: 'シグマコンサルティング(eee9046c-f7c0-4e03-98e0-3660ae9224fc)'
+    Destination: 'AzureBlob'
+    storage: 'sigmactwwwupdated'
+    ContainerName: '$web'
