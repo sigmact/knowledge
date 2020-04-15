@@ -15,3 +15,9 @@ steps:
     source: '$(Build.SourcesDirectory)'
     destination: '$(Build.SourcesDirectory)\public'
     baseURL: 'https://updated.sigmact.com'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.SourcesDirectory)\public'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
