@@ -23,10 +23,25 @@ steps:
     publishLocation: 'Container'
 
 - task: AzureCLI@2
+  displayName: 'Delete Prod'
+  inputs:
+    azureSubscription: "シグマコンサルティング(eee9046c-f7c0-4e03-98e0-3660ae9224fc)"
+    scriptType: "ps"
+    scriptLocation: "inlineScript"
+    inlineScript: 'az storage blob delete-batch -s $(container) --pattern * --account-name $(storagename) --account-key $(accountkey)'
+
+- task: AzureCLI@2
   displayName: 'Upload Prod'
   inputs:
-    # ServiceConnectorにて設定
     azureSubscription: "シグマコンサルティング(eee9046c-f7c0-4e03-98e0-3660ae9224fc)"
     scriptType: "ps"
     scriptLocation: "inlineScript"
     inlineScript: 'az storage blob upload-batch -d $(container) -s $(Build.SourcesDirectory)\public --account-name $(storagename) --account-key $(accountkey)'
+
+- task: AzureCLI@2
+  displayName: 'Purge CDN'
+  inputs:
+    azureSubscription: "シグマコンサルティング(eee9046c-f7c0-4e03-98e0-3660ae9224fc)"
+    scriptType: "ps"
+    scriptLocation: "inlineScript"
+    inlineScript: 'az cdn endpoint purge -g sigmact-www -n sigmaupdated --profile-name sigma-updated --content-paths "/music/days/" '
