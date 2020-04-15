@@ -37,8 +37,4 @@ steps:
     azureSubscription: "シグマコンサルティング(eee9046c-f7c0-4e03-98e0-3660ae9224fc)"
     scriptType: "bash"
     scriptLocation: "inlineScript"
-    inlineScript: 'az storage blob upload-batch
-      -d \$web
-      -s $(Build.SourcesDirectory)\public
-      --account-name sigmactwwwupdated
-      --account-key eyrNJLPkRQzcNmSyyFZntcH6SSJvUXYy8+eDWnL58fsoNROz/+4TCTsizrJ1CRW2torwwLGAa6FSndaEKDMJNQ=='
+    inlineScript: 'az storage blob upload-batch -d /$web -s /$(Build.SourcesDirectory)\public --account-name sigmactwwwupdated --account-key eyrNJLPkRQzcNmSyyFZntcH6SSJvUXYy8+eDWnL58fsoNROz/+4TCTsizrJ1CRW2torwwLGAa6FSndaEKDMJNQ=='
