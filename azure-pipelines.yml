@@ -28,4 +28,4 @@ steps:
     azureSubscription: 'シグマコンサルティング(eee9046c-f7c0-4e03-98e0-3660ae9224fc)'
     Destination: 'AzureBlob'
     storage: 'sigmactwwwupdated'
-    ContainerName: '$web'
+    ContainerName: 'test'
