@@ -25,7 +25,7 @@
           {{ range (where .Site.Pages "Type" "article") }}
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="topicTile bg-white shadow">
-              <a href="{{ .Permalink }}" class="d-block">
+              <a href="{{ .RelPermalink }}" class="d-block">
                 <p class="date text-right">{{ .PublishDate.Format "2006/1/2" }}</p>
 
                 {{ if (isset .Params "eyecatch") }}
