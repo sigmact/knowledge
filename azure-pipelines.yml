@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'ubuntu-16.04'
 
 steps:
 - task: HugoTask@1
@@ -37,4 +37,4 @@ steps:
     azureSubscription: "シグマコンサルティング(eee9046c-f7c0-4e03-98e0-3660ae9224fc)"
     scriptType: "bash"
     scriptLocation: "inlineScript"
-    inlineScript: 'az storage blob upload-batch -d \$web -s $(Build.SourcesDirectory)\public --account-name sigmactwwwupdated --account-key $(accountkey)'
+    inlineScript: 'az storage blob upload-batch -d test -s $(Build.SourcesDirectory)\public --account-name sigmactwwwupdated --account-key $(accountkey)'
