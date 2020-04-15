@@ -15,7 +15,7 @@
 
   {{ if (isset .Params "eyecatch") }}
   {{ $eyecatchImage := .Params.Eyecatch }}
-  <meta property="og:image" content="{{ .Site.Params.BlobURL }}{{ .Params.eyecatch }}">
+  <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.eyecatch }}">
   {{ else }}
   <meta property="og:image" content="{{ .Site.BaseURL }}images/hero.jpg">
   {{ end }}
