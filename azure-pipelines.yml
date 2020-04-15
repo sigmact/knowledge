@@ -44,4 +44,4 @@ steps:
     azureSubscription: "シグマコンサルティング(eee9046c-f7c0-4e03-98e0-3660ae9224fc)"
     scriptType: "ps"
     scriptLocation: "inlineScript"
-    inlineScript: 'az cdn endpoint purge -g sigmact-www -n sigmaupdated --profile-name sigma-updated --content-paths "/music/days/" '
+    inlineScript: 'az cdn endpoint purge -g sigmact-www -n sigmaupdated --profile-name sigma-updated --content-paths "/music/*" '
