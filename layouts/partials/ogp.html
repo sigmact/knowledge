@@ -17,5 +17,5 @@
   {{ $eyecatchImage := .Params.Eyecatch }}
   <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.eyecatch }}">
   {{ else }}
-  <meta property="og:image" content="/images/hero.jpg">
+  <meta property="og:image" content="{{ .Site.BaseURL }}/images/hero.jpg">
   {{ end }}
