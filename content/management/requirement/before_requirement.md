@@ -10,7 +10,7 @@ authors: [
 ]
 type : "article"
 tags: ["ビジネス", "マネジメント"]
-eyecatch: "images/eyecatch/before_requirement.png"
+eyecatch: "/images/eyecatch/before_requirement.png"
 ---
 
 ## はじめに

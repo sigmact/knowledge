@@ -10,7 +10,7 @@ authors: [
 ]
 type : "article"
 tags: ["インタビュー"]
-eyecatch: "images/eyecatch/gatebox.jpg"
+eyecatch: "/images/eyecatch/gatebox.jpg"
 ---
 
 好きなキャラクターが自分の部屋に現れて、いっしょに暮らす。Gatebox はそんな「キャラクター召喚装置」です。  

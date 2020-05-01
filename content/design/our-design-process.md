@@ -9,7 +9,7 @@ authors: [
 ]
 type : "article"
 tags: ["デザイン"]
-eyecatch: "images/eyecatch/our-design-process.jpg"
+eyecatch: "/images/eyecatch/our-design-process.jpg"
 ---
 
 ## はじめに
