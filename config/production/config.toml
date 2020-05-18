@@ -1,6 +1,7 @@
 DefaultContentLanguage = "ja"
 baseURL = "https://updated.sigmact.com/"
 theme = "dot-hugo-documentation-theme"
+enableRobotsTXT = true
 
 # HTMLを生成するディレクトリ
 publishDir = "public/production"
