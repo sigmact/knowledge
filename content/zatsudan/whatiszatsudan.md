@@ -1,7 +1,7 @@
 ---
 title: "【お誘い】雑談会議をやっています"
-weight: 10
-date: 2020-07-25
+weight: 11
+date: 2020-07-24
 description: "シグマコンサルティングでは何でも作ってみるのマインドの元、色々な物づくりを行っています。今回は、雑談会議という場が生まれるまでを紹介したいと思います。"
 authors: [
 ["Keiichi Hashimoto","images/author/k1hash.png"]
