@@ -21,7 +21,7 @@ eyecatch: "/images/eyecatch/zatsudan.jpg"
 
 一緒にお仕事をする仲間(シグマコンサルティング、Pnop、Cloudlive、コマーブル)で
 
-「雑談会議」という場を毎日平日17時から1時間程度設けています。
+「雑談会議」という場を毎日平日17時から1時間程度設けています。[詳しくはこちらに書いています。](/zatsudan/why/)
 
 ## Azure、C#とか技術中心。たまにそれ以外
 
@@ -75,7 +75,7 @@ https://1drv.ms/x/s!AnPJdc1518xtgbRgC3eNTL3jmz_mvQ?e=4gQ9z0
 
 <a href="https://www.pnop.co.jp" alt="株式会社Pnop" target="_blank"><img src="https://sigmactwww.blob.core.windows.net/conpass/pnop-darkorange.svg"/></a>
 
-<a href="https://www.cloudlive.jp" alt="クラウドライブ株式会社" target="_blank"><img src="https://sigmactwww.blob.core.windows.net/conpass/cloudlive.png"/></a>
+<a href="https://www.cloudlive.jp" alt="クラウドライブ株式会社" target="_blank"><img src="https://sigmactwww.blob.core.windows.net/conpass/cloudlive.png" width="400"/></a>
 
 <a href="https://www.commerble.com" alt="株式会社コマーブル" target="_blank"><img src="https://sigmactwww.blob.core.windows.net/conpass/logo01b.png"/></a>
 {{< /rawhtml >}}
