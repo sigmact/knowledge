@@ -44,4 +44,4 @@ steps:
     azureSubscription: "シグマコンサルティング(eee9046c-f7c0-4e03-98e0-3660ae9224fc)"
     scriptType: "ps"
     scriptLocation: "inlineScript"
-    inlineScript: 'az cdn endpoint purge -g sigmact-www -n sigmaupdated --profile-name sigma-updated --content-paths "/" "/about/about-updated/" "/azure/security/keyvault/" "/management/requirement/before_requirement/" "/azure/security/pci-dss-azure/" "/design/our-design-process/" "/interview/gatebox/interview-gatebox/" "/beer/sigma-brewing/" "/music/days2/" "/music/days/" "/azure/devops/azuredevops/" "/azure/operation/monitoring/" '
+    inlineScript: 'az cdn endpoint purge -g sigmact-www -n sigmaupdated --profile-name sigma-updated --content-paths "/" "/about/about-updated/" "/azure/security/keyvault/" "/management/requirement/before_requirement/" "/azure/security/pci-dss-azure/" "/design/our-design-process/" "/interview/gatebox/interview-gatebox/" "/beer/sigma-brewing/" "/music/days2/" "/music/days/" "/azure/devops/azuredevops/" "/azure/operation/monitoring/" "/zatsudan/whatiszatsudan/" "/zatsudan/why/" '
