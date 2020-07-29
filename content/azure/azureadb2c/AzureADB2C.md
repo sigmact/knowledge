@@ -1,11 +1,11 @@
 ---
-title: "Webアプリの立上げと最高に相性の良い Azure ADB2C　第一回(Azure AD B2C とは)"
+title: "Webアプリの立上げと相性の良い Azure ADB2C　第1回(Azure AD B2C とは)"
 authors:
   [
     ["Tsubasa Yoshino", "images/author/yoshinotsubasa.jpg"],
   ]
 weight: 10
-date: 2020-07-28
+date: 2020-07-27
 description: ""
 type: "article"
 eyecatch: "/images/eyecatch/deploy.png"
@@ -99,6 +99,13 @@ iDaaSを利用した方が、改修コストも少ない。
 
 - 50000認証までは無料MAU?
 - MFA1回3.36円
+
+### MFA
+
+☆ふじえさんとQAした内容
+
+- MFAは＊＊に対応している
+- ＊＊Authenticator使いたいならカスタムが必要
   
 ### 競合サービスとの比較
 
@@ -147,8 +154,4 @@ CRMのユーザー情報と組み合わせるなど
 
 外部メールプロバイダ
 
-## ユーザーフロー
-
-☆ここで動画の画像などで説明する☆ユーザーフロー自体単体の記事にするべきか
-
-次回に続きます。
+[ユーザーフローに続きます。](/azure/azureadb2c/azureadb2c-userflow)
