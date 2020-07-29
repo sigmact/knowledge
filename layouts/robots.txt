@@ -1,2 +1,4 @@
-User-agent: Twitterbot
+User-Agent:*
 Disallow:
+
+Sitemap:https://updated.sigmact.com/sitemap.xml
