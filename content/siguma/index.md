@@ -70,7 +70,7 @@ AIきりたんや初音ミク、DTMのプラグインといったテクノロジ
 
 ## 「螺旋銀河」 feat. ダルビッシュP、Orca
 
-{{< figure src="images/rasenginga.png" title="「螺旋銀河」 feat. ダルビッシュP、Orca" width="300" >}}
+{{< figure src="images/rasenginga.png" title="「螺旋銀河」 feat. ダルビッシュP、Orca" width="300" link="https://linkco.re/p29qv5YX" >}}
 
 90年代後半のLUNA SEA(ルナシー)、ラルク アン シエル、2000年代初頭のPopPunk好きな人、
 もうちょっと尖ったアニソンぽい曲探している人、ちょっと10秒いかがでしょうか。
@@ -84,7 +84,11 @@ AIきりたんや初音ミク、DTMのプラグインといったテクノロジ
 - [Guitar & Arrangemnt　ダルビッシュP(ダルP)](https://twitter.com/devilish5150)
 - Music  紫熊(Siguma)
 - [Lyrics Sigmanyan(しぐまにゃん)](https://twitter.com/k1hash)
-- [Mixing and Mastering Keinoaza](https://www.youtube.com/channel/UCGO-JaxzA2uGLhsNIXnYEvA)
+- [Mixing & Mastering Keinoaza](https://www.youtube.com/channel/UCGO-JaxzA2uGLhsNIXnYEvA)
+
+### SoundCloud
+
+{{< rawhtml >}}<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/868891219&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-417935330" title="Siguma" target="_blank" style="color: #cccccc; text-decoration: none;">Siguma</a> · <a href="https://soundcloud.com/user-417935330/harf" title="螺旋銀河 Middle" target="_blank" style="color: #cccccc; text-decoration: none;">螺旋銀河 Middle</a></div>{{< /rawhtml >}}
 
 ***
 
