@@ -90,7 +90,7 @@ AIきりたんや初音ミク、DTMのプラグインといったテクノロジ
 
 ## 「Days v2」 feat. Orca
 
-{{< figure src="images/daysv2.png" title="「Days v2」 feat. Orca" width="300" >}}
+{{< figure src="images/daysv2.png" title="「Days v2」 feat. Orca" width="300" link="https://linkco.re/p29qv5YX" >}}
 
 ループや死に戻りの如く日々繰り返す日常をどう前向きに歌った、ほのぼの系公務員である谷池公治の必殺のメロディ。
 この作品で初めてプロのミキシングを知り、もう忘れられない身体となったのでした。
@@ -144,7 +144,7 @@ IT業界関係者、必読の歌となっています。
 
 ## 「Days」 feat. Orca
 
-{{< figure src="images/days.png" title="「Days」 feat. Orca" width="300" >}}
+{{< figure src="images/days.png" title="「Days」 feat. Orca" width="300" link="https://linkco.re/pHDN0aQ5" >}}
 
 ループや死に戻りの如く日々繰り返す日常をどう前向きに歌った、ほのぼの系公務員である谷池公治の必殺のメロディ。
 初めての作品なので録音やミックスも荒いし、マキシマイザーも当たっていませんが、記念すべき第一作。
