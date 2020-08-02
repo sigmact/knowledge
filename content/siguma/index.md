@@ -34,6 +34,8 @@ eyecatch: "/images/eyecatch/days.png"
 - [Mixing and Mastering Keinoaza](https://www.youtube.com/channel/UCGO-JaxzA2uGLhsNIXnYEvA)
 - [先代Vo. & パフォーマー 池田みちる](https://ja.wikipedia.org/wiki/%E6%B1%A0%E7%94%B0%E7%BE%8E%E5%8D%83%E7%91%A0)
 
+***
+
 ## 【BIOGRAPHY】
 
 紫熊は現在、世界最高のクラウドであるAzureを日本で最高に使いこなすスーパーエンジニア集団、[シグマコンサルティング株式会社](https://www.sigmact.com)に在籍。
@@ -56,11 +58,10 @@ eyecatch: "/images/eyecatch/days.png"
 
 死ぬまでに20年前に作ったオリジナル曲を何とか形にしたいと、2020年から人形町の雑踏で細々と活動再開。
 
-Vocalには[Orca（Bathtub for the orca）](https://oooorcaaaa.jimdofree.com/)さんをたまに招きつつ、
+Vocalには[Orca（Bathtub for the orca）](https://oooorcaaaa.jimdofree.com/)をたまに招きつつ、
 AIきりたんや初音ミク、DTMのプラグインといったテクノロジーの恩恵を受け創作活動。
 
-ギター🎸とアレンジはスーパー助っ人[ダルビッシュP(ダルP)](https://twitter.com/devilish5150)、ミキシングとマスタリングはKeinoazaと
-パ・リーグの某球団並の補強をしつつ、オリジナル曲の錬成に励むのであった。
+ギター🎸とアレンジはスーパー助っ人[ダルビッシュP(ダルP)](https://twitter.com/devilish5150)、ミキシングとマスタリングは[Keinoaza](https://www.youtube.com/channel/UCGO-JaxzA2uGLhsNIXnYEvA)とパ・リーグの某球団並の補強をしつつ、オリジナル曲の錬成に励むのであった。
 目指すオリジナル曲は8曲で、あと6曲！
 
 ## 【DISCOGRAPHY】
@@ -71,9 +72,9 @@ AIきりたんや初音ミク、DTMのプラグインといったテクノロジ
 
 {{< figure src="images/rasenginga.png" title="「螺旋銀河」 feat. ダルビッシュP、Orca" width="300" >}}
 
-90年代後半のLUNA SEA(ルナシー)とかラルクのV系、2000年代初頭のPopPunk好きな人、
+90年代後半のLUNA SEA(ルナシー)、ラルク アン シエル、2000年代初頭のPopPunk好きな人、
 もうちょっと尖ったアニソンぽい曲探している人、ちょっと10秒いかがでしょうか。
-聴くと懐かしいという感想、カッコよすぎという感想、頂いています。
+聴くと懐かしいという感想、カッコ良すぎという感想、頂いています。
 
 超絶エモギターのダルビッシュP、
 ボーカルのOrca(Bathtub for the orca)に助けられて、
@@ -90,6 +91,10 @@ AIきりたんや初音ミク、DTMのプラグインといったテクノロジ
 ## 「Days v2」 feat. Orca
 
 {{< figure src="images/daysv2.png" title="「Days v2」 feat. Orca" width="300" >}}
+
+ループや死に戻りの如く日々繰り返す日常をどう前向きに歌った、ほのぼの系公務員である谷池公治の必殺のメロディ。
+この作品で初めてプロのミキシングを知り、もう忘れられない身体となったのでした。
+ボーカルであるOrcaさんの歌の良さもとても引き出せていると思います。
 
 - [Vocal Orca（Bathtub for the orca）](https://oooorcaaaa.jimdofree.com/)
 - [Guitar Sigmanyan(しぐまにゃん)](https://twitter.com/k1hash)
@@ -116,6 +121,9 @@ AIきりたんや初音ミク、DTMのプラグインといったテクノロジ
 
 {{< figure src="images/yokenteigi.png" title="「要件定義のうた」 feat.AIきりたん" width="300" >}}
 
+仕事柄、大規模系のITシステム構築ばかりやっているSigmanyanは、システムを作るうえでの一番最初の肝となる要件定義でやることを歌にしたのでした。
+IT業界関係者、必読の歌となっています。
+
 - [Vocal AIきりたん](https://n3utrino.work/)
 - [Guitar Sigmanyan(しぐまにゃん)](https://twitter.com/k1hash)
 - [Guitar 谷池公治](https://newspicks.com/user/2407391?ref=user_2407391)
@@ -137,6 +145,10 @@ AIきりたんや初音ミク、DTMのプラグインといったテクノロジ
 ## 「Days」 feat. Orca
 
 {{< figure src="images/days.png" title="「Days」 feat. Orca" width="300" >}}
+
+ループや死に戻りの如く日々繰り返す日常をどう前向きに歌った、ほのぼの系公務員である谷池公治の必殺のメロディ。
+初めての作品なので録音やミックスも荒いし、マキシマイザーも当たっていませんが、記念すべき第一作。
+V2のミキシングと比べると、プロのミキシングってヤバいというのが良くわかります。
 
 - [Vocal Orca（Bathtub for the orca）](https://oooorcaaaa.jimdofree.com/)
 - [Guitar Sigmanyan(しぐまにゃん)](https://twitter.com/k1hash)
@@ -180,6 +192,8 @@ https://updated.sigmact.com/siguma/
 ### ダルビッシュP(ダルP)
 
 https://twitter.com/devilish5150
+
+https://www.nicovideo.jp/user/4694033/mylist/12177097
 
 ### Orca
 
