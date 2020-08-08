@@ -70,7 +70,7 @@ AIきりたんや初音ミク、DTMのプラグインといったテクノロジ
 
 ## 「螺旋銀河」 feat. ダルビッシュP、Orca
 
-{{< figure src="images/rasenginga.png" title="「螺旋銀河」 feat. ダルビッシュP、Orca" width="300" link="https://linkco.re/p29qv5YX" >}}
+{{< figure src="images/rasenginga.png" title="「螺旋銀河」 feat. ダルビッシュP、Orca" width="300" link="https://linkco.re/0xAFFVVy" >}}
 
 90年代後半のLUNA SEA(ルナシー)、ラルク アン シエル、2000年代初頭のPopPunk好きな人、
 もうちょっと尖ったアニソンぽい曲探している人、ちょっと10秒いかがでしょうか。
@@ -85,6 +85,10 @@ AIきりたんや初音ミク、DTMのプラグインといったテクノロジ
 - Music  紫熊(Siguma)
 - [Lyrics Sigmanyan(しぐまにゃん)](https://twitter.com/k1hash)
 - [Mixing & Mastering Keinoaza](https://www.youtube.com/channel/UCGO-JaxzA2uGLhsNIXnYEvA)
+
+### 配信
+
+[iTunes,Apple Music,YouTube Music,GooglePlay,Amazon Music等各サービスからの配信はこちらから](https://linkco.re/0xAFFVVy)
 
 ### SoundCloud
 
@@ -109,7 +113,7 @@ AIきりたんや初音ミク、DTMのプラグインといったテクノロジ
 
 ### 配信
 
-[iTunes,GooglePlay,Amazon等各サービスからの配信はこちらから](https://linkco.re/p29qv5YX)
+[iTunes,Apple Music,YouTube Music,GooglePlay,Amazon Music等各サービスからの配信はこちらから](https://linkco.re/p29qv5YX)
 
 ### YouTube
 
