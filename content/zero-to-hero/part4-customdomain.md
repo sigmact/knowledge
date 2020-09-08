@@ -1,10 +1,15 @@
 ---
-title: 'App Service でゼロからヒーロー Part 5: App service のWEBアプリケーションにセキュアなカスタムドメインを設定する'
-author_name: "Yutang Lin"
-tags: 
-    - zero to hero
-toc: true
-toc_sticky: true
+title: "App Service でゼロからヒーロー Part 5: App service のWEBアプリケーションにセキュアなカスタムドメインを設定する"
+weight: 10
+date: 2025-09-07
+description: "この記事では、Webアプリケーションにカスタムドメインを設定する方法を説明します。カスタムドメインをもっていない場合は App Service Domainsを通じて購入する方法も説明します。"
+authors: [
+  ["Keiichi Hashimoto","images/author/k1hash.png"],
+  ["Kazunori Hamamoto","images/author/khamamoto.jpg"],
+]
+tags: ["zero to hero", "Azure", "Web Apps"]
+eyecatch: "/images/eyecatch/monitoring.jpg"
+draft: true
 ---
 
 この記事は [App Service でゼロからヒーロー](https://azure.github.io/AppService/tags/#zero-to-hero) シリーズの第5回です。

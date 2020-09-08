@@ -1,10 +1,15 @@
 ---
-title: 'App Service でゼロからヒーロー Part 3: 本番へのリリース'
-author_name: "Jason Freeberg"
-tags: 
-    - zero to hero
-toc: true
-toc_sticky: true
+title: "App Service でゼロからヒーロー Part 3: 本番へのリリース"
+weight: 10
+date: 2025-09-07
+description: "この記事では、ステージング環境とプロダクション環境のスロットをスワップすることによってプロダクション環境に新しいビルドをリリースする方法を学びます。また、プロダクションへのトラフィックを一部ステージングに流し、新しいビルドを全リリースする前にテストする方法を学びます。"
+authors: [
+  ["Keiichi Hashimoto","images/author/k1hash.png"],
+  ["Kazunori Hamamoto","images/author/khamamoto.jpg"],
+]
+tags: ["zero to hero", "Azure", "Web Apps"]
+eyecatch: "/images/eyecatch/monitoring.jpg"
+draft: true
 ---
 
 > これはApp Service でゼロからヒーローを目指す連載の3番目の記事です。この記事を読むには[これまでの2つの記事](https://azure.github.io/AppService/tags/#zero-to-hero).を終えていることを想定しています。

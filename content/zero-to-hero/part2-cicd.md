@@ -1,30 +1,32 @@
 ---
 title: "App Service でゼロからヒーロー Part 2: CI(継続的インテグレーション)とCD(継続的デリバリー)"
-author_name: "Jason Freeberg"
-tags: 
-    - zero to hero
-toc: true
-toc_sticky: true
+weight: 10
+date: 2020-09-07
+description: "前回の記事では App Service プランを作り、サンプルアプリケーションをForkして、WEBアプリケーションを作りました。この記事では、GitHub Actions を使って CI/CD のパイプラインをセットアップします。"
+authors: [
+  ["Keiichi Hashimoto","images/author/k1hash.png"],
+  ["Kazunori Hamamoto","images/author/khamamoto.jpg"],
+]
+tags: ["zero to hero", "Azure", "Web Apps"]
+eyecatch: "/images/eyecatch/monitoring.jpg"
+draft: true
 ---
 
-この記事は[App Service でゼロからヒーロー]({{site.baseurl}}/tags/#zero-to-hero)の2回目になります。
-ので、[Part 1]({{ site.baseurl }}{% link _posts/2020-06-29-zero_to_hero_pt1.md %})を終えた想定です。
+## はじめに
 
-前回の記事では App Service プランを作り、サンプルアプリケーションをForkして、WEBアプリケーションを作りました。
-この記事では、GitHub Actions を使って CI/CD のパイプラインをセットアップします。
+この記事は[App Service でゼロからヒーロー](/zero-to-hero/)の2回目になります。そのため[Part 1](/zero-to-hero/part1-setting-up/)を終えた想定です。
+
+前回の記事では App Service プランを作り、サンプルアプリケーションをForkしました。この記事では、GitHub Actions を使って CI/CD のパイプラインをセットアップします。
 
 ## CI/CDとは
 
-CI(継続的インテグレーション)とCD(継続的デリバリー) は、App Service や Azure において特別なものではありません。
-テストとデプロイを自動化することは、モダンなソフトウェア開発においてはベストプラクティスになります。
-App Service は [GitHub Actions](https://github.com/features/actions) と Azure Pipelines を直接結びつけることができるので、
-App Service の CI/CD は用意に設定することができる。
+CI(継続的インテグレーション)とCD(継続的デリバリー) は、App Service や Azure において特別なものではありません。テストとデプロイを自動化することは、モダンなソフトウェア開発においてはベストプラクティスになります。App Service は [GitHub Actions](https://github.com/features/actions) と Azure Pipelines を直接結びつけることができるので、App Service の CI/CD は用意に設定することができます。
 
 ### 継続的インテグレーション
 
-継続的インテグレーションは、CI/CD パイプライン の最初の一歩。このフェーズでは、パイプラインがアプリケーションのビルドとテストを担います。
-マスターブランチへの新しいプルリクエストでパイプラインが走ります。
-コーディングのスタイルガイドを強制したり、プルリクエストを[lint](https://en.wikipedia.org/wiki/Lint_(software))にほげほげ。
+継続的インテグレーションは、CI/CD パイプライン の最初の一歩です。このフェーズでは、パイプラインがアプリケーションのビルドとテストを担います。
+masterブランチへの新しいプルリクエストでパイプラインが走ります。
+このフェーズではコーディングのスタイルガイドを強制したり、[lint](https://en.wikipedia.org/wiki/Lint_(software))を適用したりできます。
 
 ### 継続的デリバリー
 
@@ -33,11 +35,11 @@ App Service の CI/CD は用意に設定することができる。
 
 ちょうどCI/CDを始めたチームは本番環境のミラーとなるステージング環境にデプロイし、動作確認した後に手動で新しいビルドをリリースできます。
 
-次の記事では、本番へのトラフィックの一部をステージングにルーティングして、新しいビルドにトラフィックを送る方法を紹介します。
+次の記事では、本番へのトラフィックの一部をステージングにルーティングして、新しいビルドバージョンのアプリケーションにトラフィックを送る方法を紹介します。
 
 ## ステージング環境の作成
 
-App Service では、 [スロット](https://docs.microsoft.com/azure/app-service/deploy-staging-slots)を使って、独立したステージング環境を作ったり消したりすることができます。コードやコンテナをスロットにデプロイして、新しいビルドを検証し、ステージングスロットをプロダクションスロットに_swap_することができます。
+App Service では、 [スロット](https://docs.microsoft.com/azure/app-service/deploy-staging-slots)を使って、独立したステージング環境を作ったり消したりすることができます。コードやコンテナをスロットにデプロイして、新しいビルドを検証し、ステージングスロットをプロダクションスロットに **スワップ** することができます。
 
 スワップは新しいビルドをユーザーに効果的にリリースします。
  `<name>`のパラメータをWeb Appの名前で書き換えれば、下記に記載した CLI コマンドを使ってステージングスロットが作られます。
@@ -46,8 +48,12 @@ App Service では、 [スロット](https://docs.microsoft.com/azure/app-servic
 az webapp deployment slot create --slot staging -n <name> -g zero_to_hero
 ```
 
+ポータルを利用する場合は以下の画像を参考にしてください。
+
+![デプロイスロットの作成（ポータルを利用する場合）](../images/part2-1.png)
+
 ステージングスロットは固有のドメイン名を持ちます。ドメイン名はプロダクションスロットと似たパターンの名前を持ちます。
- _http://mycoolapp.azurewebsites.net_ ステージングと付記されます: _http://mycoolapp<b>-staging</b>.azurewebsites.net_.
+`http://mycoolapp.azurewebsites.net`に`staging`というスロットを追加した場合はhttp://mycoolapp **-staging** .azurewebsites.netとなります。
 
 > [App Service のステージングスロットについて学ぶにはこちら](https://docs.microsoft.com/azure/app-service/deploy-best-practices#use-deployment-slots).
 
@@ -101,12 +107,20 @@ Deployment Centerが CI/CD のセットアッププロセスをガイドしま�
 次のページで、**GitHub Actions (Preview)** を選択し、下部の**Continue**をクリックします。
 そこで、ドロップダウンからリポジトリを選択します。言語と言語バージョンのドロップダウンを編集する必要はありません。
 
-![GitHub Actions を設定する]({{site.baseurl}}/media/2020/06/zero_to_hero_GH_actions_setup.gif)
+#### デプロイセンターを表示する
+
+![GitHub Actions を設定する](../images/part2-2.png)
+
+#### ビルドプロバイダーを選択する
+
+![GitHub Actions を設定する](../images/part2-3.png)
+
+#### ビルド構成を設定する
+
+![GitHub Actions を設定する](../images/part2-4.png)
 
 最後のページで、リポジトリにコミットした GitHub Actions ワークフローファイルのプレビューを見つけることができます。
 **完了**をクリックして、リポジトリにワークフローファイルをコミットします。このコミットはワークフローのトリガーになります。
-
-![Deployment Centerを使って CI/CD のパイプラインをモニターします]({{site.baseurl}}/media/2020/06/deployment_center_dashboard.png)
 
 > App Service と連携させる [GitHub Actions について学ぶには、こちら](https://docs.microsoft.com/azure/app-service/deploy-github-actions) and [Azure Pipelines について学ぶには、こちら](https://docs.microsoft.com/azure/app-service/deploy-continuous-deployment#github--azure-pipelines)。
 

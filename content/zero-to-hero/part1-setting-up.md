@@ -1,22 +1,27 @@
 ---
 title: "App Service でゼロからヒーロー Part 1: 設定編"
-tags: 
-    - zero to hero
-author_name: "Jason Freeberg"
-toc: true
-toc_sticky: true
+weight: 10
+date: 2020-09-07
+description: "App Service を立上げ、より進歩した使い方を身に着けていく素晴らしい土台を身に着けることができます。"
+
+authors: [
+  ["Keiichi Hashimoto","images/author/k1hash.png"],
+  ["Kazunori Hamamoto","images/author/khamamoto.jpg"],
+]
+tags: ["zero to hero", "Azure", "Web Apps"]
+eyecatch: "/images/eyecatch/monitoring.jpg"
+draft: true
 ---
 
-変化の早い時代では、開発者とIT意思決定者は　劇的に思い切って進化する眺望に適応する必要がある。
-成功した組織ではマネージドなクラウドサービスを使い、デベロッパーの労力を増やしがちなオペレーションコストを減らし、　イノベーションをうまく加速させることによって新しいビジネス機会をつかむ。
+## はじめに
+この記事は[Azure App Service Team Blog](https://azure.github.io/AppService/)の[Zero to Heroシリーズの記事](https://azure.github.io/AppService/tags/#zero-to-hero)に感銘を受けて、和訳＆改変した記事です。本家の「Zero to Hero」というフレーズの通り、App Serviceを使ったことの無い方は一人前になれるように、すでに利用している方は知識のアップデートに役立てていただければと思います。
 
-App Service はWebアプリケーションやモバイルバックエンドホスティングするのに高生産性なPaaSとして証明されている。
-App Service はAPIをデプロイ、ネットワークの拡張、ビルトインのモニタリングを提供する。
+この記事を通してWeb Appsの基礎から実運用の方法まで、筆者自身が見直す機会としてシリーズ化して掲載する事にしました。
 
 これはApp Servivce にアプリケーションを構築する連載「＃Zeroからヒーロー」の最初の記事です。
-シリーズはアプリケーションの継続的なデプロイ、アプリケーションにカスタムドメインや証明書をあて、セキュアに他のクラウドサービスに接続し、
-どうやって正確にスケールし、アプリケーションを構成するかについてカバーします。
-このガイドを通じて App Service を立上げ、より進歩した使い方を身に着けていく素晴らしい土台を身に着けることができます。
+このシリーズはアプリケーションの継続的なデプロイ、アプリケーションにカスタムドメインや証明書をあて、セキュアに他のクラウドサービスに接続し、どうやって正確にスケールし、アプリケーションを構成するかについてカバーします。このガイドを通じて App Service を立上げ、より進歩した使い方を身に着けていく素晴らしい土台を身に着けることができます。
+
+まずは初めの第一歩、Web Appsの作成をしてみましょう。
 
 ## 前提条件
 
@@ -25,9 +30,9 @@ Azureのサブスクリプションを入手する必要があります。
 
 また、この連載では Azure CLI を使うので、[このガイド](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)を見てローカルにインストールしておく必要があります。もしくは、仮想ターミナルである[Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview)を使って、Bash や PowerShell のコマンドで Azure のリソースを作成したり、更新したりする必要があります。
 
-[GitHub のアカウント](https://github.com/join)を作る必要があります
-GitHubで、↓のリポジトリを fork して自分のローカルにクローンする。リポジトリを **fork** すること。
-次の記事では、どのようにGothic　Actions を使って CI/CD を構築するか説明します。
+次の記事では、どのようにGitHub Actions を使って CI/CD を構築するか説明します。
+そのため[GitHub のアカウント](https://github.com/join)を作る必要があります。
+作成する環境ごとに下記のリポジトリを **fork** して自分のローカルにクローンする必要があります。
 
 - [.NET Core](https://github.com/AzureAppService/github-action-testapp-dotnetcore)
 - [Node.js](https://github.com/AzureAppService/github-action-testapp-node)
@@ -37,36 +42,36 @@ GitHubで、↓のリポジトリを fork して自分のローカルにクロ�
 
 ## リソースの作成
 
-これでAzureのサブスクリプションは準備できました。CLI、リポジトリ、必要なクラウドのリソースもあります。最初に[Azure Portal](https://portal.azure.com/)を開いて＊＊にある**Create a Resource** をクリックします。
-メニューで **Web App**　を選んでWeb App を作るためのブレードが開きます。
+これでAzureのサブスクリプションは準備できました。CLI、リポジトリ、必要なクラウドのリソースもあります。最初に[Azure Portal](https://portal.azure.com/)を開いて**Azure サービス**にある**リソースの作成** をクリックします。
+メニューで **Web アプリ**　を選んでWeb App を作るためのブレードが開きます。
 
-![ポータルでWebアプリケーションを作る]({{site.baseurl}}/media/2020/06/zero_to_hero_portal_create.png)
+![ポータルでWebアプリケーションを作る](../images/part1-1.png)
 
 以下の入力が要求される:
 
 1. **リソースグループ** : プロジェクトのリソースをグループ化するものです。ここでは、新規作成から **zero_to_hero** と入力し、作成します。
 2. **名前** : このWebアプリケーションの名前を入力します。この名前は、半角英数文字で、デフォルトのドメイン名としても使われます。ので、グローバルでユニークである必要があります。独自の名前と数字の組み合わせで作ってみましょう。例えば, **john-doe-1**。
 3. **公開** : こちらはアプリケーションのソースコードをデプロイするので **コード**にしておきます。 App Service は [Docker コンテナー](https://docs.microsoft.com/azure/app-service/containers/quickstart-docker)二も対応しています。ただし、このガイドでは扱いません。
-4. **ランタイム スタック** : 自分でリポジトリにクローンした内容に従い、ランタイムを選択してください。もし、「.NET Core」を選択する場合、 **.NET Core 2.1** を選びます。Node.js の場合、 **Node 12 LTS** を選びます。Spring の場合、 **Java 8 SE** を選択します。
+4. **ランタイム スタック** : 自分でリポジトリにクローンした内容に従い、ランタイムを選択してください。もし、「.NET Core」を選択する場合、 **.NET Core 3.1** を選びます。Node.js の場合、 **Node 12 LTS** を選びます。Spring の場合、 **Java 8 SE** を選択します。
 5. **リージョン** : デプロイしたいリージョンを選択します。
 
-入力したら,  **Review + create** をクリックし、作成を終了する。
+入力したら,  **確認および作成** をクリックし、作成を終了する。
 
 > The Azure CLI はWebアプリケーションを作って、構成するためのコマンドを有している。 もっと知りたい人は,  [このガイド](https://docs.microsoft.com/cli/azure/webapp?view=azure-cli-latest)を見よう。
 
 ## App Service Plan とは
 
 [App Service Plan](https://docs.microsoft.com/azure/app-service/overview-hosting-plans)
-では仮想マシン(Virtual Machine)が複数の App Service をホストできる形になっている。
-より高機能なハードウェア Tier が沢山のコンピューティングリソースや機能を提供する。
-App Service Plan はスケールの機能も持つ。(この記事でおいおい説明する。)いつでも、ハードウェアのTierを変更することができる。
+では仮想マシン(Virtual Machine)が複数の App Service をホストできる形になっています。
+より高機能なハードウェアプランが沢山のコンピューティングリソースや機能を提供します。
+App Service Plan はスケールの機能も持っおり。いつでも、ハードウェアのプランを変更することができます。
 
 ## まとめ
 
 これでApp Service のプランと WEBアプリケーションを作成しました。
 クラウド　ヒーローに向かって１ステップ近づいています。
 
- [次の記事では、]({{site.baseurl}}{% link _posts/2020-06-29-zero_to_hero_pt2.md %}) CI(Continuous Integration)環境を構築し、
+ [次の記事では、](/zero-to-hero/part2-cicd) CI(Continuous Integration)環境を構築し、
  リリース用のパイプラインを作り、プログラムをWEBアプリケーションにデプロイします。
 
 ### 役に立つリンク
