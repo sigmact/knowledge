@@ -1,7 +1,7 @@
 ---
 title: "App Service でゼロからヒーロー Part 3: 本番へのリリース"
 weight: 10
-date: 2025-09-07
+date: 2020-09-07
 description: "この記事では、ステージング環境とプロダクション環境のスロットをスワップすることによってプロダクション環境に新しいビルドをリリースする方法を学びます。また、プロダクションへのトラフィックを一部ステージングに流し、新しいビルドを全リリースする前にテストする方法を学びます。"
 authors: [
   ["Keiichi Hashimoto","images/author/k1hash.png"],
@@ -12,7 +12,23 @@ eyecatch: "/images/eyecatch/monitoring.jpg"
 draft: true
 ---
 
-> これはApp Service でゼロからヒーローを目指す連載の3番目の記事です。この記事を読むには[これまでの2つの記事](https://azure.github.io/AppService/tags/#zero-to-hero).を終えていることを想定しています。
+## はじめに
+
+この記事は[Azure App Service Team Blog](https://azure.github.io/AppService/)の[Zero to Heroシリーズの記事](https://azure.github.io/AppService/tags/#zero-to-hero)に感銘を受けて、和訳＆改変した記事です。本家の「Zero to Hero」というフレーズの通り、App Serviceを使ったことの無い方は一人前になれるように、すでに利用している方は知識のアップデートに役立てていただければと思います
+
+今回は「[Zero to Hero with App Service, Part 3: Releasing to Production](https://azure.github.io/AppService/2020/07/07/zero_to_hero_pt3.html)」を翻訳した記事です。
+
+なお、連載の５回目からは筆者オリジナルのコンテンツを掲載していきます。掲載予定のコンテンツは以下のようなものを予定しております
+
+- 「Easy Authを利用した簡易的な認証ページを作成する」
+- 「Application Gatewayを利用して運用を楽にする」
+- 「診断ツールを使って問題を解決する」
+
+この記事を通してWeb Appsの基礎から実運用の方法まで、筆者自身が見直す機会としてシリーズ化して掲載する事にしました。
+
+## 概要
+
+これは[App Service でゼロからヒーロー](/zero-to-hero/)を目指す連載の3番目の記事です。この記事を読むには[これまでの2つの記事](/zero-to-hero/)を終えていることを想定しています。
 
 この時点で、メインブランチにソースコードがコミットされる度にステージングのスロットにデプロイする CI/CD のパイプラインがGitHub Actions に構築済みです。この記事では、ステージング環境とプロダクション環境のスロットをスワップすることによって
 プロダクション環境に新しいビルドをリリースする方法を学びます。
@@ -20,48 +36,38 @@ draft: true
 
 ## スロットをスワップする
 
-Azureポータルを開きます。左側のメニューから**デプロイ スロット**を選択します。
-新しいブレードが開き、Webアプリケーションのスロットがリスト表示されます。
-**プロダクション** と **本番** のスロットを見つけ、上部にある**スワップ**ボタンをクリックします。
+Azureポータルを開きます。左側のメニューから**デプロイ スロット**を選択します。  
+新しいブレードが開き、Webアプリケーションのスロットがリスト表示されます。  
+**プロダクション** と **staging** のスロットを見つけ、上部にある**スワップ**ボタンをクリックします。  
 
-![The slots overview blade]({{site.baseurl}}/media/2020/07/slots-blade.png){: .align-center}
+![The slots overview blade](../images/part3-1.png)
 
 **スワップ**ボタンを押すと、メニューがポップアップし、スワップ後に変更されるコンフィグレーションの値が表形式で表示されます。
 
- [Appsettings](https://docs.microsoft.com/en-us/azure/app-service/configure-common#configure-app-settings)
-環境変数として設定されているキーバリュー型のコンフィグレーションです。
-今後の記事でもう少し詳細に触れる予定です。
-下部の**スワップ**をクリックして、スワップします。
+ [Appsettings](https://docs.microsoft.com/en-us/azure/app-service/configure-common#configure-app-settings)環境変数として設定されているキーバリュー型のコンフィグレーションです。今後の記事でもう少し詳細に触れる予定です。下部の**スワップ**をクリックして、スワップします。
 
-![スロットをスワップする]({{site.baseurl}}/media/2020/07/slots-swap-menu.png){: .align-center}
+![スロットをスワップする](../images/part3-2.png)
 
 処理が終わり、プロダクションのサイトを見るとサンプルアプリケーションが確認できます。
 
-The staging slot should now have the sample application,and the staging slot will have the placeholder HTML page with help text.
-☆ようわからん
+今回はステージングスロットにはサンプルアプリケーションをデプロイしています。スワップが判別できるようにHTMLページに判別できるようなテキストやプレースホルダを設定しておくと良いでしょう。
 
 > また、 [カスタムコンテナーのスロットを使用する](https://docs.microsoft.com/azure/app-service/deploy-best-practices#continuously-deploy-containers)事も出来ます。
 
 ## チェックポイント
 
-ここまでに、メインブランチにプッシュがあるたびにGitHub Actions のワークフローを起動するGitHubのリポジトリを用意しています。
-ワークフローはアプリケーションのビルドとステージングへのデプロイを行います。
-ステージングサイトを使って、最新の変更を評価することができます。
+ここまでに、メインブランチにプッシュがあるたびにGitHub Actions のワークフローを起動するGitHubのリポジトリを用意しています。ワークフローはアプリケーションのビルドとステージングへのデプロイを行います。ステージングサイトを使って、最新の変更を評価することができます。
 
-準備ができたら、スワップボタンか
-[CLIコマンド](https://docs.microsoft.com/en-us/cli/azure/webapp/deployment/slot?view=azure-cli-latest#az-webapp-deployment-slot-swap))を使ってスロットをスワップします。
+準備ができたら、スワップボタンか[CLIコマンド](https://docs.microsoft.com/en-us/cli/azure/webapp/deployment/slot?view=azure-cli-latest#az-webapp-deployment-slot-swap)を使ってスロットをスワップします。
 
-![CI/CD プロセスを俯瞰する]({{site.baseurl}}/media/2020/07/CICD_overview.png){: .align-center}
+![CI/CD プロセスを俯瞰する](../images/part3-3.png)
 
 大きいチームで働いている場合、テスト用のスロット、品質保証、カナリアリリース、A/Bテスト等の為にスロットを作ります。
 ここに複数スロットのユースケースがあります。
 
 1. 開発者がローカルにブランチをプルして実行せず、簡単に実装の変更を確認できるように、マスターブランチからテスト用スロットへの継続的なデプロイ。
-
 1. コンフィグレーションをよりプロダクションに似せたQAスロットにスワップする。新しいビルドはQAや受入チームによってテストされる。
-
 1. 本番へのトラフィックの一部をステージングスロットにデプロイしたビルドで試験する。この場合、コンフィグレーションはプロダクションのスロットと合わせる必要がある。
-
 1. 新しいビルドを丸々スワップしてプロダクションスロットにリリースする。
 
 > デプロイとリリースの間には暗黙的な特性があります。よりこの特性について知るには、 [この記事](https://blog.turbinelabs.io/deploy-not-equal-release-part-one-4724bc1e726b)が良いでしょう。
@@ -77,7 +83,7 @@ The staging slot should now have the sample application,and the staging slot wil
 ### コンフィグレーション
 
 Azureポータルで、**デプロイ スロット**メニューに遷移します。
-スロットの表の中で、**Traffic %**という項目があります。
+スロットの表の中で、**トラフィック %**という項目があります。
 デフォルトでは、全てのトラフィックはプロダクションスロットにルーティングされています。
 トラフィックのパーセンテージを **10%** ステージングスロットに向けてみましょう。
 **保存** をクリックします。シンプルな変更で、1/10のプロダクションへのトラフィックが、新しいビルドに流れるようになります。
