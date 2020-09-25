@@ -1,10 +1,15 @@
 ---
-title: 'App Service でゼロからヒーロー Part 4: Azure App Service にマイグレーションする'
-author_name: "Gaurav Seth"
-tags: 
-    - zero to hero
-toc: true
-toc_sticky: true
+title: "App Service でゼロからヒーロー Part 4: Azure App Service にマイグレーションする"
+weight: 10
+date: 2999-09-07
+description: "既にあるアプリケーションをどのように App Service にマイグレーションするか学びます。"
+authors: [
+  ["Keiichi Hashimoto","images/author/k1hash.png"],
+  ["Kazunori Hamamoto","images/author/khamamoto.jpg"],
+]
+tags: ["zero to hero", "Azure", "Web Apps"]
+eyecatch: "/images/eyecatch/monitoring.jpg"
+draft: true
 ---
 
 App Service でゼロからヒーロー連載4回目は既にあるアプリケーションをどのように App Service にマイグレーションするか学びます。1回目から3回目まで読んでいれば、 あなたの App Service にはアプリケーションが既にデプロイされていて、この記事を読み進めることが出来ます。
