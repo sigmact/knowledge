@@ -14,6 +14,21 @@ draft: true
 
 ## はじめに
 
+この記事は[Azure App Service Team Blog](https://azure.github.io/AppService/)の[Zero to Heroシリーズの記事](https://azure.github.io/AppService/tags/#zero-to-hero)に感銘を受けて、和訳＆改変した記事です。本家の「Zero to Hero」というフレーズの通り、App Serviceを使ったことの無い方は一人前になれるように、すでに利用している方は知識のアップデートに役立てていただければと思います
+
+今回は「[Zero to Hero with App Service, Part 2: Continuous Integration and Delivery](https://azure.github.io/AppService/2020/06/29/zero_to_hero_pt2.html)」を翻訳した記事です。
+
+
+なお、連載の５回目からは筆者オリジナルのコンテンツを掲載していきます。掲載予定のコンテンツは以下のようなものを予定しております
+
+- 「Easy Authを利用した簡易的な認証ページを作成する」
+- 「Application Gatewayを利用して運用を楽にする」
+- 「診断ツールを使って問題を解決する」
+
+この記事を通してWeb Appsの基礎から実運用の方法まで、筆者自身が見直す機会としてシリーズ化して掲載する事にしました。
+
+## 概要
+
 この記事は[App Service でゼロからヒーロー](/zero-to-hero/)の2回目になります。そのため[Part 1](/zero-to-hero/part1-setting-up/)を終えた想定です。
 
 前回の記事では App Service プランを作り、サンプルアプリケーションをForkしました。この記事では、GitHub Actions を使って CI/CD のパイプラインをセットアップします。
@@ -137,5 +152,5 @@ GitHubリポジトリの**Actions**タブをクリックすると、GitHub Actio
 
 ### 役に立つリンク
 
-1. [Using GitHub Actions to deploy a Windows Container to App Service]({{site.baseurl}}{% link _posts/2020-06-09-App Service Continuous Deployment for Windows Containers with GitHub Actions.md %})
+1. [Using GitHub Actions to deploy a Windows Container to App Service](https://azure.github.io/AppService/2020/06/09/App-Service-Continuous-Deployment-for-Windows-Containers-with-GitHub-Actions.html)
 2. [GitHub Workflows to create and delete a slot for Pull Requests](https://github.com/JasonFreeberg/create-and-delete-slots)
