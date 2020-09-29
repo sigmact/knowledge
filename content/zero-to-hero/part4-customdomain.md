@@ -30,7 +30,7 @@ draft: false
 ## 概要
 
 この記事は [App Service でゼロからヒーロー](https://azure.github.io/AppService/tags/#zero-to-hero) シリーズの第4回です。
-この記事を読むためには[初回記事](/zero-to-hero/part1-setting-up)を読み終えていることを想定しています。
+この記事を読むためには[初回記事](/zero-to-hero/part1-setting-up/)を読み終えていることを想定しています。
 
 もし、“azurewebsites.net”以外のドメイン名をWebアプリケーションに当てたい場合、カスタムドメインをWebアプリケーションに足すことができます。  
 それ以上に、カスタムドメインを App Service Managed Certificates の無償の証明書でセキュアにすることができます。  

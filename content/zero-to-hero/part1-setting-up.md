@@ -83,7 +83,7 @@ App Service Plan はスケールの機能も持っおり。いつでも、ハー
 これでApp Service のプランと WEBアプリケーションを作成しました。
 クラウド　ヒーローに向かって１ステップ近づいています。
 
- [次の記事では、](/zero-to-hero/part2-cicd) CI(Continuous Integration)環境を構築し、
+ [次の記事では、](/zero-to-hero/part2-cicd/) CI(Continuous Integration)環境を構築し、
  リリース用のパイプラインを作り、プログラムをWEBアプリケーションにデプロイします。
 
 ### 役に立つリンク
