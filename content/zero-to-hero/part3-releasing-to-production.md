@@ -1,15 +1,16 @@
 ---
 title: "App Service でゼロからヒーロー Part 3: 本番へのリリース"
 weight: 10
-date: 2020-09-07
+date: 2020-09-13
 description: "この記事では、ステージング環境とプロダクション環境のスロットをスワップすることによってプロダクション環境に新しいビルドをリリースする方法を学びます。また、プロダクションへのトラフィックを一部ステージングに流し、新しいビルドを全リリースする前にテストする方法を学びます。"
 authors: [
   ["Keiichi Hashimoto","images/author/k1hash.png"],
   ["Kazunori Hamamoto","images/author/khamamoto.jpg"],
 ]
+type : "article"
 tags: ["zero to hero", "Azure", "Web Apps"]
-eyecatch: "/images/eyecatch/monitoring.jpg"
-draft: true
+eyecatch: "/images/eyecatch/zero-to-hero.jpeg"
+draft: false
 ---
 
 ## はじめに

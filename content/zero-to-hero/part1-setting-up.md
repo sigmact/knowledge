@@ -8,9 +8,10 @@ authors: [
   ["Keiichi Hashimoto","images/author/k1hash.png"],
   ["Kazunori Hamamoto","images/author/khamamoto.jpg"],
 ]
+type : "article"
 tags: ["zero to hero", "Azure", "Web Apps"]
-eyecatch: "/images/eyecatch/monitoring.jpg"
-draft: true
+eyecatch: "/images/eyecatch/zero-to-hero.jpeg"
+draft: false
 ---
 
 ## はじめに

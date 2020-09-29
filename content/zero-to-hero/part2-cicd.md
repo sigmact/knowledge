@@ -1,15 +1,16 @@
 ---
 title: "App Service でゼロからヒーロー Part 2: CI(継続的インテグレーション)とCD(継続的デリバリー)"
 weight: 10
-date: 2020-09-07
+date: 2020-09-10
 description: "前回の記事では App Service プランを作り、サンプルアプリケーションをForkして、WEBアプリケーションを作りました。この記事では、GitHub Actions を使って CI/CD のパイプラインをセットアップします。"
 authors: [
   ["Keiichi Hashimoto","images/author/k1hash.png"],
   ["Kazunori Hamamoto","images/author/khamamoto.jpg"],
 ]
+type : "article"
 tags: ["zero to hero", "Azure", "Web Apps"]
-eyecatch: "/images/eyecatch/monitoring.jpg"
-draft: true
+eyecatch: "/images/eyecatch/zero-to-hero.jpeg"
+draft: false
 ---
 
 ## はじめに

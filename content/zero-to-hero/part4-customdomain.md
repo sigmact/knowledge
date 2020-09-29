@@ -1,15 +1,16 @@
 ---
 title: "App Service でゼロからヒーロー Part 4: App service のWEBアプリケーションにセキュアなカスタムドメインを設定する"
-weight: 10
-date: 2020-09-07
+weight: 1
+date: 2020-09-16
 description: "この記事では、Webアプリケーションにカスタムドメインを設定する方法を説明します。カスタムドメインをもっていない場合は App Service Domainsを通じて購入する方法も説明します。"
 authors: [
   ["Keiichi Hashimoto","images/author/k1hash.png"],
   ["Kazunori Hamamoto","images/author/khamamoto.jpg"],
 ]
+type : "article"
 tags: ["zero to hero", "Azure", "Web Apps"]
-eyecatch: "/images/eyecatch/monitoring.jpg"
-draft: true
+eyecatch: "/images/eyecatch/zero-to-hero.jpeg"
+draft: false
 ---
 
 ## はじめに
