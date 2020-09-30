@@ -86,9 +86,7 @@ App Service には GitHub Actions と Azure Pipelinesを繋ぐ機能がビルト
 
 ワークフローファイルは自動化が実行された時を定義します。ワークフローは１つか複数の**jobs**から構成され、ジョブは１つか複数の**steps**から構成されます。ジョブは、ステップが実行されるOSを定義します。もし、ライブラリをパブリッシュして複数のOSでテストしたいなら、複数のジョブを使う必要があります。各ステップは個々の自動化のタスクで、自分に必要なものを書いたり、GitHubコミュニティで作られたアクションをインポートすることも出来ます。
 
-"Hello World" ワークフローファイル例は以下になります。リポジトリにPUSHされると、いつでも、_"Hello Keanu Reeves"_と現時刻がプリントされます。YAMLを注意深く読めば、
-
-you can see how the last step references the output from the earlier "Hello world" command using the dotted syntax.
+"Hello World" ワークフローファイル例は以下になります。リポジトリにPUSHされると、いつでも、_"Hello Keanu Reeves"_と現時刻がプリントされます。YAMLを注意深く読めば、ドット記法を使用して、最後のステップが以前の「Helloworld」ステップからの出力をどのように参照しているかを確認できます。
 
 ```yaml
 name: Greet Everyone
