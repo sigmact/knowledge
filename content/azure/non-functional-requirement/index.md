@@ -7,8 +7,9 @@ authors: [
 ["Keiichi Hashimoto","images/author/k1hash.png"]
 ]
 type : "article"
-tags: ["音楽"]
+tags: ["Azure"]
 eyecatch: "/images/eyecatch/default.png"
+draft : "true"
 ---
 
 ## そもそも非機能要件とは何か
