@@ -1,8 +1,7 @@
 ---
 title: "ユーザーの利用継続に重要なユーザーオンボーディングとは"
 authors: [
-["Keiichi Hashimoto","images/author/k1hash.png"],
-["Jun Nemoto","images/author/nemoto.gif"]
+["Keiichi Hashimoto","images/author/k1hash.png"]
 ]
 weight: 10
 date: 2020-10-14
