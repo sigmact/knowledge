@@ -59,29 +59,30 @@ Azureのサブスクリプションを入手する必要があります。
 
 ![ポータルでWebアプリケーションを作る](../images/part1-1.png)
 
-以下の入力が要求される:
+Webアプリの作成画面では下記項目の入力を行ってください。
 
 1. **リソースグループ** : プロジェクトのリソースをグループ化するものです。ここでは、新規作成から **zero_to_hero** と入力し、作成します。
 2. **名前** : このWebアプリケーションの名前を入力します。この名前は、半角英数文字で、デフォルトのドメイン名としても使われます。ので、グローバルでユニークである必要があります。独自の名前と数字の組み合わせで作ってみましょう。例えば, **john-doe-1**。
-3. **公開** : こちらはアプリケーションのソースコードをデプロイするので **コード**にしておきます。 App Service は [Docker コンテナー](https://docs.microsoft.com/azure/app-service/containers/quickstart-docker)二も対応しています。ただし、このガイドでは扱いません。
-4. **ランタイム スタック** : 自分でリポジトリにクローンした内容に従い、ランタイムを選択してください。もし、「.NET Core」を選択する場合、 **.NET Core 3.1** を選びます。Node.js の場合、 **Node 12 LTS** を選びます。Spring の場合、 **Java 8 SE** を選択します。
-5. **リージョン** : デプロイしたいリージョンを選択します。
+3. **公開** : こちらはアプリケーションのソースコードをデプロイするので **コード**にしておきます。 App Service は [Docker コンテナー](https://docs.microsoft.com/azure/app-service/containers/quickstart-docker)にも対応しています。ただし、このガイドでは扱いません。
+4. **ランタイム スタック** : 自分でリポジトリにクローンした内容に従い、ランタイムを選択してください。もし、「.NET Core」を選択する場合、 **.NET Core 3.1** を選びます。「Node.js」の場合、 **Node 12 LTS** を選びます。「Spring」の場合、 **Java 8 SE** を選択します。
+5. **地域** : デプロイしたいリージョンを選択します。
+6. **App Service プラン** : このWebアプリケーションをデプロイするApp Serive プランを指定してください。Part2ではスロットを作成するため、FプランやBプランではなくSプラン以上のプランを指定する事が望ましいです。
 
-入力したら、[**確認および作成**] をクリックし、作成を終了する。
+入力したら、[**確認および作成**] をクリックし、作成を終了します。
 
 > The Azure CLI はWebアプリケーションを作って、構成するためのコマンドを有している。 もっと知りたい人は,  [このガイド](https://docs.microsoft.com/cli/azure/webapp?view=azure-cli-latest)を見よう。
 
-## App Service Plan とは
+## App Service プラン とは
 
-[App Service Plan](https://docs.microsoft.com/azure/app-service/overview-hosting-plans)
+[App Service プラン](https://docs.microsoft.com/azure/app-service/overview-hosting-plans)
 では仮想マシン(Virtual Machine)が複数の App Service をホストできる形になっています。
 より高機能なハードウェアプランが沢山のコンピューティングリソースや機能を提供します。
 App Service Plan はスケールの機能もあり。いつでも、ハードウェアのプランを変更することができます。
 
 ## まとめ
 
-これでApp Service のプランと WEBアプリケーションを作成しました。
-クラウド　ヒーローに向かって１ステップ近づいています。
+これでApp Service のプランと WEBアプリケーションを作成しました。  
+クラウドヒーローに向かって一歩ずつ近づいています。
 
  [次の記事では、](/zero-to-hero/part2-cicd/) CI (Continuous Integration) 環境を構築し、
  リリース用のパイプラインを作り、プログラムをWEBアプリケーションにデプロイします。
