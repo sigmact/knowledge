@@ -2,7 +2,7 @@
 name: ArticleReport
 about: 記事に対する指摘を行う際に利用するテンプレート
 title: 記事に対する指摘事項
-labels: wontfix
+labels: article
 assignees: hamamotsu, k1hash
 
 ---
