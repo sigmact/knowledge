@@ -36,7 +36,7 @@ draft: false
 
 ## CI/CDとは
 
-CI(継続的インテグレーション)とCD(継続的デリバリー) は、App Service や Azure において特別なものではありません。テストとデプロイを自動化することは、モダンなソフトウェア開発においてはベストプラクティスになります。App Service は [GitHub Actions](https://github.com/features/actions) と Azure Pipelines を直接結びつけることができるので、App Service の CI/CD は用意に設定することができます。
+CI(継続的インテグレーション)とCD(継続的デリバリー) は、App Service や Azure において特別なものではありません。テストとデプロイを自動化することは、モダンなソフトウェア開発においてはベストプラクティスになります。App Service は [GitHub Actions](https://github.com/features/actions) と Azure Pipelines を直接結びつけることができるので、App Service の CI/CD は容易に設定することができます。
 
 ### 継続的インテグレーション
 
@@ -73,7 +73,7 @@ az webapp deployment slot create --slot staging -n <name> -g zero_to_hero
 
 > [App Service のステージングスロットについて学ぶにはこちら](https://docs.microsoft.com/azure/app-service/deploy-best-practices#use-deployment-slots).
 
-## Create a CI/CD Pipeline
+## CI/CD パイプラインを作成する
 
 次に、CI/CDパイプラインを作り、GitHubリポジトリをステージングスロットに繋げます。
 App Service には GitHub Actions と Azure Pipelinesを繋ぐ機能がビルトインされています。
@@ -84,7 +84,7 @@ App Service には GitHub Actions と Azure Pipelinesを繋ぐ機能がビルト
 [GitHub Actions](https://github.com/features/actions) CI/CD をビルトインした自動化のフレームワークです。
 リポジトリに新しいコミットや、プルリクエストへのコメント、プルリクエストがマージされたとき、CRONスケジュールがあるたびに、自動化タスクを実行することができます。自動化タスクは YAMLのファイルでリポジトリの `.github/workflows/` ディレクトリにある [ワークフローファイル](https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow)にまとめられ、アプリケーションコードと共にソース配下としてトラックされます。
 
-ワークフローファイルは自動化が実行された時を定義します。ワークフローは１つか複数の**jobs**から構成され、ジョブは１つか複数の**steps**から構成されます。ジョブは、ステップが実行されるOSを定義します。もし、ライブラリをパブリッシュして複数のOSでテストしたいなら、複数のジョブを使う必要があります。各ステップは個々の自動化のタスクで、自分に必要なものを書いたり、GitHubコミュニティで作られたアクションをインポートすることも出来ます。
+ワークフローファイルは自動化が実行される際の処理内容を定義します。ワークフローは１つか複数の**jobs**から構成され、ジョブは１つか複数の**steps**から構成されます。ジョブは、ステップが実行されるOSを定義します。もし、ライブラリをパブリッシュして複数のOSでテストしたいなら、複数のジョブを使う必要があります。各ステップは個々の自動化のタスクで、自分に必要なものを書いたり、GitHubコミュニティで作られたアクションをインポートすることも出来ます。
 
 "Hello World" ワークフローファイル例は以下になります。リポジトリにPUSHされると、いつでも、_"Hello Keanu Reeves"_と現時刻がプリントされます。YAMLを注意深く読めば、ドット記法を使用して、最後のステップが以前の「Helloworld」ステップからの出力をどのように参照しているかを確認できます。
 
@@ -113,40 +113,41 @@ jobs:
 ### パイプラインを作成する
 
 [Azure Portal](https://portal.azure.com/)で、前回作ったApp Service を開きます。
-**Deployment**ヘッダーの左側にある**Deployment Center**を選択します。
+**デプロイメント**ヘッダーの左側にある[**デプロイ センター**]を選択します。
 App Service Deployment Centerが開きます。
 Deployment Centerが CI/CD のセットアッププロセスをガイドします。
 
-次に、**GitHub** を選択して **Continue**をクリックします。
-次のページで、**GitHub Actions (Preview)** を選択し、下部の**Continue**をクリックします。
-そこで、ドロップダウンからリポジトリを選択します。言語と言語バージョンのドロップダウンを編集する必要はありません。
-
 #### デプロイセンターを表示する
 
-![GitHub Actions を設定する](../images/part2-2.png)
+![デプロイセンターを表示する](../images/part2-2.png)
 
 #### ビルドプロバイダーを選択する
 
-![GitHub Actions を設定する](../images/part2-3.png)
+次に、[**GitHub**] を選択して [**続行**]をクリックします。
+次のページで、[**GitHub Actions**] を選択し、下部の[**続行**]をクリックします。
+
+![ビルドプロバイダーを選択する](../images/part2-3.png)
 
 #### ビルド構成を設定する
 
-![GitHub Actions を設定する](../images/part2-4.png)
+次にドロップダウンからリポジトリを選択します。言語と言語バージョンのドロップダウンを編集する必要はありません。
+
+![ビルド構成を設定する](../images/part2-4.png)
 
 最後のページで、リポジトリにコミットした GitHub Actions ワークフローファイルのプレビューを見つけることができます。
-**完了**をクリックして、リポジトリにワークフローファイルをコミットします。このコミットはワークフローのトリガーになります。
+[**完了**]をクリックして、リポジトリにワークフローファイルをコミットします。このコミットはワークフローのトリガーになります。
 
 > App Service と連携させる [GitHub Actions について学ぶには、こちら](https://docs.microsoft.com/azure/app-service/deploy-github-actions) and [Azure Pipelines について学ぶには、こちら](https://docs.microsoft.com/azure/app-service/deploy-continuous-deployment#github--azure-pipelines)。
 
 ### パイプラインの進捗状況をチェックする
 
 GitHubのリポジトリにあるマスターブランチで、`.github/workflows/` という新しいファイルを見つけることができます。
-GitHubリポジトリの**Actions**タブをクリックすると、GitHub Actions が実行された履歴を見ることができます。
+GitHubリポジトリの[**Actions**]タブをクリックすると、GitHub Actions が実行された履歴を見ることができます。
 ワークフローが完了すると、ステージングスロットへのデプロイが完了しているのが確認できます。
 
 ## まとめ
 
-これで継続的ビルドとステージングにデプロイするための CI/CD パイプラインを作ることができた。次の記事では、どのようにステージングスロットとプロダクションスロットを _swap_ して、新しいビルドをプロダクションのユーザーにリリースします。
+これで継続的ビルドとステージングにデプロイするための CI/CD パイプラインを作ることができました。次の記事では、どのようにステージングスロットとプロダクションスロットを _swap_ して、新しいビルドをプロダクションのユーザーにリリースします。
 また、どのように少数のユーザーをステージングスロットにルーティングして、新しいビルドとプロダクションのトラフィックをA/Bテストするかについても説明します。
 
 ### 役に立つリンク
