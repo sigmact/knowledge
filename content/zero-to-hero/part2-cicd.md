@@ -73,7 +73,7 @@ az webapp deployment slot create --slot staging -n <name> -g zero_to_hero
 
 > [App Service のステージングスロットについて学ぶにはこちら](https://docs.microsoft.com/azure/app-service/deploy-best-practices#use-deployment-slots).
 
-## Create a CI/CD Pipeline
+## CI/CD パイプラインを作成する
 
 次に、CI/CDパイプラインを作り、GitHubリポジトリをステージングスロットに繋げます。
 App Service には GitHub Actions と Azure Pipelinesを繋ぐ機能がビルトインされています。
@@ -84,7 +84,7 @@ App Service には GitHub Actions と Azure Pipelinesを繋ぐ機能がビルト
 [GitHub Actions](https://github.com/features/actions) CI/CD をビルトインした自動化のフレームワークです。
 リポジトリに新しいコミットや、プルリクエストへのコメント、プルリクエストがマージされたとき、CRONスケジュールがあるたびに、自動化タスクを実行することができます。自動化タスクは YAMLのファイルでリポジトリの `.github/workflows/` ディレクトリにある [ワークフローファイル](https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow)にまとめられ、アプリケーションコードと共にソース配下としてトラックされます。
 
-ワークフローファイルは自動化が実行された時を定義します。ワークフローは１つか複数の**jobs**から構成され、ジョブは１つか複数の**steps**から構成されます。ジョブは、ステップが実行されるOSを定義します。もし、ライブラリをパブリッシュして複数のOSでテストしたいなら、複数のジョブを使う必要があります。各ステップは個々の自動化のタスクで、自分に必要なものを書いたり、GitHubコミュニティで作られたアクションをインポートすることも出来ます。
+ワークフローファイルは自動化が実行される際の処理内容を定義します。ワークフローは１つか複数の**jobs**から構成され、ジョブは１つか複数の**steps**から構成されます。ジョブは、ステップが実行されるOSを定義します。もし、ライブラリをパブリッシュして複数のOSでテストしたいなら、複数のジョブを使う必要があります。各ステップは個々の自動化のタスクで、自分に必要なものを書いたり、GitHubコミュニティで作られたアクションをインポートすることも出来ます。
 
 "Hello World" ワークフローファイル例は以下になります。リポジトリにPUSHされると、いつでも、_"Hello Keanu Reeves"_と現時刻がプリントされます。YAMLを注意深く読めば、ドット記法を使用して、最後のステップが以前の「Helloworld」ステップからの出力をどのように参照しているかを確認できます。
 
