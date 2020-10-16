@@ -76,14 +76,14 @@ Azureのサブスクリプションを入手する必要があります。
 [App Service Plan](https://docs.microsoft.com/azure/app-service/overview-hosting-plans)
 では仮想マシン(Virtual Machine)が複数の App Service をホストできる形になっています。
 より高機能なハードウェアプランが沢山のコンピューティングリソースや機能を提供します。
-App Service Plan はスケールの機能も持っおり。いつでも、ハードウェアのプランを変更することができます。
+App Service Plan はスケールの機能もあり。いつでも、ハードウェアのプランを変更することができます。
 
 ## まとめ
 
 これでApp Service のプランと WEBアプリケーションを作成しました。
 クラウド　ヒーローに向かって１ステップ近づいています。
 
- [次の記事では、](/zero-to-hero/part2-cicd/) CI(Continuous Integration)環境を構築し、
+ [次の記事では、](/zero-to-hero/part2-cicd/) CI (Continuous Integration) 環境を構築し、
  リリース用のパイプラインを作り、プログラムをWEBアプリケーションにデプロイします。
 
 ### 役に立つリンク

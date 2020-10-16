@@ -36,7 +36,7 @@ draft: false
 
 ## CI/CDとは
 
-CI(継続的インテグレーション)とCD(継続的デリバリー) は、App Service や Azure において特別なものではありません。テストとデプロイを自動化することは、モダンなソフトウェア開発においてはベストプラクティスになります。App Service は [GitHub Actions](https://github.com/features/actions) と Azure Pipelines を直接結びつけることができるので、App Service の CI/CD は用意に設定することができます。
+CI(継続的インテグレーション)とCD(継続的デリバリー) は、App Service や Azure において特別なものではありません。テストとデプロイを自動化することは、モダンなソフトウェア開発においてはベストプラクティスになります。App Service は [GitHub Actions](https://github.com/features/actions) と Azure Pipelines を直接結びつけることができるので、App Service の CI/CD は容易に設定することができます。
 
 ### 継続的インテグレーション
 
@@ -113,12 +113,12 @@ jobs:
 ### パイプラインを作成する
 
 [Azure Portal](https://portal.azure.com/)で、前回作ったApp Service を開きます。
-**Deployment**ヘッダーの左側にある**Deployment Center**を選択します。
+**Deployment**ヘッダーの左側にある[**Deployment Center**]を選択します。
 App Service Deployment Centerが開きます。
 Deployment Centerが CI/CD のセットアッププロセスをガイドします。
 
-次に、**GitHub** を選択して **Continue**をクリックします。
-次のページで、**GitHub Actions (Preview)** を選択し、下部の**Continue**をクリックします。
+次に、[**GitHub**] を選択して [**Continue**]をクリックします。
+次のページで、[**GitHub Actions (Preview)**] を選択し、下部の[**Continue**]をクリックします。
 そこで、ドロップダウンからリポジトリを選択します。言語と言語バージョンのドロップダウンを編集する必要はありません。
 
 #### デプロイセンターを表示する
@@ -134,19 +134,19 @@ Deployment Centerが CI/CD のセットアッププロセスをガイドしま�
 ![GitHub Actions を設定する](../images/part2-4.png)
 
 最後のページで、リポジトリにコミットした GitHub Actions ワークフローファイルのプレビューを見つけることができます。
-**完了**をクリックして、リポジトリにワークフローファイルをコミットします。このコミットはワークフローのトリガーになります。
+[**完了**]をクリックして、リポジトリにワークフローファイルをコミットします。このコミットはワークフローのトリガーになります。
 
 > App Service と連携させる [GitHub Actions について学ぶには、こちら](https://docs.microsoft.com/azure/app-service/deploy-github-actions) and [Azure Pipelines について学ぶには、こちら](https://docs.microsoft.com/azure/app-service/deploy-continuous-deployment#github--azure-pipelines)。
 
 ### パイプラインの進捗状況をチェックする
 
 GitHubのリポジトリにあるマスターブランチで、`.github/workflows/` という新しいファイルを見つけることができます。
-GitHubリポジトリの**Actions**タブをクリックすると、GitHub Actions が実行された履歴を見ることができます。
+GitHubリポジトリの[**Actions**]タブをクリックすると、GitHub Actions が実行された履歴を見ることができます。
 ワークフローが完了すると、ステージングスロットへのデプロイが完了しているのが確認できます。
 
 ## まとめ
 
-これで継続的ビルドとステージングにデプロイするための CI/CD パイプラインを作ることができた。次の記事では、どのようにステージングスロットとプロダクションスロットを _swap_ して、新しいビルドをプロダクションのユーザーにリリースします。
+これで継続的ビルドとステージングにデプロイするための CI/CD パイプラインを作ることができました。次の記事では、どのようにステージングスロットとプロダクションスロットを _swap_ して、新しいビルドをプロダクションのユーザーにリリースします。
 また、どのように少数のユーザーをステージングスロットにルーティングして、新しいビルドとプロダクションのトラフィックをA/Bテストするかについても説明します。
 
 ### 役に立つリンク
