@@ -98,7 +98,7 @@ Azureポータルで、[**デプロイ スロット**]メニューに遷移し�
     </iframe>
 </div>
 
-> “カナリアリリース” という総称の起源は [the “canary in a coal mine” idiom](https://en.wiktionary.org/wiki/canary_in_a_coal_mine)になります。
+> 「カナリアリリース」 という総称の起源は [the “canary in a coal mine” idiom](https://en.wiktionary.org/wiki/canary_in_a_coal_mine)になります。
 
 ### テレメトリーのタグ付け
 
