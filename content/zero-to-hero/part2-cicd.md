@@ -113,25 +113,26 @@ jobs:
 ### パイプラインを作成する
 
 [Azure Portal](https://portal.azure.com/)で、前回作ったApp Service を開きます。
-**Deployment**ヘッダーの左側にある[**Deployment Center**]を選択します。
+**デプロイメント**ヘッダーの左側にある[**デプロイ センター**]を選択します。
 App Service Deployment Centerが開きます。
 Deployment Centerが CI/CD のセットアッププロセスをガイドします。
 
-次に、[**GitHub**] を選択して [**Continue**]をクリックします。
-次のページで、[**GitHub Actions (Preview)**] を選択し、下部の[**Continue**]をクリックします。
-そこで、ドロップダウンからリポジトリを選択します。言語と言語バージョンのドロップダウンを編集する必要はありません。
-
 #### デプロイセンターを表示する
 
-![GitHub Actions を設定する](../images/part2-2.png)
+![デプロイセンターを表示する](../images/part2-2.png)
 
 #### ビルドプロバイダーを選択する
 
-![GitHub Actions を設定する](../images/part2-3.png)
+次に、[**GitHub**] を選択して [**続行**]をクリックします。
+次のページで、[**GitHub Actions**] を選択し、下部の[**続行**]をクリックします。
+
+![ビルドプロバイダーを選択する](../images/part2-3.png)
 
 #### ビルド構成を設定する
 
-![GitHub Actions を設定する](../images/part2-4.png)
+次にドロップダウンからリポジトリを選択します。言語と言語バージョンのドロップダウンを編集する必要はありません。
+
+![ビルド構成を設定する](../images/part2-4.png)
 
 最後のページで、リポジトリにコミットした GitHub Actions ワークフローファイルのプレビューを見つけることができます。
 [**完了**]をクリックして、リポジトリにワークフローファイルをコミットします。このコミットはワークフローのトリガーになります。
