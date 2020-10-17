@@ -1,5 +1,5 @@
 ---
-title: "App Service でゼロからヒーロー Part 5: 認証/承認機能を利用した簡易的な認証ページを作成する"
+title: "Azure App Service でゼロからヒーロー Part 5: 認証/承認機能を利用した簡易的な認証ページを作成する"
 weight: 1
 date: 2020-10-16
 description: "この記事では、Webアプリケーションに認証/承認機能を利用した認証を追加する方法を説明します。"
@@ -8,13 +8,13 @@ authors: [
 ]
 type : "article"
 tags: ["zero to hero", "Azure", "Web Apps"]
-eyecatch: "/images/eyecatch/zero-to-hero.jpeg"
+eyecatch: "/images/eyecatch/zero-to-hero5.jpg"
 draft: false
 ---
 
 ## はじめに
 
-この記事は[Azure App Service Team Blog](https://azure.github.io/AppService/)の[Zero to Heroシリーズの記事](https://azure.github.io/AppService/tags/#zero-to-hero)に感銘を受けて、和訳＆改変した記事です。本家の「Zero to Hero」というフレーズの通り、App Serviceを使ったことの無い方は一人前になれるように、すでに利用している方は知識のアップデートに役立てていただければと思います
+この記事は[Azure App Service Team Blog](https://azure.github.io/AppService/)の[Zero to Heroシリーズの記事](https://azure.github.io/AppService/tags/#zero-to-hero)に感銘を受けて、和訳＆改変した記事です。本家の「Zero to Hero」というフレーズの通り、Azure App Serviceを使ったことの無い方は一人前になれるように、すでに利用している方は知識のアップデートに役立てていただければと思います
 
 なお、連載の５回目からは筆者オリジナルのコンテンツを掲載していきます。掲載予定のコンテンツは以下のようなものを予定しております
 
