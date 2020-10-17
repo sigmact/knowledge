@@ -1,21 +1,20 @@
 ---
-title: "App Service でゼロからヒーロー Part 2: CI(継続的インテグレーション)とCD(継続的デリバリー)"
+title: "Azure App Service でゼロからヒーロー Part 2: CI(継続的インテグレーション)とCD(継続的デリバリー)"
 weight: 10
 date: 2020-09-10
-description: "前回の記事では App Service プランを作り、サンプルアプリケーションをForkして、WEBアプリケーションを作りました。この記事では、GitHub Actions を使って CI/CD のパイプラインをセットアップします。"
+description: "前回の記事では Azure App Service プランを作り、サンプルアプリケーションをForkして、WEBアプリケーションを作りました。この記事では、GitHub Actions を使って CI/CD のパイプラインをセットアップします。"
 authors: [
-  ["Keiichi Hashimoto","images/author/k1hash.png"],
-  ["Kazunori Hamamoto","images/author/khamamoto.jpg"],
+  ["Kazunori Hamamoto","images/author/khamamoto.jpg"]
 ]
 type : "article"
 tags: ["zero to hero", "Azure", "Web Apps"]
-eyecatch: "/images/eyecatch/zero-to-hero.jpeg"
+eyecatch: "/images/eyecatch/zero-to-hero2.jpg"
 draft: false
 ---
 
 ## はじめに
 
-この記事は[Azure App Service Team Blog](https://azure.github.io/AppService/)の[Zero to Heroシリーズの記事](https://azure.github.io/AppService/tags/#zero-to-hero)に感銘を受けて、和訳＆改変した記事です。本家の「Zero to Hero」というフレーズの通り、App Serviceを使ったことの無い方は一人前になれるように、すでに利用している方は知識のアップデートに役立てていただければと思います
+この記事は[Azure App Service Team Blog](https://azure.github.io/AppService/)の[Zero to Heroシリーズの記事](https://azure.github.io/AppService/tags/#zero-to-hero)に感銘を受けて、和訳＆改変した記事です。本家の「Zero to Hero」というフレーズの通り、Azure App Serviceを使ったことの無い方は一人前になれるように、すでに利用している方は知識のアップデートに役立てていただければと思います
 
 今回は「[Zero to Hero with App Service, Part 2: Continuous Integration and Delivery](https://azure.github.io/AppService/2020/06/29/zero_to_hero_pt2.html)」を翻訳した記事です。
 
