@@ -8,7 +8,7 @@ authors: [
 ]
 type : "article"
 tags: ["general"]
-eyecatch: "/images/eyecatch/about_updated.png"
+eyecatch: "images/eyecatch/about_updated.png"
 ---
 
 ## はじめに

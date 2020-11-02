@@ -8,7 +8,7 @@ authors: [
 ]
 type : "article"
 tags: ["雑談会議","Azure","C#"]
-eyecatch: "/images/eyecatch/why.jpg"
+eyecatch: "images/eyecatch/why.jpg"
 ---
 
 ## 皆さん、新しい出会いは生まれているでしょうか？

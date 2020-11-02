@@ -8,7 +8,7 @@ authors: [
 ]
 type : "article"
 tags: ["zero to hero", "Azure", "Web Apps"]
-eyecatch: "/images/eyecatch/zero-to-hero3.jpg"
+eyecatch: "images/eyecatch/zero-to-hero3.jpg"
 draft: false
 ---
 

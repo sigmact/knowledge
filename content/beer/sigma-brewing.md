@@ -8,7 +8,7 @@ authors: [
 ]
 type : "article"
 tags: ["ビール"]
-eyecatch: "/images/eyecatch/sigma-brewing.png"
+eyecatch: "images/eyecatch/sigma-brewing.png"
 ---
 
 ## はじめに

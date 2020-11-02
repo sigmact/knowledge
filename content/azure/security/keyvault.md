@@ -9,7 +9,7 @@ authors: [
     ["Takekazu Omi","images/author/omi.png"]
 ]
 tags: ["Azure", "セキュリティ"]
-eyecatch: "/images/eyecatch/keyvault.png"
+eyecatch: "images/eyecatch/keyvault.png"
 ---
 
 ## はじめに

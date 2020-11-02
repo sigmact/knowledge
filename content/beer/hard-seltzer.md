@@ -8,7 +8,7 @@ authors: [
 ]
 type : "article"
 tags: ["ハードセルツァー"]
-eyecatch: "/images/eyecatch/hard-seltzer.jpg"
+eyecatch: "images/eyecatch/hard-seltzer.jpg"
 ---
 
 皆さんは「ハードセルツァー」とは何かご存知でしょうか？耳にしたことのある方もいれば、まったく知らない方も多いと思います。

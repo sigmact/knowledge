@@ -45,9 +45,9 @@
               <div class="mt-5">
                 {{ if (isset .Params "eyecatch") }}
                 {{ $eyecatchImage := .Params.Eyecatch }}
-                <img src="{{ $eyecatchImage }}" alt="{{ .Params.title }}"/>
+                <img src="{{ .Site.BaseURL }}{{ $eyecatchImage }}" alt="{{ .Params.title }}"/>
                 {{ else }}
-                <img class="topicTitleImages" src="/images/eyecatch/default.png" alt="{{ .Params.title }}">
+                <img class="topicTitleImages" src="{{ .Site.BaseURL }}images/eyecatch/default.png" alt="{{ .Params.title }}">
                 {{ end }}
               </div>
 

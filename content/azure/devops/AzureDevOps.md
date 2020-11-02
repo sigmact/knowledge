@@ -8,7 +8,7 @@ weight: 10
 date: 2020-04-06
 description: "弊社では少数精鋭によるパブリッククラウドを利用した SI の提供を前提とした DevOps に取り組んでいます。取り組みの中では弊社にとってベストプラクティスに到達している要素もあれば、継続的に検証と改善を繰り返している要素もあり、まだまだ未成熟な状態です。"
 type: "article"
-eyecatch: "/images/eyecatch/deploy.png"
+eyecatch: "images/eyecatch/deploy.png"
 ---
 
 ## Azure DevOps

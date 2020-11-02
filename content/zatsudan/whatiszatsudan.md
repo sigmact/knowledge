@@ -8,7 +8,7 @@ authors: [
 ]
 type : "article"
 tags: ["雑談会議","Azure","C#"]
-eyecatch: "/images/eyecatch/zatsudan.jpg"
+eyecatch: "images/eyecatch/zatsudan.jpg"
 ---
 
 ## 【雑談Azure会議のお誘い】

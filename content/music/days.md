@@ -8,7 +8,7 @@ authors: [
 ]
 type : "article"
 tags: ["音楽"]
-eyecatch: "/images/eyecatch/days.png"
+eyecatch: "images/eyecatch/days.png"
 ---
 
 ## はじめに
