@@ -13,12 +13,12 @@ steps:
 - task: HugoTask@1
   inputs:
     source: '$(Build.SourcesDirectory)'
-    destination: '$(Build.SourcesDirectory)\public'
-    baseURL: 'https://www.sigmact.com/updated'
+    destination: '$(Build.SourcesDirectory)\public\updated'
+    baseURL: 'https://www.sigmact.com/updated/'
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.SourcesDirectory)\public'
+    PathtoPublish: '$(Build.SourcesDirectory)\public\updated'
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
