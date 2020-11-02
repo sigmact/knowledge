@@ -1,7 +1,10 @@
 DefaultContentLanguage = "ja"
-baseURL = "http://localhost:1313"
+baseURL = "http://localhost:1313/updated"
 theme = "dot-hugo-documentation-theme"
 enableRobotsTXT = true
+
+RelativeURLs=true
+CanonifyURLs=true
 
 # HTMLを生成するディレクトリ
 publishDir = "public/dev"
