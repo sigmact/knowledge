@@ -4,7 +4,7 @@ weight: 10
 date: 2020-10-02
 description: "ハードセルツァーの魅力ごご紹介します。"
 authors: [
-["Saki Shimada","images/author/s-shimada.png"]
+["Saki Shimada","images/author/s-shimada.jpg"]
 ]
 type : "article"
 tags: ["ハードセルツァー"]
