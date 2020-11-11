@@ -1,31 +1,29 @@
 {{ define "main" }}
 
   {{ "<!-- page title -->" | safeHTML }}
-  <section class="section bg-dark">
-    <div class="container">
-      <div class="row">
+  <div class="container">
+    <div class="keyvisual">
+      <img class="keyvisualImage" src="{{ .Site.BaseURL }}{{ .Params.eyecatch }}" alt="{{ .Title }}">
+      <div class="keyvisualTextBox">
         <div class="col-lg-8 mx-auto text-center">
-          {{ with .Data.Params.banner.title }} <h1 class="text-white mb-4">{{ . }}</h1> {{ end }}
-          <h2 class="text-white mb-4">{{ .Title }}</h2>
-
+          <h1 class="text-white mb-4">{{ .Title }}</h1>
+          <p class="keyword">{{ .Params.Description }}</p>
         </div>
-      </div>
+      </div>        
     </div>
-  </section>
+  </div>
   {{ "<!-- /page title -->" | safeHTML }}
 
   {{ "<!-- topics -->" | safeHTML }}
   <section class="section pt-0">
     <div class="container">
       <div class="row mt-5">
-          <div class="col-12 text-center">
-            {{with .Data.Params.topics.title}} <h2 class="section-title mt-0">{{ . }}</h2> {{ end }}
-          </div>
-              <!-- ページ内リンクを作りながらコンテンツをレンダリングする -->
-              {{- with .Content -}}
-                {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor"><i class="fas fa-link"></i></a> ${3}` | safeHTML }}
-              {{- end -}}
+        {{ .Content }}
 
+        <div class="col-12 text-center">
+          <h2 class="section-title mt-0">記事一覧</h2>
+        </div>
+             
           {{ "<!-- topic-item -->" | safeHTML }}
           {{ range (where .Data.Pages "Type" "article") }}
           <div class="col-lg-4 col-md-6 mb-4">
