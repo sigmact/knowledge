@@ -172,10 +172,10 @@ figcaption {
   }
   &Container { 
     padding: 30px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     background-color: rgba($color: $white, $alpha: .9);
     > .container {
-      padding: 0 200px;
+      padding: 0 50px;
     }
   }
   &Title {
