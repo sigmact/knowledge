@@ -1,14 +1,14 @@
 ---
-title: "Azure App Serviceを使いこなしてゼロからヒーローになる"
+title: "【Azure初心者から上級者まで！】Azure App Serviceを使いこなしてゼロからヒーローになる"
 date: 2020-11-11T11:02:05+06:00
 icon: "ti-panel"
-description: "Azure App Serviceを使いこなしてゼロからヒーローになる"
+description: "【Azure初心者から上級者まで！】Azure App Serviceを使いこなしてゼロからヒーローになる"
 type : "category_top"
 eyecatch: "images/eyecatch/zero-to-hero.jpeg"
 draft: false
 ---
 
-## Azure App Service を使いこなしてゼロからヒーローになる
+## 【Azure初心者から上級者まで！】Azure App Service を使いこなしてゼロからヒーローになる
 
 Azure App Service といえば、Webサイトや APIを迅速に構築できる開発環境、デプロイ、スケーリングできる運用環境を兼ね備えたマネージドサービスです。Windows または Linux 上で実行されている .NET、.NET Core、Node.js、Java、Python、PHP を使用できます。
 
