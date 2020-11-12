@@ -1,6 +1,6 @@
 ---
 title: "Azure App Serviceを使いこなしてゼロからヒーローになる"
-date: 2019-07-29T11:02:05+06:00
+date: 2020-11-11T11:02:05+06:00
 icon: "ti-panel"
 description: "Azure App Serviceを使いこなしてゼロからヒーローになる"
 type : "category_top"
@@ -10,16 +10,18 @@ draft: false
 
 ## Azure App Service を使いこなしてゼロからヒーローになる
 
-Azure App Service といえば、様々な用途で利用可能なWEBサイト、WEBサービス環境を瞬時に作れるうえに、アプリケーション層以下をMicrosoftがマネージドサービスとして管理してくれる素晴らしいサービスです。
+Azure App Service といえば、Webサイトや APIを迅速に構築できる開発環境、デプロイ、スケーリングできる運用環境を兼ね備えたマネージドサービスです。Windows または Linux 上で実行されている .NET、.NET Core、Node.js、Java、Python、PHP を使用できます。
 
-アプリケーションの実装に専念できるため
+様々な用途で利用可能なWEBサイト、WEBサービス環境を瞬時に作れるうえに、アプリケーション層以下をMicrosoftがマネージドサービスとしてMicrosoftが管理してくれるので、パフォーマンス、セキュリティ、およびコンプライアンス要件に対応できます。
+
+開発者はアプリケーションの実装に専念できるため、小さいチームでも
 
 - スタートアップ事業のサービス基盤
 - 金融系のサービスの基盤として PCI DSS 対応
 - ECサイトの拡張機能
 - アプリと連携するためのAPI基盤
 
-とにかく使い勝手の万能なPaaS型のサービスで、多くの事例で利用しています！
+といった大きな事例で活かすことができます！
 
 ここでは[Azure App Service Team Blog](https://azure.github.io/AppService/)の[Zero to Heroシリーズの記事](https://azure.github.io/AppService/tags/#zero-to-hero)に感銘を受けて、和訳＆改変＆自作記事を追加しています。
 本家の「Zero to Hero」というフレーズの通り、Azure App Serviceを使ったことの無い方は一人前になれるように、すでに利用している方は知識のアップデートに役立てていただければと思います。
