@@ -8,7 +8,7 @@
           {{ range first 3 .Site.RegularPages.ByLastmod.Reverse }}
           <li>
             <a href="{{.RelPermalink}}" class="d-flex p-1">
-              <time class="mr-3 flex-shrink-0" datetime="{{.Date.Format "2006/1/2"}}">{{.Date.Format "2006/1/2"}}</time>
+              <time class="mr-3 flex-shrink-0" datetime="{{.Lastmod.Format "2006/1/2"}}">{{.Lastmod.Format "2006/1/2"}}</time>
               <span>{{.Title}}</span>
             </a>
           </li>

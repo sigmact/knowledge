@@ -2,6 +2,7 @@ DefaultContentLanguage = "ja"
 baseURL = "https://www.sigmact.com/updated"
 theme = "dot-hugo-documentation-theme"
 enableRobotsTXT = true
+enableGitInfo = true
 
 RelativeURLs=true
 CanonifyURLs=true

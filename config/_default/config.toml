@@ -2,6 +2,7 @@ DefaultContentLanguage = "ja"
 baseURL = "http://localhost:1313/updated"
 theme = "dot-hugo-documentation-theme"
 enableRobotsTXT = true
+enableGitInfo = true
 
 RelativeURLs=true
 CanonifyURLs=true
