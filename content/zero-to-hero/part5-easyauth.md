@@ -1,5 +1,5 @@
 ---
-title: "Azure App Service でゼロからヒーロー Part 5: 認証/承認機能を利用した簡易的な認証ページを作成する"
+title: "【Azure App Service】Easy Authを利用した簡易的な認証ページを作成する"
 weight: 1
 date: 2020-10-16
 description: "この記事では、Webアプリケーションに認証/承認機能を利用した認証を追加する方法を説明します。"

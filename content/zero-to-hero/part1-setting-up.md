@@ -1,5 +1,5 @@
 ---
-title: "Azure App Service でゼロからヒーロー Part 1: 設定編"
+title: "【Azure App Service】App Service プランを作る設定"
 weight: 10
 date: 2020-09-07
 description: "Azure App Service を立上げ、より進歩した使い方を身に着けていく素晴らしい土台を身に着けることができます。"

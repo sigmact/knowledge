@@ -1,8 +1,8 @@
 ---
-title: "Azure App Service でゼロからヒーロー Part 6: Application GatewayとWeb Appの連携（ルーティング編）"
+title: "【Azure App Service】Application Gatewayと Web Apps の連携（ルーティング編）"
 weight: 1
 date: 2020-11-09
-description: "この記事では、Application Gatewayのルーティング機能を使用して複数のWeb AppからWebアプリケーションを構成する方法を説明します。"
+description: "この記事では、Application Gatewayのルーティング機能を使用して複数の Web Apps からWebアプリケーションを構成する方法を説明します。"
 authors: [
   ["Kazunori Hamamoto","images/author/khamamoto.jpg"],
 ]
