@@ -1,5 +1,5 @@
 ---
-title: "Azure AD B2C とは| 新規事業と相性の良い Azure ADB2C Vol.1"
+title: "【初心者でも理解できる】Azure AD B2C とは"
 authors:
   [
     ["Tsubasa Yoshino", "images/author/yoshinotsubasa.jpg"],
