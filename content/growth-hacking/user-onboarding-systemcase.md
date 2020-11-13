@@ -1,5 +1,5 @@
 ---
-title: "ユーザーオンボーディング成功へのヒント１(システム機能編) "
+title: "システム機能の工夫でユーザーオンボーディングを成功させよう"
 authors: [
 ["Saki Shimada","images/author/s-shimada.jpg"]
 ]

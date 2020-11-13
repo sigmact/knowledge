@@ -1,5 +1,5 @@
 ---
-title: "【Azure Key Vault】Azure Key Vault、App Configuration、App Settings の比較 | センシティブ情報管理のベストプラクティス"
+title: "Azure Key Vault を使ったセンシティブ情報管理"
 weight: 20
 date: 2019-10-22
 description: "Microsoft Azureで、アプリケーションで使われるセンシティブ情報(パスワード等)の保護のベストプラクティスについて書いています。以下に、アプリケーションの設定情報を外部に保持する複数の方法について比較し、その後センシティブ情報をKey Vaultに保存する利点を論じています。"

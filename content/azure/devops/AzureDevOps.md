@@ -1,5 +1,5 @@
 ---
-title: "目指すDevOpsを実現するために Azure DevOps を使いこなす(Azure Pipelines編)"
+title: "Azure DevOps Pipelines の使い方 | 目指すDevOpsを実現する"
 authors:
   [
     ["Tsubasa Yoshino", "images/author/yoshinotsubasa.jpg"],

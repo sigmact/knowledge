@@ -1,5 +1,5 @@
 ---
-title: "ユーザーオンボーディング成功へのヒント２(メール編) "
+title: "メールで実現するユーザーオンボーディング成功"
 authors: [
 ["Saki Shimada","images/author/s-shimada.jpg"]
 ]

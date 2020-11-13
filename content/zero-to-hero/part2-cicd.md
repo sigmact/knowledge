@@ -1,5 +1,5 @@
 ---
-title: "【Azure App Service】App Service の CI(継続的インテグレーション)とCD(継続的デリバリー)"
+title: "Azure App Service CI(継続的インテグレーション)とCD(継続的デリバリー) | Azure App Serviceをゼロから使いこなす"
 weight: 10
 date: 2020-09-10
 description: "前回の記事では Azure App Service プランを作り、サンプルアプリケーションをForkして、WEBアプリケーションを作りました。この記事では、GitHub Actions を使って CI/CD のパイプラインをセットアップします。"

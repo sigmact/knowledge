@@ -1,5 +1,5 @@
 ---
-title: "Azure上でセキュア・アプリケーションを作るベストプラクティスを突き詰め続ける"
+title: "PCI DSS 対応を踏まえたAzure上でセキュアなアプリケーションを作るベストプラクティス"
 authors: [
     ["Takekazu Omi","images/author/omi.png"],
     ["Keiichi Hashimoto","images/author/k1hash.png"]

@@ -1,5 +1,5 @@
 ---
-title: "Webアプリの立上げと相性の良い Azure ADB2C　第1回(Azure AD B2C とは)"
+title: "Azure AD B2C とは| Webアプリの立上げと相性の良い Azure ADB2C Vol.1"
 authors:
   [
     ["Tsubasa Yoshino", "images/author/yoshinotsubasa.jpg"],
