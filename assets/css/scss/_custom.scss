@@ -415,6 +415,20 @@ figcaption {
   }
 }
 
+.authorIcon{
+  display:inline-block;
+  width:60px;height:60px;
+  margin-right:8px;
+  margin-bottom:0;
+  border-radius:50%
+}
+
+.authorName{
+  display:inline-block;
+  line-height:40px;
+  font-size:18px;
+  font-size:1.8rem
+}
 
 .footerSns {
   margin-top: 5px;
