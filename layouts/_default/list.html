@@ -26,50 +26,45 @@
           <h2 class="section-title mt-0">記事一覧</h2>
         </div>
              
-          {{ "<!-- topic-item -->" | safeHTML }}
-          {{ range (where .Data.Pages "Type" "article") }}
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="topicTile bg-white shadow">
-              <a href="{{ .RelPermalink }}" class="d-block">
-                <p class="date text-right">{{ .PublishDate.Format "2006/1/2" }}</p>
+        {{ "<!-- topic-item -->" | safeHTML }}
+        {{ range (where .Data.Pages "Type" "article") }}
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="topicTile bg-white shadow">
+            <a href="{{ .RelPermalink }}" class="d-block">
+              <p class="date text-right">{{ .PublishDate.Format "2006/1/2" }}</p>
 
-                {{ if (isset .Params "eyecatch") }}
-                {{ $eyecatchImage := .Params.Eyecatch }}
-                <img class="topicTitleImages" src="{{ .Site.BaseURL }}{{ $eyecatchImage }}" alt="{{ .Params.title }}">
-                {{ else }}
-                <img class="topicTitleImages" src="{{ .Site.BaseURL }}images/eyecatch/default.png" alt="{{ .Params.title }}">
-                {{ end }}
-                <div class="topicTileText">
-                  <h3 class="title mt-0 mb-0">{{ .Title }}</h3>
-                </div>
+              {{ if (isset .Params "eyecatch") }}
+              {{ $eyecatchImage := .Params.Eyecatch }}
+              <img class="topicTitleImages" src="{{ .Site.BaseURL }}{{ $eyecatchImage }}" alt="{{ .Params.title }}">
+              {{ else }}
+              <img class="topicTitleImages" src="{{ .Site.BaseURL }}images/eyecatch/default.png" alt="{{ .Params.title }}">
+              {{ end }}
+              <div class="topicTileText">
+                <h3 class="title mt-0 mb-0">{{ .Title }}</h3>
+              </div>
                
-                <ul class="tagList">
-                  {{ range .Params.Tags }}
-                  <li>#{{ . }}</li>
-                  {{ end }}
-                </ul>
+              <ul class="tagList">
+                {{ range .Params.Tags }}
+                <li>#{{ . }}</li>
+                {{ end }}
+              </ul>
                 
-              </a>
-            </div>
+            </a>
           </div>
-          {{ end }}
+        </div>
+        {{ end }}
+      
+        <div class="text-center col-12 text-center">
+          <!--<p class="section-title mb-4">問い合わせ</p>-->
+          <p class="mb-4">お問い合わせはこちらから</p>
+          <a href="https://www.sigmact.com/#section-contact" class="btn btn-primary">問い合わせる</a>
+        </div>
+      
       </div>
     </div>
+
   </section>
   {{ "<!-- /topics -->" | safeHTML }}
-
-  {{ if .Site.Params.cta.enable }}
-  {{ "<!-- call to action -->" | safeHTML }}
-  {{/*  <section class="section bg-gray pt-5">
-    <div class="text-center bg-white p-5">
-      {{ with .Site.Params.cta.title }} <p class="section-title mb-4">{{ . }}</p> {{ end }}
-      {{ with .Site.Params.cta.description }} <p class="mb-4">{{ . }}</p> {{ end }}
-      <a href="{{ with .Site.Params.cta.btnURL}}{{ . | absURL }}{{ end }}"
-        class="btn btn-primary">{{ with .Site.Params.cta.btnText}}{{ . }}{{ end }}</a>
-    </div>
-  </section>  */}}
-  {{ "<!-- /call to action -->" | safeHTML }}
-  {{ end }}
 
 
 {{ end }}
