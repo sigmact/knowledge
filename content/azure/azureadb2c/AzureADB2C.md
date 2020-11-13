@@ -1,5 +1,5 @@
 ---
-title: "【初心者でも理解できる】Azure AD B2C とは"
+title: "【丁寧解説】Azure AD B2C とは？"
 authors:
   [
     ["Tsubasa Yoshino", "images/author/yoshinotsubasa.jpg"],

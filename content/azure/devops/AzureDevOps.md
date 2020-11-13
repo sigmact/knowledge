@@ -1,5 +1,5 @@
 ---
-title: "Azure DevOps Pipelines の使い方 | 目指すDevOpsを実現する"
+title: "【丁寧解説】Azure DevOps Pipelines を使い、ASP.NET Core アプリをAzure WebApps にデプロイする"
 authors:
   [
     ["Tsubasa Yoshino", "images/author/yoshinotsubasa.jpg"],
@@ -13,10 +13,7 @@ eyecatch: "images/eyecatch/deploy.png"
 
 ## Azure DevOps
 
-この記事は、「自社にとって最適な DevOps を突き詰める」の続きになります。
-その自社にとって最適な DevOps を実現するために Azure DevOps を使いこなす」という趣旨の記事です。
-
-※ところが前編はただいま執筆中です。
+この記事は、「自社にとって最適な DevOps を実現するために Azure DevOps を使いこなす」という趣旨の記事です。
 
 ### はじめに
 
