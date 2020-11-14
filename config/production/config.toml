@@ -13,7 +13,7 @@ publishDir = "public/production"
 googleAnalytics = "UA-139325091-1"
 
 [params]
-  articleToCLevel = 3
+  articleToCLevel = 1
 
 [blackfriday]
   hrefTargetBlank = true
