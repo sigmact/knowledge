@@ -8,6 +8,7 @@ weight: 10
 date: 2020-01-27
 description: "Azure 上でアプリケーションを構築する開発者向け(元々は社内向け)に、セキュア・アプリケーションを構築する際のベストプラクティス的な内容をアップデートし続けていく事を目指しています。"
 type : "article"
+category : "azure"
 tags: ["Azure", "セキュリティ","KeyVault"]
 eyecatch: "images/eyecatch/pcidss.png"
 ---

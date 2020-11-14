@@ -8,6 +8,7 @@ authors: [
 ["Chiho Otonashi","images/author/otns.png"]
 ]
 type : "article"
+category : "sigma"
 tags: ["デザイン"]
 eyecatch: "images/eyecatch/our-design-process.jpg"
 ---

@@ -8,6 +8,7 @@ weight: 10
 date: 2020-07-29
 description: ""
 type: "article"
+category : "azure"
 eyecatch: "/images/eyecatch/deploy.png"
 draft: true
 ---

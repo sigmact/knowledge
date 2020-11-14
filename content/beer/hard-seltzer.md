@@ -7,6 +7,7 @@ authors: [
 ["Saki Shimada","images/author/s-shimada.jpg"]
 ]
 type : "article"
+category : "diy"
 tags: ["ハードセルツァー"]
 eyecatch: "images/eyecatch/hard-seltzer.jpg"
 ---

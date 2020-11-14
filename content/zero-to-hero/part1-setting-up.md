@@ -8,6 +8,7 @@ authors: [
   ["Kazunori Hamamoto","images/author/khamamoto.jpg"]
 ]
 type : "article"
+category : "azure"
 tags: ["zero to hero", "Azure", "Web Apps"]
 eyecatch: "images/eyecatch/zero-to-hero1.jpg"
 draft: false

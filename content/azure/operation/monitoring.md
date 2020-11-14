@@ -7,6 +7,7 @@ authors: [
   ["Kazunori Hamamoto","images/author/khamamoto.jpg"],
 ]
 type : "article"
+category : "azure"
 tags: ["運用監視"]
 eyecatch: "images/eyecatch/monitoring.jpg"
 ---

@@ -19,10 +19,11 @@
     <div class="container">
       <div class="row mt-5">
           <div class="col-12 text-center">
-            {{with .Site.Params.topics.title}} <h2 class="section-title mt-0">{{ . }}</h2> {{ end }}
+            {{with .Site.Params.topics.title}} <h2 class="section-title mt-0">Azure関連記事</h2> {{ end }}
           </div>
           {{ "<!-- topic-item -->" | safeHTML }}
-          {{ range (where .Site.Pages "Type" "article") }}
+          {{ range where .Site.Pages "Params.category" "azure" }}
+
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="topicTile bg-white shadow">
               <a href="{{ .RelPermalink }}" class="d-block">
@@ -49,6 +50,75 @@
           </div>
           {{ end }}
       </div>
+
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          {{with .Site.Params.topics.title}} <h2 class="section-title mt-0">仕事の考え方関連記事</h2> {{ end }}
+        </div>
+        {{ "<!-- topic-item -->" | safeHTML }}
+        {{ range where .Site.Pages "Params.category" "sigma" }}
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="topicTile bg-white shadow">
+            <a href="{{ .RelPermalink }}" class="d-block">
+              <p class="date text-right">{{ .PublishDate.Format "2006/1/2" }}</p>
+
+              {{ if (isset .Params "eyecatch") }}
+              {{ $eyecatchImage := .Params.Eyecatch }}
+              <img class="topicTitleImages" src="{{ $eyecatchImage }}" alt="{{ .Params.title }}">
+              {{ else }}
+              <img class="topicTitleImages" src="/images/eyecatch/default.png" alt="{{ .Params.title }}">
+              {{ end }}
+              <div class="topicTileText">
+                <h3 class="title mt-0 mb-0">{{ .Title }}</h3>
+              </div>
+             
+              <ul class="tagList">
+                {{ range .Params.Tags }}
+                <li>#{{ . }}</li>
+                {{ end }}
+              </ul>
+              
+            </a>
+          </div>
+        </div>
+        {{ end }}
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-12 text-center">
+        {{with .Site.Params.topics.title}} <h2 class="section-title mt-0">作って学ぶDIY関連記事</h2> {{ end }}
+      </div>
+      {{ "<!-- topic-item -->" | safeHTML }}
+      {{ range where .Site.Pages "Params.category" "diy" }}
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="topicTile bg-white shadow">
+          <a href="{{ .RelPermalink }}" class="d-block">
+            <p class="date text-right">{{ .PublishDate.Format "2006/1/2" }}</p>
+
+            {{ if (isset .Params "eyecatch") }}
+            {{ $eyecatchImage := .Params.Eyecatch }}
+            <img class="topicTitleImages" src="{{ $eyecatchImage }}" alt="{{ .Params.title }}">
+            {{ else }}
+            <img class="topicTitleImages" src="/images/eyecatch/default.png" alt="{{ .Params.title }}">
+            {{ end }}
+            <div class="topicTileText">
+              <h3 class="title mt-0 mb-0">{{ .Title }}</h3>
+            </div>
+           
+            <ul class="tagList">
+              {{ range .Params.Tags }}
+              <li>#{{ . }}</li>
+              {{ end }}
+            </ul>
+            
+          </a>
+        </div>
+      </div>
+      {{ end }}
+  </div>
+
     </div>
   </section>
   {{ "<!-- /topics -->" | safeHTML }}

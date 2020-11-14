@@ -7,6 +7,7 @@ authors: [
 ["Keiichi Hashimoto","images/author/k1hash.png"]
 ]
 type : "article"
+category : "diy"
 tags: ["音楽"]
 eyecatch: "images/eyecatch/days.png"
 ---

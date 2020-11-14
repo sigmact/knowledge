@@ -7,6 +7,7 @@ authors: [
 ["Keiichi Hashimoto","images/author/k1hash.png"],
 ]
 type : "article"
+category : "sigma"
 tags: ["general"]
 eyecatch: "images/eyecatch/about_updated.png"
 ---

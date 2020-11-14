@@ -6,7 +6,7 @@ description: ""
 authors: [
 ["Keiichi Hashimoto","images/author/k1hash.png"]
 ]
-type : "article"
+type : "sigma"
 tags: ["雑談会議","Azure","C#"]
 eyecatch: "images/eyecatch/why.jpg"
 ---

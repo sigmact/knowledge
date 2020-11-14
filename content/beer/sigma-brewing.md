@@ -7,6 +7,7 @@ authors: [
 ["Kazuki Terukina","images/author/kazuki.png"]
 ]
 type : "article"
+category : "diy"
 tags: ["ビール"]
 eyecatch: "images/eyecatch/sigma-brewing.png"
 ---

@@ -7,6 +7,7 @@ type : "article"
 authors: [
     ["Takekazu Omi","images/author/omi.png"]
 ]
+category : "azure"
 tags: ["Azure", "セキュリティ"]
 eyecatch: "images/eyecatch/keyvault.png"
 ---

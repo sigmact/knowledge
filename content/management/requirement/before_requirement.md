@@ -10,6 +10,7 @@ authors: [
 ]
 type : "article"
 tags: ["ビジネス", "マネジメント"]
+category : "sigma"
 eyecatch: "images/eyecatch/before_requirement.png"
 ---
 

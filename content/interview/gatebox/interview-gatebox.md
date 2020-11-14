@@ -9,6 +9,7 @@ authors: [
 ["Sunao Tomita","images/author/sunaotomita.jpg"]
 ]
 type : "article"
+category : "azure"
 tags: ["インタビュー"]
 eyecatch: "images/eyecatch/gatebox.jpg"
 ---

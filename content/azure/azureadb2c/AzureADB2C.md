@@ -6,7 +6,8 @@ authors:
   ]
 weight: 10
 date: 2020-11-02
-description: ""
+description: "Azure AD B2C(以下 AAD B2C) はAzure AD の1サービスです。Azure AD B2C を使うと迅速に認証や認可部分の機能を立ち上げることができます。"
+category : "azure"
 type: "article"
 eyecatch: "images/eyecatch/deploy.png"
 ---
