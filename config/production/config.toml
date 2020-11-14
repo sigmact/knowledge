@@ -18,6 +18,12 @@ googleAnalytics = "UA-139325091-1"
 [blackfriday]
   hrefTargetBlank = true
 
+[markup]
+  [markup.tableOfContents]
+    endLevel = 2
+    ordered = true
+    startLevel = 2
+
 [Languages]
 
   # Japanese Language
