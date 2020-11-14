@@ -45,11 +45,17 @@ h1,
 h2,
 .h2 {
   font-size: 24px;
+  padding: 0.5em;/*文字周りの余白*/
+  color: #494949;/*文字色*/
+  background: #fffaf4;/*背景色*/
+  border-left: solid 5px #ffaf58;/*左線（実線 太さ 色）*/
 }
 
 h3,
 .h3 {
   font-size: 20px;
+  padding: 0.5em;/*文字周りの余白*/
+  border-left: solid 5px #ffaf58;/*左線（実線 太さ 色）*/
 }
 
 h4,
