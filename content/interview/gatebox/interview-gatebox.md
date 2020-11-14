@@ -10,7 +10,7 @@ authors: [
 ]
 type : "article"
 category : "azure"
-tags: ["インタビュー"]
+tags: ["Azure","事例","インタビュー","WebApps"]
 eyecatch: "images/eyecatch/gatebox.jpg"
 ---
 

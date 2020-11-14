@@ -8,7 +8,7 @@ authors: [
 ]
 type : "article"
 category : "sigma"
-tags: ["general"]
+tags: ["Sigma","UPDATED"]
 eyecatch: "images/eyecatch/about_updated.png"
 ---
 

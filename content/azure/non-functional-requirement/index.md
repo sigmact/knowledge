@@ -7,6 +7,7 @@ authors: [
 ["Keiichi Hashimoto","images/author/k1hash.png"]
 ]
 type : "article"
+category : "azure"
 tags: ["Azure"]
 eyecatch: "/images/eyecatch/default.png"
 draft : "true"

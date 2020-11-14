@@ -8,7 +8,7 @@ authors: [
 ]
 type : "article"
 category : "azure"
-tags: ["運用監視"]
+tags: ["Azure", "Azure DevOps", "Web Apps"]
 eyecatch: "images/eyecatch/monitoring.jpg"
 ---
 

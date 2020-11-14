@@ -9,7 +9,7 @@ authors: [
 ]
 type : "article"
 category : "sigma"
-tags: ["デザイン"]
+tags: ["デザイン","Sigma"]
 eyecatch: "images/eyecatch/our-design-process.jpg"
 ---
 

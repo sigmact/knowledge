@@ -9,6 +9,7 @@ date: 2020-07-29
 description: ""
 type: "article"
 category : "azure"
+tags: ["Azure", "AADB2C", "Web Apps", "Azure AD B2C"]
 eyecatch: "/images/eyecatch/deploy.png"
 draft: true
 ---

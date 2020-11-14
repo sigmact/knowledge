@@ -8,6 +8,7 @@ date: 2020-10-14
 description: "ユーザーオンボーディングとは、新規ユーザーを様々な活動でフォローしながら満足度を高め、一人前のユーザーに育て、継続的に利用してもらえるようにすることを指します。"
 type: "article"
 category : "sigma"
+tags: ["オンボーディング","Sigma"]
 eyecatch: "images/eyecatch/onboarding.jpg"
 ---
 

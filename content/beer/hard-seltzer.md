@@ -8,7 +8,7 @@ authors: [
 ]
 type : "article"
 category : "diy"
-tags: ["ハードセルツァー"]
+tags: ["DIY","ビール作り","ハードセルツァー"]
 eyecatch: "images/eyecatch/hard-seltzer.jpg"
 ---
 

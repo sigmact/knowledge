@@ -9,8 +9,8 @@ authors: [
 ["Keiichi Hashimoto","images/author/k1hash.png"]
 ]
 type : "article"
-tags: ["ビジネス", "マネジメント"]
 category : "sigma"
+tags: ["ビジネス", "マネジメント"]
 eyecatch: "images/eyecatch/before_requirement.png"
 ---
 

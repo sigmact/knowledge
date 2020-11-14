@@ -8,7 +8,7 @@ authors: [
 ]
 type : "article"
 category : "diy"
-tags: ["音楽"]
+tags: ["DIY","音楽","紫熊"]
 eyecatch: "images/eyecatch/days.png"
 ---
 

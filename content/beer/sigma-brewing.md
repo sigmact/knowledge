@@ -8,7 +8,7 @@ authors: [
 ]
 type : "article"
 category : "diy"
-tags: ["ビール"]
+tags: ["DIY","ビール作り","さんぴん茶エール"]
 eyecatch: "images/eyecatch/sigma-brewing.png"
 ---
 
