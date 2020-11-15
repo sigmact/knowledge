@@ -47,15 +47,15 @@ h2,
   font-size: 24px;
   padding: 0.5em;/*文字周りの余白*/
   color: #494949;/*文字色*/
-  background: #fffaf4;/*背景色*/
-  border-left: solid 5px #ffaf58;/*左線（実線 太さ 色）*/
+  background: #eff2f3;/*背景色*/
+  border-left: solid 5px #ba0aca;/*左線（実線 太さ 色）*/
 }
 
 h3,
 .h3 {
   font-size: 20px;
   padding: 0.5em;/*文字周りの余白*/
-  border-left: solid 5px #ffaf58;/*左線（実線 太さ 色）*/
+  border-left: solid 5px #ba0aca;/*左線（実線 太さ 色）*/
 }
 
 h4,
@@ -195,6 +195,7 @@ select:focus {
   @include fz(20);
   font-weight: bold;
   text-align: left;
+  border-left: 0px none;
 }
 
 .bg-cover {

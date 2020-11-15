@@ -217,8 +217,7 @@ figcaption {
   }
   .date {
     color: #999;
-    @include fz(12);
-    font-weight: bold;
+    @include fz(16);
   }
   &Text {
     margin-top: 15px;
@@ -437,4 +436,10 @@ figcaption {
   font-size: 12px;
   margin-bottom: 0;
   padding: 10px 0;
+}
+
+.listTitle {
+  font-size: 18px;
+  background: #ffffff;/*背景色*/
+  border: 0px none;/*左線（実線 太さ 色）*/
 }
