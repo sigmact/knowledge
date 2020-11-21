@@ -16,17 +16,13 @@ draft: false
 
 ## はじめに
 
-この記事は[Azure App Service Team Blog](https://azure.github.io/AppService/)の[Zero to Heroシリーズの記事](https://azure.github.io/AppService/tags/#zero-to-hero)に感銘を受けて、和訳＆改変した記事です。本家の「Zero to Hero」というフレーズの通り、Azure App Serviceを使ったことの無い方は一人前になれるように、すでに利用している方は知識のアップデートに役立てていただければと思います
-
-今回は「[Zero to Hero with App Service, Part 1: Setting Up](https://azure.github.io/AppService/2020/06/29/zero_to_hero_pt1.html)」を翻訳した記事です。
-
-なお、連載の５回目からは筆者オリジナルのコンテンツを掲載していきます。掲載予定のコンテンツは以下のようなものを予定しております
-
-- 「Easy Authを利用した簡易的な認証ページを作成する」
-- 「Application GatewayとWeb Appの連携」
-- 「診断ツールを使って問題を解決する」
-
+この記事は[Azure App Service Team Blog](https://azure.github.io/AppService/)の[Zero to Heroシリーズの記事](https://azure.github.io/AppService/tags/#zero-to-hero)に感銘を受けて、和訳＆改変した記事です。
 この記事を通してWeb Appsの基礎から実運用の方法まで、筆者自身が見直す機会としてシリーズ化して掲載する事にしました。
+本家の「Zero to Hero」というフレーズの通り、Azure App Serviceを使ったことの無い方は一人前になれるように、すでに利用している方は知識のアップデートに役立てていただければと思います。
+
+なお、連載の５回目からは筆者オリジナルのコンテンツを掲載しています。目次からまとめて読めますので、是非どうぞ。
+
+[【Azure初心者から上級者まで！】Azure App Service を使いこなしてゼロからヒーローになる](https://www.sigmact.com/updated/zero-to-hero/)
 
 ## 概要
 
