@@ -21,7 +21,7 @@ draft: false
 
 なお、連載の５回目からは筆者オリジナルのコンテンツを掲載しています。目次から読めますので、是非どうぞ。
 
-![【Azure初心者から上級者まで！】Azure App Service を使いこなしてゼロからヒーローになる](https://www.sigmact.com/updated/zero-to-hero/)
+[【Azure初心者から上級者まで！】Azure App Service を使いこなしてゼロからヒーローになる](https://www.sigmact.com/updated/zero-to-hero/)
 
 ## 概要{#overview}
 
