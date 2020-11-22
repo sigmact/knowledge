@@ -3,17 +3,34 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- master
-
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: HugoTask@1
+  inputs:
+    source: '$(Build.SourcesDirectory)'
+    destination: '$(Build.SourcesDirectory)\public\updated'
+    baseURL: 'https://www.sigmact.com/updated/'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.SourcesDirectory)\public\updated'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
+- task: AzureCLI@2
+  displayName: 'Delete Prod'
+  inputs:
+    azureSubscription: "シグマコンサルティング(eee9046c-f7c0-4e03-98e0-3660ae9224fc)"
+    scriptType: "ps"
+    scriptLocation: "inlineScript"
+    inlineScript: 'az storage blob delete-batch -s $(container) --pattern * --account-name $(storagename) --account-key $(accountkey)'
+
+- task: AzureCLI@2
+  displayName: 'Upload Prod'
+  inputs:
+    azureSubscription: "シグマコンサルティング(eee9046c-f7c0-4e03-98e0-3660ae9224fc)"
+    scriptType: "ps"
+    scriptLocation: "inlineScript"
+    inlineScript: 'az storage blob upload-batch -d $(container) -s $(Build.SourcesDirectory)\public --account-name $(storagename) --account-key $(accountkey)'
