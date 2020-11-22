@@ -1,5 +1,5 @@
 ---
-title: "WebAppsを本番へリリースするには"
+title: "Azure App Service の WebApps を本番へリリースするには"
 weight: 10
 date: 2020-09-13
 description: "この記事では、ステージング環境とプロダクション環境のスロットをスワップすることによってプロダクション環境に新しいビルドをリリースする方法を学びます。また、プロダクションへのトラフィックを一部ステージングに流し、新しいビルドを全リリースする前にテストする方法を学びます。"
@@ -15,7 +15,7 @@ draft: false
 
 ## はじめに
 
-この記事は[Azure App Service Team Blog](https://azure.github.io/AppService/)の[Zero to Heroシリーズの記事](https://azure.github.io/AppService/tags/#zero-to-hero)に感銘を受けて、和訳＆改変した記事です。
+この記事は[Azure App Service Team Blog](https://azure.github.io/AppService/)の[Zero to Heroシリーズの記事](https://azure.github.io/AppService/tags/#zero-to-hero)に感銘を受けて、和訳＆改変＆自分で新規執筆した記事です。
 この記事を通してWeb Appsの基礎から実運用の方法まで、筆者自身が見直す機会としてシリーズ化して掲載する事にしました。
 本家の「Zero to Hero」というフレーズの通り、Azure App Serviceを使ったことの無い方は一人前になれるように、すでに利用している方は知識のアップデートに役立てていただければと思います。
 
