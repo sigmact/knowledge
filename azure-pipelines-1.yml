@@ -3,9 +3,6 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- master
-
 pool:
   vmImage: 'windows-latest'
 
@@ -22,6 +19,13 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
+- task: AzureCLI@2
+  displayName: 'Delete Prod'
+  inputs:
+    azureSubscription: "シグマコンサルティング(eee9046c-f7c0-4e03-98e0-3660ae9224fc)"
+    scriptType: "ps"
+    scriptLocation: "inlineScript"
+    inlineScript: 'az storage blob delete-batch -s $(container) --pattern * --account-name $(storagename) --account-key $(accountkey)'
 
 - task: AzureCLI@2
   displayName: 'Upload Prod'
