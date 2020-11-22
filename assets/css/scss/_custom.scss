@@ -443,3 +443,20 @@ figcaption {
   background: #ffffff;/*背景色*/
   border: 0px none;/*左線（実線 太さ 色）*/
 }
+
+.frame-wrapper__video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.frame-wrapper__video iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

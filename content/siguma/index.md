@@ -93,7 +93,7 @@ AIきりたんや初音ミク、DTMのプラグインといったテクノロジ
 
 ### YouTube
 
-{{< rawhtml >}}<iframe width="560" height="315" src="https://www.youtube.com/embed/oiVJLFk4cZU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>{{< /rawhtml >}}
+{{< rawhtml >}}<div class="frame-wrapper__video"><iframe src="https://www.youtube.com/embed/oiVJLFk4cZU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>{{< /rawhtml >}}
 
 
 ### SoundCloud
@@ -123,7 +123,7 @@ AIきりたんや初音ミク、DTMのプラグインといったテクノロジ
 
 ### YouTube
 
-{{< rawhtml >}}<iframe width="560" height="315" src="https://www.youtube.com/embed/u-mTsAEEOiM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>{{< /rawhtml >}}
+{{< rawhtml >}}<div class="frame-wrapper__video"><iframe src="https://www.youtube.com/embed/u-mTsAEEOiM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>{{< /rawhtml >}}
 
 ### SoundCloud
 
