@@ -6,7 +6,8 @@ description: "シグマコンサルティングでは何でも作ってみるの
 authors: [
 ["Keiichi Hashimoto","images/author/k1hash.png"]
 ]
-type : "sigma"
+type : "article"
+category : "sigma"
 tags: ["雑談会議","Azure","C#"]
 eyecatch: "images/eyecatch/zatsudan.jpg"
 ---
