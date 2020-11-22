@@ -166,7 +166,7 @@ figcaption {
 .updateList {
   display: block;
   & > li a {
-    @include fz(15);
+    @include fz(16);
     font-weight: bold;
 
     &:hover {
@@ -174,11 +174,11 @@ figcaption {
     }
   }
   &Container { 
-    padding: 30px;
-    margin-bottom: 50px;
+    padding: 10px;
+    margin-bottom: 20px;
     background-color: rgba($color: $white, $alpha: .9);
     > .container {
-      padding: 0 50px;
+      padding: 0 20px;
     }
   }
   &Title {
