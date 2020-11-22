@@ -9,7 +9,7 @@ description: "ユーザーオンボーディングとは、**「新規ユーザ�
 type: "article"
 category : "sigma"
 tags: ["オンボーディング","Sigma"]
-eyecatch: "images/eyecatch/onboarding.jpg"
+eyecatch: "images/eyecatch/onboarding_mail.jpg"
 ---
 
 ## はじめに
