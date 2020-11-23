@@ -1,36 +1,35 @@
-        <div class="col-12 text-center">
-            <h2 class="section-title mt-0">関連記事</h2>
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+          <h2 class="section-title mt-0">関連記事</h2>
         </div>
-      
         {{ $related := .Site.RegularPages.Related . | first 3 }}
         {{ with $related }}
 
         {{ range . }}              
         <div class="col-lg-4 col-md-6 mb-4">
-            <div class="topicTile bg-white shadow">
-                <a href="{{ .RelPermalink }}" class="d-block">
-                    <p class="date text-right">{{ .PublishDate.Format "2006/1/2" }}</p>
+          <div class="topicTile bg-white shadow">
+            <a href="{{ .RelPermalink }}" class="d-block">
+              <p class="date text-right">{{ .PublishDate.Format "2006/1/2" }}</p>
 
-                    {{ if (isset .Params "eyecatch") }}
-                    {{ $eyecatchImage := .Params.Eyecatch }}
-                    <img class="topicTitleImages" src="{{ .Site.BaseURL }}{{ $eyecatchImage }}" alt="{{ .Params.title }}">
-                    {{ else }}
-                   <img class="topicTitleImages" src="{{ .Site.BaseURL }}images/eyecatch/default.png" alt="{{ .Params.title }}">
-                    {{ end }}
-                    <div class="topicTileText">
-                        <h3 class="listTitle mt-0 mb-0">{{ .Title }}</h3>
-                    </div>
-         
-                    <ul class="tagList">
-                    {{ range .Params.Tags }}
-                        <li>#{{ . }}</li>
-                    {{ end }}
-                    </ul>
-          
-                </a>
-            </div>
+              {{ if (isset .Params "eyecatch") }}
+              {{ $eyecatchImage := .Params.Eyecatch }}
+              <img class="topicTitleImages" src="{{ .Site.BaseURL }}{{ $eyecatchImage }}" alt="{{ .Params.title }}">
+              {{ else }}
+              <img class="topicTitleImages" src="{{ .Site.BaseURL }}images/eyecatch/default.png" alt="{{ .Params.title }}">
+              {{ end }}
+              <div class="topicTileText">
+                <h3 class="listTitle mt-0 mb-0">{{ .Title }}</h3>
+              </div>
+               
+              <ul class="tagList">
+              {{ range .Params.Tags }}
+                <li>#{{ . }}</li>
+              {{ end }}
+              </ul>
+                
+            </a>
+          </div>
         </div>
         {{ end }}
 
         {{ end }}
-        
