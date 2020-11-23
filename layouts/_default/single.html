@@ -28,83 +28,85 @@
         </div>
         <div class="col-lg-9">
           <div class="p-3 p-md-5 bg-white">
-              <h1>{{ .Title }}</h1>
-              <p class="post-meta text-right">更新日 {{ .Lastmod.Format "2006/01/02" }}</p>
-              <p class="post-meta text-right">作成日 {{ .PublishDate.Format "2006/01/02" }}</p>
+            <h1>{{ .Title }}</h1>
+            <p class="post-meta text-right">更新日 {{ .Lastmod.Format "2006/01/02" }}</p>
+            <p class="post-meta text-right">作成日 {{ .PublishDate.Format "2006/01/02" }}</p>
 
-              <!-- 著者 -->
-              <div class="mt-3">
-                {{ range $values := .Params.authors }}
-                <div class="author">
-                  <img class="authorIcon" src="/{{ index $values 1 }}" alt="{{ index $values 0 }}" width="40" height="40"/>
-                  <span class="authorName">{{ index $values 0 }}</span>
-                </div>
-                {{ end }}
+            <!-- 著者 -->
+            <div class="mt-3">
+              {{ range $values := .Params.authors }}
+              <div class="author">
+                <img class="authorIcon" src="/{{ index $values 1 }}" alt="{{ index $values 0 }}" width="40" height="40"/>
+                <span class="authorName">{{ index $values 0 }}</span>
               </div>
+              {{ end }}
+            </div>
 
-              <!-- アイキャッチ画像 -->
-              <div class="mt-5">
+            <!-- アイキャッチ画像 -->
+            <div class="mt-5">
+              {{ if (isset .Params "eyecatch") }}
+              {{ $eyecatchImage := .Params.Eyecatch }}
+              <img src="{{ .Site.BaseURL }}{{ $eyecatchImage }}" alt="{{ .Params.title }}"/>
+              {{ else }}
+              <img class="topicTitleImages" src="{{ .Site.BaseURL }}images/eyecatch/default.png" alt="{{ .Params.title }}">
+              {{ end }}
+            </div>
+
+            <!-- ページ内リンクを作りながらコンテンツをレンダリングする -->
+            {{- with .Content -}}
+              {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor"><i class="fas fa-link"></i></a> ${3}` | safeHTML }}
+            {{- end -}}
+
+            <div class="mt-5 d-sm-flex justify-content-between align-items-center flex-sm-wrap">       
+              {{  partial "share.html" . }}            
+            </div>
+
+            <div class="text-center col-12 text-center">
+              <!--<p class="section-title mb-4">問い合わせ</p>-->
+              <p class="mb-4">お問い合わせはこちらから</p>
+              <a href="https://www.sigmact.com/#section-contact" class="btn btn-primary">問い合わせる</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <h2 class="section-title mt-0">関連記事</h2>
+          </div>
+                  
+          {{ $related := .Site.RegularPages.Related . | first 3 }}
+          {{ with $related }}
+      
+          {{ range . }}              
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="topicTile bg-white shadow">
+              <a href="{{ .RelPermalink }}" class="d-block">
+                <p class="date text-right">{{ .PublishDate.Format "2006/1/2" }}</p>
+      
                 {{ if (isset .Params "eyecatch") }}
                 {{ $eyecatchImage := .Params.Eyecatch }}
-                <img src="{{ .Site.BaseURL }}{{ $eyecatchImage }}" alt="{{ .Params.title }}"/>
+                <img class="topicTitleImages" src="{{ .Site.BaseURL }}{{ $eyecatchImage }}" alt="{{ .Params.title }}">
                 {{ else }}
                 <img class="topicTitleImages" src="{{ .Site.BaseURL }}images/eyecatch/default.png" alt="{{ .Params.title }}">
                 {{ end }}
-              </div>
-
-              <!-- ページ内リンクを作りながらコンテンツをレンダリングする -->
-              {{- with .Content -}}
-                {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor"><i class="fas fa-link"></i></a> ${3}` | safeHTML }}
-              {{- end -}}
-
-              <div class="mt-5 d-sm-flex justify-content-between align-items-center flex-sm-wrap">       
-                {{  partial "share.html" . }}            
-              </div>
-
-              <div class="text-center col-12 text-center">
-                <!--<p class="section-title mb-4">問い合わせ</p>-->
-                <p class="mb-4">お問い合わせはこちらから</p>
-                <a href="https://www.sigmact.com/#section-contact" class="btn btn-primary">問い合わせる</a>
-              </div>
-
-              <div class="col-12 text-center">
-                <h2 class="section-title mt-0">関連記事</h2>
-              </div>
-                  
-              {{ $related := .Site.RegularPages.Related . | first 3 }}
-              {{ with $related }}
-      
-              {{ range . }}              
-              <div class="col-lg-4 col-md-6 mb-4">
-                <div class="topicTile bg-white shadow">
-                  <a href="{{ .RelPermalink }}" class="d-block">
-                    <p class="date text-right">{{ .PublishDate.Format "2006/1/2" }}</p>
-      
-                    {{ if (isset .Params "eyecatch") }}
-                    {{ $eyecatchImage := .Params.Eyecatch }}
-                    <img class="topicTitleImages" src="{{ .Site.BaseURL }}{{ $eyecatchImage }}" alt="{{ .Params.title }}">
-                    {{ else }}
-                    <img class="topicTitleImages" src="{{ .Site.BaseURL }}images/eyecatch/default.png" alt="{{ .Params.title }}">
-                    {{ end }}
-                    <div class="topicTileText">
-                      <h3 class="listTitle mt-0 mb-0">{{ .Title }}</h3>
-                    </div>
-                     
-                    <ul class="tagList">
-                      {{ range .Params.Tags }}
-                      <li>#{{ . }}</li>
-                      {{ end }}
-                    </ul>
-                      
-                  </a>
+                <div class="topicTileText">
+                  <h3 class="listTitle mt-0 mb-0">{{ .Title }}</h3>
                 </div>
-              </div>
-              {{ end }}
-      
-              {{ end }}
+                     
+                <ul class="tagList">
+                {{ range .Params.Tags }}
+                  <li>#{{ . }}</li>
+                {{ end }}
+                </ul>
+                      
+              </a>
+            </div>
           </div>
-
+          {{ end }}
+      
+          {{ end }}
         </div>
+
       </div>
     </div>
   </section>
