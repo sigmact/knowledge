@@ -127,7 +127,9 @@ figcaption {
     }
   }
   @media (max-width: 576px) { 
-    margin-bottom: 180px;
+    margin-bottom: 0;
+    padding-bottom: 140px;
+    background-color: #fff;
     &.noBottomMargin {
       margin-bottom:0;
     }
