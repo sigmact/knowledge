@@ -14,6 +14,7 @@ steps:
   inputs:
     source: '$(Build.SourcesDirectory)'
     destination: '$(Build.SourcesDirectory)\public\updated'
+    extendedVersion: true
     baseURL: 'https://www.sigmact.com/updated/'
 
 - task: PublishBuildArtifacts@1
