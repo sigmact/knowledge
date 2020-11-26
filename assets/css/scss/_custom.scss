@@ -128,16 +128,21 @@ figcaption {
   }
   @media (max-width: 576px) { 
     margin-bottom: 0;
-    padding-bottom: 140px;
+    padding-bottom: 0px;
     background-color: #fff;
     &.noBottomMargin {
       margin-bottom:0;
     }
     &Text {
       &Box {
-        top: 100px;
+        top: 0;
         left: 0;
         width: 100%;
+        position:relative;
+        height:auto;
+        margin-top:-150px;
+        overflow:
+        hidden;padding-bottom:20px;
       }
       .keyTitleText {
         margin-top: 40px;
