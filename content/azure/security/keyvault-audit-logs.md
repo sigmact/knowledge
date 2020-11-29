@@ -10,7 +10,7 @@ authors: [
 type : "article"
 category : "azure"
 tags: ["Azure", "セキュリティ","KeyVault"]
-eyecatch: "images/eyecatch/keyvault.png"
+eyecatch: "azure/security/images/screen08.png"
 ---
 
 ## はじめに
