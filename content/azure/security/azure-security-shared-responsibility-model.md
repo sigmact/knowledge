@@ -6,7 +6,7 @@ authors: [
 ]
 weight: 10
 date: 2020-11-24
-description: "本記事では、まず基本として「情報セキュリティの定義」を紹介し、続いてAzureにおけるセキュリティの利点である「共有責任モデル」について説明します。"
+description: "この記事はトピック「Azure上でセキュアなアプリケーションを作るベストプラクティス」の中の一記事となります。本記事では、まず基本として「情報セキュリティの定義」を紹介し、続いてAzureにおけるセキュリティの利点である「共有責任モデル」について説明します。"
 type : "article"
 category : "azure"
 tags: ["Azure", "セキュリティ","PCI DSS"]
@@ -15,8 +15,10 @@ eyecatch: "azure/security/images/02-srmodel.png"
 
 ## はじめに
 
-この記事は連載「Azure上でセキュアなアプリケーションを作るベストプラクティス」の中の一記事となります。
-本記事では、まず基本知識として「情報セキュリティの定義」を紹介し、続いてAzureにおけるセキュリティの利点である「共有責任モデル」について説明します。
+この記事はトピック[「Azure上でセキュアなアプリケーションを作るベストプラクティス」](/azure/security/)の中の一記事となります。
+例として PCI DSS の要件を取り上げており、それぞれの要件と Azure での実装を解説していきます。
+
+本記事では、まず基本知識として「情報セキュリティの定義」を紹介し、続いてAzureにおけるセキュリティの利点である **「共有責任モデル」** について説明します。
 
 ## 情報セキュリティの定義
 
@@ -73,7 +75,7 @@ PCI DSS に準拠している Microsoft は、**PCI DSS 評価(AoC)** へのリ�
 
 - [Azure Blueprint: PaaS Web Application for PCI DSS とは](/azure/security/pci-dss-azure-blueprint/)
 
-- [Azure とセキュリティTOP](/azure/security/)
+- [Azure上でセキュアなアプリケーションを作るベストプラクティス](/azure/security/)
 
 ## 参考
 

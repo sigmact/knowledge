@@ -1,22 +1,25 @@
 ---
-title: "Azure でセンシティブ情報を管理する際の実現方法を比較"
+title: "Azure でセンシティブ情報を管理する際の実現方法5つを比較(ローカルファイル, App Settings, App Configuration, Key Vault, Blob)"
 weight: 20
-date: 2019-10-22
-description: "Microsoft Azureで、アプリケーションで使われるセンシティブ情報(パスワード等)の保護のベストプラクティスについて書いています。以下に、アプリケーションの設定情報を外部に保持する複数の方法について比較し、その後センシティブ情報をKey Vaultに保存する利点を論じています。"
+date: 2019-10-24
+description: "この記事はトピック「Azure上でセキュアなアプリケーションを作るベストプラクティス」の中の一記事となります。Microsoft Azureで、アプリケーションで使われるセンシティブ情報(パスワード等)の保護のベストプラクティスについて書いています。本稿では「Azure上でパスワード等のセンシティブ情報を管理する方法」がいくつかあるなかで、その比較を紹介します。"
 authors: [
-    ["Takekazu Omi","images/author/omi.png"]
+    ["Takekazu Omi","images/author/omi.png"],
+    ["Keiichi Hashimoto","images/author/k1hash.png"]
 ]
 type : "article"
 category : "azure"
-tags: ["Azure", "セキュリティ"]
+tags: ["Azure", "セキュリティ","KeyVault"]
 eyecatch: "images/eyecatch/keyvault.png"
 ---
 
 ## はじめに
 
-Azure上ではパスワード等のセンシティブ情報を管理する方法がいくつかあります。
+この記事はトピック[「Azure上でセキュアなアプリケーションを作るベストプラクティス」](/azure/security/)の中の一記事となります。
 
-本稿では、設定情報を外部に保つ方法として、ローカルファイル(Web.config/appsettins.json)、App Service の[App Settings](https://docs.microsoft.com/en-us/azure/app-service/configure-common#configure-app-settings), [App Configuration](https://docs.microsoft.com/en-us/azure/azure-app-configuration/overview), [Key Vault](https://docs.microsoft.com/en-in/azure/key-vault/key-vault-overview), [Blob Storage](https://docs.microsoft.com/ja-jp/azure/storage/blobs/storage-blobs-overview)の５つを比較しました。後者４つはAzure 固有の機能ですが、同等のものは各種クラウド環境に存在します。
+本稿では「Azure上でパスワード等のセンシティブ情報を管理する方法」がいくつかあるなかで、その比較を紹介します。
+
+設定情報を外部に保つ方法として、ローカルファイル(Web.config/appsettins.json)、App Service の[App Settings](https://docs.microsoft.com/en-us/azure/app-service/configure-common#configure-app-settings), [App Configuration](https://docs.microsoft.com/en-us/azure/azure-app-configuration/overview), [Key Vault](https://docs.microsoft.com/en-in/azure/key-vault/key-vault-overview), [Blob Storage](https://docs.microsoft.com/ja-jp/azure/storage/blobs/storage-blobs-overview)の５つを比較しました。後者４つはAzure 固有の機能ですが、同等のものは各種クラウド環境に存在します。
 
 ## 比較のポイント
 
@@ -55,3 +58,9 @@ Azure上ではパスワード等のセンシティブ情報を管理する方法
 監査ログが不要で、複数アプリ・インスタンスで共有したいなら、App Conguration、App Settingsという選択肢があります。
 
 環境依存な設定情報には、機密と機密ではないものが両方含まれています。センシティブ情報と定義したデータへのアクセスに必要な設定情報は監査可能なKey Vaultに収容するのがベストプラクティスです。
+
+### 次の記事
+
+- [「アプリケーションと設定情報の分離」App Settings, App Configuration, KeyVault の違いを解説](/azure/security/keyvault-separate-configuration/)
+
+- [Azure上でセキュアなアプリケーションを作るベストプラクティス](/azure/security/)

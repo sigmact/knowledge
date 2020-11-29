@@ -6,7 +6,7 @@ authors: [
 ]
 weight: 10
 date: 2020-11-26
-description: "Azure 上でアプリケーションを構築する開発者向け(元々は社内向け)に、セキュア・アプリケーションを構築する際のベストプラクティス的な内容をアップデートし続けていく事を目指しています。"
+description: "この記事はトピック「Azure上でセキュアなアプリケーションを作るベストプラクティス」の中の一記事となります。本稿では、認証とアクセス制御について取り上げます。"
 type : "article"
 category : "azure"
 tags: ["Azure", "セキュリティ","KeyVault"]
@@ -15,8 +15,10 @@ eyecatch: "azure/security/images/05-3layer.png"
 
 ## はじめに
 
-この記事は連載「Azure上でセキュアなアプリケーションを作るベストプラクティス」の中の一記事となります。
+この記事はトピック[「Azure上でセキュアなアプリケーションを作るベストプラクティス」](/azure/security/)の中の一記事となります。
 例として PCI DSS の要件を取り上げており、それぞれの要件と Azure での実装を解説していきます。
+
+本稿では、認証とアクセス制御について取り上げます。
 
 1. 認証、アクセス制御※本記事
 
@@ -87,7 +89,7 @@ PCI DSS 3.2 では、要件 7 と 8 が認証とアクセス制御に相当し�
 
 - [不正アクセス(Unauthorized Access)防止」Azureでの PCI DSS 対応をまとめる(2)](/azure/security/pci-dss-azure-unauthorized-access-prevention/)
 
-- [Azure におけるセキュリティTOP](/azure/security/)
+- [Azure上でセキュアなアプリケーションを作るベストプラクティス](/azure/security/)
 
 
 ## 参考

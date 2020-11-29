@@ -6,7 +6,7 @@ authors: [
 ]
 weight: 10
 date: 2020-11-25
-description: "本記事では、Azure 上で PCI DSS に対応するアーキテクチャを検討する上で、Microsoft が提供している「PCI DSS のための PaaS Web アプリケーション」を紹介します。"
+description: "この記事はトピック「Azure上でセキュアなアプリケーションを作るベストプラクティス」の中の一記事となります。本記事では、Azure 上で PCI DSS に対応するアーキテクチャを検討する上で、Microsoft が提供している「PCI DSS のための PaaS Web アプリケーション」を紹介します。"
 type : "article"
 category : "azure"
 tags: ["Azure", "セキュリティ","PCI DSS"]
@@ -15,8 +15,10 @@ eyecatch: "azure/security/images/03-arch.png"
 
 ## はじめに
 
-この記事は連載「Azure上でセキュアなアプリケーションを作るベストプラクティス」の中の一記事となります。
-本記事では、Azure 上で PCI DSS に対応するアーキテクチャを検討する上で、Microsoft が提供している「PCI DSS のための PaaS Web アプリケーション」を紹介します。
+この記事はトピック[「Azure上でセキュアなアプリケーションを作るベストプラクティス」](/azure/security/)の中の一記事となります。
+例として PCI DSS の要件を取り上げており、それぞれの要件と Azure での実装を解説していきます。
+
+本記事では、Azure 上で PCI DSS に対応するアーキテクチャを検討する上で、Microsoft が提供している **「PCI DSS のための PaaS Web アプリケーション」** を紹介します。
 
 ## Blueprint: PaaS Web Application for PCI DSS とは
 
@@ -41,7 +43,7 @@ Monitor](https://azure.microsoft.com/ja-jp/services/monitor/)に集約します�
 
 - [「認証、アクセス制御」Azureでの PCI DSS 対応をまとめる(1)](/azure/security/pci-dss-azure-authorized-access-control/)
 
-- [Azure とセキュリティTOP](/azure/security/)
+- [Azure上でセキュアなアプリケーションを作るベストプラクティス](/azure/security/)
 
 
 ## 参考
