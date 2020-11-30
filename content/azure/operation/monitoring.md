@@ -7,7 +7,7 @@ authors: [
   ["Kazunori Hamamoto","images/author/khamamoto.jpg"],
 ]
 type : "article"
-category : "azure"
+category : "sigma"
 tags: ["Azure", "Azure DevOps", "Web Apps"]
 eyecatch: "images/eyecatch/monitoring.jpg"
 ---
