@@ -10,7 +10,7 @@ authors: [
 type : "article"
 category : "azure"
 tags: ["Azure", "セキュリティ","KeyVault"]
-eyecatch: "azure/security/images/accessmodel.png"
+eyecatch: "azure/security/images/accessmodel.jpg"
 ---
 
 ## はじめに
