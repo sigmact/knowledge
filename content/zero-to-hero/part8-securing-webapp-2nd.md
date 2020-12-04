@@ -28,7 +28,7 @@ draft: false
 この記事は [App Service でゼロからヒーロー](https://azure.github.io/AppService/tags/#zero-to-hero) シリーズの第８回です。
 この記事を読むためには[初回記事](/zero-to-hero/part1-setting-up/)を読み終えていることを想定しています。
 
-[前回の記事](/zero-to-hero/part8-securing-webapp/)ではApplication GatewayとAzure Firewallを利用して受信トラフィックと送信トラフィックを制限してApp Serviceを保護する方法を紹介しました。今回は前回の代替手段としてAzure Front DoorとNATゲートウェイを利用してアプリケーションを保護する方法をご紹介します。
+[前回の記事](/zero-to-hero/part7-securing-webapp/)ではApplication GatewayとAzure Firewallを利用して受信トラフィックと送信トラフィックを制限してApp Serviceを保護する方法を紹介しました。今回は前回の代替手段としてAzure Front DoorとNATゲートウェイを利用してアプリケーションを保護する方法をご紹介します。
 
 ## WEBアプリケーションを保護する{#securing-webapp}
 
