@@ -4,7 +4,7 @@ weight: 10
 date: 2020-08-02
 description: "バンド紫熊(Siguma)のアーティストページです。"
 authors: [
-["Keiichi Hashimoto","images/author/k1hash.png"]
+["しぐまこ","images/author/sigumaco.jpg"]
 ]
 type : "article"
 category : "diy"
@@ -22,15 +22,20 @@ eyecatch: "images/eyecatch/days.png"
 もうちょっと尖ったアニソンぽい曲探している人、10秒視聴いかがでしょうか。
 聴くと懐かしいという感想、カッコよすぎという感想、頂いています。
 
-### 【常勤Member】
+### 【Leader】
 
-- [Composer & Guitar & 雑用 Sigmanyan(しぐまにゃん)](https://twitter.com/k1hash)
-- [Composer & Guitar 谷池公治](https://newspicks.com/user/2407391?ref=user_2407391)
-- [Dr.根本純](https://angl.jp/junnemoto)
+- [Producer & Composer しぐまこ](https://twitter.com/SigumaCo)
+
+### 【半常勤Member】
+
+- [Guitar & 雑用 K1hash](https://soundcloud.com/sojukanou)
+- [Guitar Yachi](https://newspicks.com/user/2407391?ref=user_2407391)
+- [Dr JINE](https://angl.jp/junnemoto)
 
 ### 【スーパー助っ人】
 
 - [Vo. Orca（Bathtub for the orca）](https://oooorcaaaa.jimdofree.com/)
+- [Arrangement & Keyboard Sojukano](https://twitter.com/sojukano)
 - [Guitar & Arrangement ダルビッシュP(ダルP)](https://twitter.com/devilish5150)
 - [Mixing and Mastering Keinoaza](https://www.youtube.com/channel/UCGO-JaxzA2uGLhsNIXnYEvA)
 - [先代Vo. & パフォーマー 池田みちる](https://ja.wikipedia.org/wiki/%E6%B1%A0%E7%94%B0%E7%BE%8E%E5%8D%83%E7%91%A0)
