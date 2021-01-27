@@ -16,20 +16,18 @@ eyecatch: "images/eyecatch/days.png"
 
 {{< figure src="images/logo.png" title="紫熊ロゴ" width="300" >}}
 
-紫熊(Siguma)は現在、世界最高のクラウドであるAzureを日本で最高に使いこなす、スーパーエンジニア集団、[シグマコンサルティング株式会社](https://www.sigmact.com)に在籍。
-
 尖ったアニソンぽい曲探している人、映画音楽やチルアウトが好きな方、
 90年代後半のV系、2000年代初頭のPopPunk好きな人、10秒視聴いかがでしょうか。
 
 ### 【Leader】
 
-- [Producer & Composer しぐまこ](https://twitter.com/SigumaCo)
+- Producer & Composer しぐまこ
 
 ### 【半常勤Member】
 
-- [Guitar & 雑用 K1hash](https://twitter.com/k1hash)
-- [Guitar Yachi](https://newspicks.com/user/2407391?ref=user_2407391)
-- [Dr JINE](https://angl.jp/junnemoto)
+- Guitar & 雑用 K1hash
+- Guitar Yachi
+- Dr JINE
 
 ### 【スーパー助っ人】
 
@@ -74,10 +72,10 @@ eyecatch: "images/eyecatch/days.png"
 {{< figure src="images/garden.png" title="「Garden」 feat. SoJuKaNoU,Orca" width="300" link="https://linkco.re/yn9dScnd" >}}
 
 
-- [Vocal Orca](https://oooorcaaaa.jimdofree.com/)
-- [Arrangemnt & Keyboard　SoJuKaNoU](https://soundcloud.com/sojukanou)
+- Vocal Orca
+- Arrangemnt & Keyboard　SoJuKaNoU
 - Music & Lyrics  紫熊(Siguma)
-- [Producer しぐまこ](https://twitter.com/SigumaCo)
+- Producer しぐまこ
 
 ### 配信
 
@@ -96,11 +94,11 @@ eyecatch: "images/eyecatch/days.png"
 ボーカルのOrca(Bathtub for the orca)に助けられて、
 紫熊(Siguma)渾身の2曲目、遂にリリース。
 
-- [Vocal Orca](https://oooorcaaaa.jimdofree.com/)
-- [Guitar & Arrangemnt　ダルビッシュP(ダルP)](https://twitter.com/devilish5150)
+- Vocal Orca
+- Guitar & Arrangemnt　ダルビッシュP(ダルP)
 - Music & Lyrics  紫熊(Siguma)
-- [Mixing & Mastering Keinoaza](https://www.youtube.com/channel/UCGO-JaxzA2uGLhsNIXnYEvA)
-- [Producer しぐまこ](https://twitter.com/SigumaCo)
+- Mixing & Mastering Keinoaza
+- Producer しぐまこ
 
 ### 配信
 
@@ -120,13 +118,13 @@ eyecatch: "images/eyecatch/days.png"
 この作品で初めてプロのミキシングを知り、もう忘れられない身体となったのでした。
 ボーカルであるOrcaさんの歌の良さもとても引き出せていると思います。
 
-- [Vocal Orca](https://oooorcaaaa.jimdofree.com/)
-- [Guitar K1hash](https://twitter.com/k1hash)
-- [Guitar Yachi](https://newspicks.com/user/2407391?ref=user_2407391)
-- [Dr　JINE](https://angl.jp/junnemoto)
-- [Lyrics & Music Yachi](https://newspicks.com/user/2407391?ref=user_2407391)
-- [Mixing and Mastering Keinoaza](https://www.youtube.com/channel/UCGO-JaxzA2uGLhsNIXnYEvA)
-- [Producer しぐまこ](https://twitter.com/SigumaCo)
+- Vocal Orca
+- Guitar K1hash
+- Guitar Yachi
+- Dr　JINE
+- Lyrics & Music Yachi
+- Mixing and Mastering Keinoaza
+- Producer しぐまこ
 
 ### 配信
 
@@ -146,12 +144,12 @@ eyecatch: "images/eyecatch/days.png"
 IT業界関係者、必読の歌となっています。
 
 - [Vocal AIきりたん](https://n3utrino.work/)
-- [Guitar K1hash](https://twitter.com/k1hash)
-- [Guitar Yachi](https://newspicks.com/user/2407391?ref=user_2407391)
-- [Dr　JINE](https://angl.jp/junnemoto)
-- [Lyrics K1hash](https://twitter.com/k1hash)
-- [Music Yachi](https://newspicks.com/user/2407391?ref=user_2407391)
-- [Producer しぐまこ](https://twitter.com/SigumaCo)
+- Guitar K1hash
+- Guitar Yachi
+- Dr　JINE
+- Lyrics K1hash
+- Music Yachi
+- Producer しぐまこ
 
 ### YouTube
 
@@ -167,11 +165,11 @@ IT業界関係者、必読の歌となっています。
 初めての作品なので録音やミックスも荒いし、マキシマイザーも当たっていませんが、記念すべき第一作。
 プロデューサーのMasaKさんには半年くらい編曲に付き合ってもらい、Cubaseの使い方を教えてもらい感謝。
 
-- [Vocal Orca（Bathtub for the orca）](https://oooorcaaaa.jimdofree.com/)
-- [Guitar Sigmanyan(しぐまにゃん)](https://twitter.com/k1hash)
-- [Guitar 谷池公治](https://newspicks.com/user/2407391?ref=user_2407391)
-- [Dr譜　根本純](https://angl.jp/junnemoto)
-- [Lyrics & Music 谷池公治](https://newspicks.com/user/2407391?ref=user_2407391)
+- Vocal Orca
+- Guitar K1hash
+- Guitar Yachi
+- Dr　JINE
+- Lyrics & Music Yachi
 - Mixing and Mastering MasaK
 
 ### 配信
