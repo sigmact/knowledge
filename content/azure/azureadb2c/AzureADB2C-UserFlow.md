@@ -5,7 +5,7 @@ authors:
     ["Tsubasa Yoshino", "images/author/yoshinotsubasa.jpg"],
   ]
 weight: 10
-date: 2020-07-28
+date: 2021-01-26
 description: ""
 type: "article"
 category : "azure"
