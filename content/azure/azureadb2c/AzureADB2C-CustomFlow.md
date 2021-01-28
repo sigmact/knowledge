@@ -1,5 +1,5 @@
 ---
-title: "Webアプリの立上げと相性の良い Azure ADB2C　第3回(カスタムフローとは)"
+title: "Webアプリの立上げと相性の良い Azure ADB2C　第3回(カスタムポリシーとは)"
 authors:
   [
     ["Tsubasa Yoshino", "images/author/yoshinotsubasa.jpg"],
@@ -11,7 +11,7 @@ type: "article"
 category : "azure"
 tags: ["Azure", "AADB2C", "Web Apps", "Azure AD B2C"]
 eyecatch: "/images/eyecatch/deploy.png"
-draft: true
+draft: false
 ---
 
 ## はじめに
@@ -41,7 +41,7 @@ XML を記述して AAD B2C のフローを構築していきます。
 
 ## 事例
 
-カスタムフローは、弊社内でも使用しています。
+カスタムポリシーは、弊社内でも使用しています。
 その事例の一部をご紹介します。
 
 このシステムでは、会員のサインアップ、サインイン機能をカスタムポリシーで実装しています。
@@ -68,11 +68,11 @@ XML を記述して AAD B2C のフローを構築していきます。
 - メールプロバイダの変更
 - 各フローで外部サービスとの連携(外部のREST APIを叩くなど)  
 
-## カスタムフローのひな型
+## カスタムポリシーのひな型
 
 Microsoft 公式で、カスタムポリシーのひな型を提供してくれているので、今回は、そのひな型を使いながら進行していきます。
 
-[GitHub](https://github.com/Azure-Samples/active-directory-b2c-custom-policy-starterpack
+[GitHub](https://github.com/Azure-Samples/active-directory-b2c-custom-policy-starterpack)
 
 ## カスタムポリシーでカスタマイズする
 

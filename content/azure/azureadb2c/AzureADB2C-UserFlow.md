@@ -11,19 +11,13 @@ type: "article"
 category : "azure"
 tags: ["Azure", "AADB2C", "Web Apps", "Azure AD B2C"]
 eyecatch: "/images/eyecatch/deploy.png"
-draft: true
+draft: false
 ---
 
 ## はじめに
 
 [最初の記事](/azure/azureadb2c/azureadb2c) では、AAD B2C の概要について触れました。
 これ以降で、具体的に AAD B2C を使用して認証システムを構築する方法を説明していきます。
-
-
-☆ユーザーフローとは
-☆全般的に動画に近い感じで画像を付けて説明してほしい(↓50分くらいから)
-https://1drv.ms/v/s!AnPJdc1518xtgb016R6vficYEpkOiw?e=7BtU8w
-
 ## ユーザーフローについて
 
 ### ユーザーフローの概要
@@ -137,7 +131,7 @@ AAD B2C を使用する場合、「openid」と「offline_access」のスコー�
 
 #### スコープの補足
 
-先ほど許可した OIDC のスコープ、「openid」と「offline_access」は、それぞれ以下のようなアクセス許可を許可することになります。
+先ほど許可した OIDC のスコープ、「openid」と「offline_access」は、それぞれ以下のようなアクセス許可を付与することになります。
 
 ##### openid
 
