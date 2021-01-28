@@ -72,17 +72,29 @@ AAD B2C は、本質としては、AAD なので、B2C 用の AAD テナント�
 
 B2C で検索をすると、Azure Active Directory B2C のリソースが出てくるので、それを選択します。
 
-{{<figure src="/azure/azureadb2c/images/part2/tenant/01.png" alt="検索結果">}}
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part2/tenant/01.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 
 作成に進むと、新しい B2C テナントを作成するか、既存のテナントをサブスクリプションに紐づけるか選択する画面が出ますので、
 今回は、新しくテナントを作成します。
 
-{{<figure src="/azure/azureadb2c/images/part2/tenant/02.png">}}
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part2/tenant/02.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 
 テナント作成画面では、組織名、ドメイン名、使用する国/地域を設定します。
 ドメイン名は、「ドメイン名.onmicrosoft.com」という AAD のドメイン名に使用される名前になります。
 
-{{<figure src="/azure/azureadb2c/images/part2/tenant/03.png">}}
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part2/tenant/03.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 
 AAD B2C の地域は、選択した地域に最適なデータセンターにデプロイされるという意味になるので、データセンターを指定するよくあるものではないことにご留意ください。
 
@@ -117,7 +129,11 @@ AAD テナントが作成されたら、次にテナントに、B2C を使用す
 「アクセス許可」は、認証に使う OpenId Connect のスコープ設定になります。
 AAD B2C を使用する場合、「openid」と「offline_access」のスコープを許可する必要があるため、ここにチェックを入れます。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/03.png">}}
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part2/b2c/03.png" style="width:90%">
+</figure>
+{{< /rawhtml >}}
 
 #### スコープの補足
 
@@ -154,7 +170,11 @@ AAD B2C を使用する場合、「openid」と「offline_access」のスコー�
 ユーザ属性は、サインアップ時に収集するユーザ名等の情報です。
 ここで定義をしたうえで、フローでどのユーザ属性を使用するか指定すると、ユーザ情報の収集が出来るようになります。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/06.png">}}
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part2/b2c/06.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 
 標準でもユーザ名、メールアドレス等の基本的な情報は、定義されています。
 
@@ -189,14 +209,22 @@ ID プロバイダーは、標準で表示される「Email signup」を使用�
 
 多要素認証は、現状メール or SMS がサポートされています。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/10.png">}}
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part2/b2c/10.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 
 ユーザ属性は、サインアップ時に収集したい場合は、「属性を収集する」にチェックを入れます。
 またサインイン時に、アプリに情報を渡したい場合は、「要求を返す」にチェックを入れます。
 
 ユーザ属性は、「詳細を表示する」を選択すると一覧が表示されるので、設定したいものを探して設定してください。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/11.png">}}
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part2/b2c/11.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 
 これで設定がユーザフローの作成が完了しました。
 
@@ -208,12 +236,20 @@ ID プロバイダーは、標準で表示される「Email signup」を使用�
 ユーザーフロー管理画面の上部に、「ユーザーフローを実行する」ボタンがあるので選択します。
 ここで、先ほど作成したアプリケーションを選択して、「ユーザーフローを実行します」ボタンを選択します。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/12.png">}}
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part2/b2c/12.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 
 実行するとまず初めにサインイン画面が表示されるはずです。
 ここまで来たらユーザフローは、ひとまず完成です。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/13.png">}}
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part2/b2c/13.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 
 サインアップをする場合は、Sign up now を選択します。
 サインアップ画面では、先ほど指定したユーザ属性とメールアドレス、パスワードの入力欄が用意されています。
@@ -224,11 +260,19 @@ ID プロバイダーは、標準で表示される「Email signup」を使用�
 
 全て入力後に「Create」を選択すると、アカウントが発行され、指定したリダイレクト URL にリダイレクトします。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/14.png">}}
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part2/b2c/14.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 
 作成されたユーザは、AAD の管理画面 > ユーザ の項目から確認が出来ます。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/15.png">}}
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part2/b2c/15.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 
 先ほど入力したメールアドレスのユーザが登録されていたら成功です。
 
@@ -243,7 +287,11 @@ ID プロバイダーは、標準で表示される「Email signup」を使用�
 
 設定は、ユーザーフローの管理画面 > 言語 の項目です。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/17.png">}}
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part2/b2c/17.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 
 画面上部の「言語のカスタマイズを有効化」を選択すると、多言語機能が有効化されます。
 
@@ -252,19 +300,31 @@ ID プロバイダーは、標準で表示される「Email signup」を使用�
 追加したい言語を選択し、有効化をします。
 また、既定に設定するとデフォルトの言語が、その言語に設定されます。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/19.png">}}
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part2/b2c/19.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 
 翻訳は、既定の翻訳が提供されますが、独自にファイルをアップロードしてカスタマイズすることも可能です。
 
 先ほどの翻訳を有効化した画面下部にある、「ページレベルのリソースファイル」から「既定値のダウンロード」を選択すると、ファイルがダウンロードできるので、
 そのファイルを書き換えて再アップロードすると新しい翻訳が適用されます。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/20.png">}}
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part2/b2c/20.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 
 翻訳を試す場合は、「ユーザーフローを実行する」の画面で、ローカライズ > ui_locales を「はい」にして言語を選択します。
 ここで指定しない場合は、ブラウザの言語を基準に言語が選択されます。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/21.png">}}
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part2/b2c/21.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 
 ## ASP.NET Core に組み込んでみる
 
@@ -304,7 +364,13 @@ Individual User Accounts > Connect to an existing user store in the cloud
 
 プロジェクトのプロパティ > Debug から、デバッグ用の URL をコピーします。
 
-{{<figure src="/azure/azureadb2c/images/part2/vs/04.png">}}
+<!-- {{<figure src="/azure/azureadb2c/images/part2/vs/04.png">}} -->
+
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part2/vs/04.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 
 この URL を B2C の管理画面 > アプリの登録 > 先ほど登録したアプリ > 認証
 でアプリに追加をします。
@@ -318,6 +384,7 @@ URL は、コピーした URL/signin-oidc を設定します。
 アプリケーションを実行すると、右上に Sign In ボタンがあるのでそれを選択します。
 
 {{<figure src="/azure/azureadb2c/images/part2/vs/06.png">}}
+
 
 選択すると、B2C の画面へ遷移します。
 ここで、先ほどの作成したアカウントでサインイン or 新規でサインアップすると、サインイン状態でアプリケーションにリダイレクトされ、認証処理が完了します。

@@ -140,7 +140,11 @@ Base.xml の PasswordReset を呼び出しています。
 
 AAD B2C の管理画面 > Identity Experience Framework を選択して、カスタムポリシーの管理画面へ移動します。
 
-{{<figure src="/azure/azureadb2c/images/part3/b2c/01.png">}}
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part3/b2c/01.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 
 次に B2C にポリシーキーを登録します。
 B2C では、シークレットと証明書をポリシーキーという形で保存し、連携するサービスとの間で信頼の確立に使用します。
@@ -148,13 +152,22 @@ B2C では、シークレットと証明書をポリシーキーという形で�
 
 
 作成は、メニューのポリシーキーから移動します。
-{{<figure src="/azure/azureadb2c/images/part3/b2c/03.png">}}
+
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part3/b2c/03.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 
 キーの使用法を署名、名前を「TokenSigningKeyContainer」、キーの種類を RSA のキーと、キーの使用法を暗号化、名前を「TokenEncryptionKeyContainer」、キーの種類を RSA でそれぞれキーを生成します。
 
 カスタムポリシーの管理画面に移動したら、画面上部の「カスタムポリシーをアップロードします」を選択して、ファイルをアップロードします。
 
-{{<figure src="/azure/azureadb2c/images/part3/b2c/02.png">}}
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part3/b2c/02.png" style="width:100%">
+</figure>
+{{< /rawhtml >}}
 
 カスタムポリシーのファイルは、アップロードするタイミングで正しい定義になっているかといった整合性チェックを行った上で、カスタムポリシーを構築します。
 そのため、Base ファイルから順番にアップロードする必要があることに注意してください。
@@ -169,17 +182,35 @@ B2C では、シークレットと証明書をポリシーキーという形で�
 上の手順を一通り行った上でアップロードすれば、エラーは、出ないはずです。
 アップロードが完了すると、カスタムポリシーの項目にアップロードしたポリシーが表示されるはずです。
 
-{{<figure src="/azure/azureadb2c/images/part3/b2c/04.png">}}
+<!-- {{<figure src="/azure/azureadb2c/images/part3/b2c/04.png">}} -->
+
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part3/b2c/04.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 
 実行したいカスタムポリシーを選択します。
 今回は、signup_signin を選択します。
 カスタムポリシーを選択すると、「今すぐ実行」のボタンが表示されるので、実行します。
 
-{{<figure src="/azure/azureadb2c/images/part3/b2c/05.png">}}
+<!-- {{<figure src="/azure/azureadb2c/images/part3/b2c/05.png">}} -->
+
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part3/b2c/05.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 
 実行すると下図のような画面が表示されるはずです。
 
-{{<figure src="/azure/azureadb2c/images/part3/b2c/06.png">}}
+<!-- {{<figure src="/azure/azureadb2c/images/part3/b2c/06.png">}} -->
+
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part3/b2c/06.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 
 では、これから色々と調整して実験をしてみましょう
 ### バリデーションの変更
@@ -200,7 +231,11 @@ test+hoge@sigmact.com
 
 実際にサインアップ画面で試してみると下図のようにエラーが出ます。
 
-{{<figure src="/azure/azureadb2c/images/part3/b2c/07.png">}}
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part3/b2c/07.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 
 + が原因でバリデーションを突破出来ないというのが理由なのですが、このメールは、RFC に準拠しているということや、テストでアカウントを大量に作りたい場合に
 使えると便利なので、使えるように変更します。
@@ -253,8 +288,11 @@ test+hoge@sigmact.com
 
 今回は、+ が含まれていてもバリデーションエラーになりませんでした。
 
-{{<figure src="/azure/azureadb2c/images/part3/b2c/08.png">}}
-
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part3/b2c/08.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
 ## メールプロバイダの変更
 
 次にメールプロバイダを変更してみましょう。
@@ -263,13 +301,21 @@ test+hoge@sigmact.com
 またこのテンプレートを細かく調整することが難しかったり、差出人や件名などの調整が細かくてできなかったりと
 なんだか微妙な内容になっているので、実案件で使用するのは、少し考え者です。
 
-{{<figure src="/azure/azureadb2c/images/part3/b2c/09.png">}}
 
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part3/b2c/09.png">
+</figure>
+{{< /rawhtml >}}
 ### メールプロバイダ変更の実装例
 
 今回は、下図のような構成を構築します。
 
-{{<figure src="/azure/azureadb2c/images/part1/Diagram03.png" title="構成例" width="300">}}
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part1/Diagram03.png" style="width:90%">
+</figure>
+{{< /rawhtml >}}
 
 主な作業としては、
 
@@ -627,7 +673,12 @@ LocalAccountSignUpWithLogonEmail の TechnicalProfile 内にある InputClaims �
 
 これで実際に動かすと、次のような画面になります。
 
-{{<figure src="/azure/azureadb2c/images/part3/b2c/10.png">}}
+{{< rawhtml >}}
+<figure style="text-align:center">
+  <img src="/azure/azureadb2c/images/part3/b2c/10.png" style="width:70%">
+</figure>
+{{< /rawhtml >}}
+
 
 メールアドレスを入力して、コードを発行してみるとメールが飛んでくるはずです。
 
