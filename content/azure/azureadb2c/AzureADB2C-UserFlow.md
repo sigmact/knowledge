@@ -16,7 +16,7 @@ draft: false
 
 ## はじめに
 
-[最初の記事](../azureadb2c/azureadb2c) では、AAD B2C の概要について触れました。
+[最初の記事](../azureadb2c/azureadb2c/) では、AAD B2C の概要について触れました。
 これ以降で、具体的に AAD B2C を使用して認証システムを構築する方法を説明していきます。
 ## ユーザーフローについて
 
@@ -390,4 +390,4 @@ URL は、コピーした URL/signin-oidc を設定します。
 
 次の記事では、より柔軟にカスタムが出来るカスタムポリシーの説明を行いたいと思います。
 
-[カスタムポリシーに続きます。](../azureadb2c-customflow)
+[カスタムポリシーに続きます。](../azureadb2c-customflow/)

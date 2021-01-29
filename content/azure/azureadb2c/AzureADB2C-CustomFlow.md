@@ -16,7 +16,7 @@ draft: false
 
 ## はじめに
 
-[ユーザーフローの記事](../azureadb2c/azureadb2c-userflow) では、AAD B2C の構築方法の簡単な説明と、
+[ユーザーフローの記事](../azureadb2c/azureadb2c-userflow/) では、AAD B2C の構築方法の簡単な説明と、
 ユーザーフローの基本的な使い方を抑えました。
 
 今回の記事では、前回名前だけ出てきたカスタムポリシーについて触れていこうと思います。
