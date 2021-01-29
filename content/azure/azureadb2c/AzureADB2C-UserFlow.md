@@ -10,7 +10,7 @@ description: ""
 type: "article"
 category : "azure"
 tags: ["Azure", "AADB2C", "Web Apps", "Azure AD B2C"]
-eyecatch: "/images/eyecatch/deploy.png"
+eyecatch: "images/eyecatch/deploy.png"
 draft: false
 ---
 
