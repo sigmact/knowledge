@@ -16,7 +16,7 @@ draft: false
 
 ## はじめに
 
-[最初の記事](/azure/azureadb2c/azureadb2c) では、AAD B2C の概要について触れました。
+[最初の記事](../azureadb2c/azureadb2c) では、AAD B2C の概要について触れました。
 これ以降で、具体的に AAD B2C を使用して認証システムを構築する方法を説明していきます。
 ## ユーザーフローについて
 
@@ -68,7 +68,7 @@ B2C で検索をすると、Azure Active Directory B2C のリソースが出て�
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part2/tenant/01.png" style="width:70%">
+  <img src="../images/part2/tenant/01.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
@@ -77,7 +77,7 @@ B2C で検索をすると、Azure Active Directory B2C のリソースが出て�
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part2/tenant/02.png" style="width:70%">
+  <img src="../images/part2/tenant/02.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
@@ -86,7 +86,7 @@ B2C で検索をすると、Azure Active Directory B2C のリソースが出て�
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part2/tenant/03.png" style="width:70%">
+  <img src="../images/part2/tenant/03.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
@@ -103,14 +103,14 @@ AAD テナントが作成されたら、次にテナントに、B2C を使用す
 
 また、下図の画面で表示されている「ドメイン名」は、後程使用するのでどこかにメモしておいてください。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/01.png">}}
+{{<figure src="../images/part2/b2c/01.png">}}
 
 まず初めにアプリの登録を行います。
 この設定は、サインイン、サインアップなどが完了した後のレスポンスの返却先を予め登録しておく設定です。
 
 アプリの登録 > 新規登録 を選択します。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/02.png">}}
+{{<figure src="../images/part2/b2c/02.png">}}
 
 下図の赤枠の項目を設定してきます。
 
@@ -125,7 +125,7 @@ AAD B2C を使用する場合、「openid」と「offline_access」のスコー�
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part2/b2c/03.png" style="width:90%">
+  <img src="../images/part2/b2c/03.png" style="width:90%">
 </figure>
 {{< /rawhtml >}}
 
@@ -152,13 +152,13 @@ AAD B2C を使用する場合、「openid」と「offline_access」のスコー�
 
 アプリ管理画面の認証の項目に移動します。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/04.png">}}
+{{<figure src="../images/part2/b2c/04.png">}}
 
 ここでは、発行されるトークンの設定を行います。
 
 今回は、最後に ASP.NET Core に組み込む際に、アクセストークンが必要になるので、「アクセストークン」と「ID トークン」の両方にチェックを入れます。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/05.png">}}
+{{<figure src="../images/part2/b2c/05.png">}}
 ### ユーザ属性を定義する
 
 ユーザ属性は、サインアップ時に収集するユーザ名等の情報です。
@@ -166,7 +166,7 @@ AAD B2C を使用する場合、「openid」と「offline_access」のスコー�
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part2/b2c/06.png" style="width:70%">
+  <img src="../images/part2/b2c/06.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
@@ -183,7 +183,7 @@ AAD B2C を使用する場合、「openid」と「offline_access」のスコー�
 
 また、名前に日本語名を入れると警告が出るので、英数字で入力します。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/07.png">}}
+{{<figure src="../images/part2/b2c/07.png">}}
 
 ### ユーザフローを作成する
 
@@ -191,12 +191,12 @@ AAD B2C を使用する場合、「openid」と「offline_access」のスコー�
 
 メニューの ユーザーフロー > 新しいユーザーフロー に進みます。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/08.png">}}
+{{<figure src="../images/part2/b2c/08.png">}}
 
 今回は、サインインサインアップを使用します。
 バージョンは、「推奨」となってるものを使用します。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/09.png">}}
+{{<figure src="../images/part2/b2c/09.png">}}
 
 ID プロバイダーは、標準で表示される「Email signup」を使用します。
 別途、ID プロバイダーを追加した場合は、MS アカウントなどの ID プロバイダーが表示されるようになります。
@@ -205,7 +205,7 @@ ID プロバイダーは、標準で表示される「Email signup」を使用�
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part2/b2c/10.png" style="width:70%">
+  <img src="../images/part2/b2c/10.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
@@ -216,7 +216,7 @@ ID プロバイダーは、標準で表示される「Email signup」を使用�
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part2/b2c/11.png" style="width:70%">
+  <img src="../images/part2/b2c/11.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
@@ -232,7 +232,7 @@ ID プロバイダーは、標準で表示される「Email signup」を使用�
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part2/b2c/12.png" style="width:70%">
+  <img src="../images/part2/b2c/12.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
@@ -241,7 +241,7 @@ ID プロバイダーは、標準で表示される「Email signup」を使用�
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part2/b2c/13.png" style="width:70%">
+  <img src="../images/part2/b2c/13.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
@@ -256,7 +256,7 @@ ID プロバイダーは、標準で表示される「Email signup」を使用�
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part2/b2c/14.png" style="width:70%">
+  <img src="../images/part2/b2c/14.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
@@ -264,13 +264,13 @@ ID プロバイダーは、標準で表示される「Email signup」を使用�
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part2/b2c/15.png" style="width:70%">
+  <img src="../images/part2/b2c/15.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
 先ほど入力したメールアドレスのユーザが登録されていたら成功です。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/16.png">}}
+{{<figure src="../images/part2/b2c/16.png">}}
 
 ユーザーフローは、外部 API の呼出し等、カスタムポリシーでしか出来なかった機能が徐々に追加されてきているので、メールのカスタマイズ等もどこかのタイミングで追加されないか期待して待ちたいですね
 
@@ -283,20 +283,20 @@ ID プロバイダーは、標準で表示される「Email signup」を使用�
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part2/b2c/17.png" style="width:70%">
+  <img src="../images/part2/b2c/17.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
 画面上部の「言語のカスタマイズを有効化」を選択すると、多言語機能が有効化されます。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/18.png">}}
+{{<figure src="../images/part2/b2c/18.png">}}
 
 追加したい言語を選択し、有効化をします。
 また、既定に設定するとデフォルトの言語が、その言語に設定されます。
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part2/b2c/19.png" style="width:70%">
+  <img src="../images/part2/b2c/19.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
@@ -307,7 +307,7 @@ ID プロバイダーは、標準で表示される「Email signup」を使用�
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part2/b2c/20.png" style="width:70%">
+  <img src="../images/part2/b2c/20.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
@@ -316,7 +316,7 @@ ID プロバイダーは、標準で表示される「Email signup」を使用�
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part2/b2c/21.png" style="width:70%">
+  <img src="../images/part2/b2c/21.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
@@ -331,13 +331,13 @@ ASP.NET Core の場合は、プロジェクト作成時の設定で B2C を組�
 
 始めに、プロジェクト作成画面 > ASP.NET Core Web Application > Create でプロジェクトを作成します。
 
-{{<figure src="/azure/azureadb2c/images/part2/vs/01.png">}}
+{{<figure src="../images/part2/vs/01.png">}}
 
 Create を選択すると、アプリケーションの種類を選ぶ画面に遷移します。
 
 適当にアプリケーションの種類を選択し(図では、MVC を選択) Authentication > change を選択します。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/02.png">}}
+{{<figure src="../images/part2/b2c/02.png">}}
 
 認証周りの設定画面が表示されるので、
 
@@ -345,7 +345,7 @@ Individual User Accounts > Connect to an existing user store in the cloud
 
 を選択します。
 
-{{<figure src="/azure/azureadb2c/images/part2/b2c/03.png">}}
+{{<figure src="../images/part2/b2c/03.png">}}
 
 ここで、AAD B2C の値を入力していきます。
 
@@ -358,11 +358,10 @@ Individual User Accounts > Connect to an existing user store in the cloud
 
 プロジェクトのプロパティ > Debug から、デバッグ用の URL をコピーします。
 
-<!-- {{<figure src="/azure/azureadb2c/images/part2/vs/04.png">}} -->
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part2/vs/04.png" style="width:70%">
+  <img src="../images/part2/vs/04.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
@@ -371,13 +370,13 @@ Individual User Accounts > Connect to an existing user store in the cloud
 
 URL は、コピーした URL/signin-oidc を設定します。
 
-{{<figure src="/azure/azureadb2c/images/part2/vs/05.png">}}
+{{<figure src="../images/part2/vs/05.png">}}
 
 これで準備完了です。
 
 アプリケーションを実行すると、右上に Sign In ボタンがあるのでそれを選択します。
 
-{{<figure src="/azure/azureadb2c/images/part2/vs/06.png">}}
+{{<figure src="../images/part2/vs/06.png">}}
 
 
 選択すると、B2C の画面へ遷移します。
@@ -391,4 +390,4 @@ URL は、コピーした URL/signin-oidc を設定します。
 
 次の記事では、より柔軟にカスタムが出来るカスタムポリシーの説明を行いたいと思います。
 
-[カスタムポリシーに続きます。](/azure/azureadb2c/azureadb2c-customflow)
+[カスタムポリシーに続きます。](../azureadb2c-customflow)

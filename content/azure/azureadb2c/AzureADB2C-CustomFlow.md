@@ -16,7 +16,7 @@ draft: false
 
 ## はじめに
 
-[ユーザーフローの記事](/azure/azureadb2c/azureadb2c-userflow) では、AAD B2C の構築方法の簡単な説明と、
+[ユーザーフローの記事](../azureadb2c/azureadb2c-userflow) では、AAD B2C の構築方法の簡単な説明と、
 ユーザーフローの基本的な使い方を抑えました。
 
 今回の記事では、前回名前だけ出てきたカスタムポリシーについて触れていこうと思います。
@@ -46,11 +46,11 @@ XML を記述して AAD B2C のフローを構築していきます。
 
 このシステムでは、会員のサインアップ、サインイン機能をカスタムポリシーで実装しています。
 
-{{<figure src="/azure/azureadb2c/images/part3/Case/01.png" title="サインイン画面">}}
+{{<figure src="../images/part3/Case/01.png" title="サインイン画面">}}
 
-{{<figure src="/azure/azureadb2c/images/part3/Case/02.png" title="サインアップ画面">}}
+{{<figure src="../images/part3/Case/02.png" title="サインアップ画面">}}
 
-{{<figure src="/azure/azureadb2c/images/part3/Case/03.png" title="認証用メール">}}
+{{<figure src="../images/part3/Case/03.png" title="認証用メール">}}
 
 ユーザーフローを触った方でしたら分かる通り、ユーザーフローでは、メールが Microsoft から送信されたといったようなメールになり、
 メール文面も変更することが出来ません。
@@ -142,7 +142,7 @@ AAD B2C の管理画面 > Identity Experience Framework を選択して、カス
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part3/b2c/01.png" style="width:70%">
+  <img src="../images/part3/b2c/01.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
@@ -155,7 +155,7 @@ B2C では、シークレットと証明書をポリシーキーという形で�
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part3/b2c/03.png" style="width:70%">
+  <img src="../images/part3/b2c/03.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
@@ -165,7 +165,7 @@ B2C では、シークレットと証明書をポリシーキーという形で�
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part3/b2c/02.png" style="width:100%">
+  <img src="../images/part3/b2c/02.png" style="width:100%">
 </figure>
 {{< /rawhtml >}}
 
@@ -182,11 +182,11 @@ B2C では、シークレットと証明書をポリシーキーという形で�
 上の手順を一通り行った上でアップロードすれば、エラーは、出ないはずです。
 アップロードが完了すると、カスタムポリシーの項目にアップロードしたポリシーが表示されるはずです。
 
-<!-- {{<figure src="/azure/azureadb2c/images/part3/b2c/04.png">}} -->
+<!-- {{<figure src="../images/part3/b2c/04.png">}} -->
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part3/b2c/04.png" style="width:70%">
+  <img src="../images/part3/b2c/04.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
@@ -194,21 +194,21 @@ B2C では、シークレットと証明書をポリシーキーという形で�
 今回は、signup_signin を選択します。
 カスタムポリシーを選択すると、「今すぐ実行」のボタンが表示されるので、実行します。
 
-<!-- {{<figure src="/azure/azureadb2c/images/part3/b2c/05.png">}} -->
+<!-- {{<figure src="../images/part3/b2c/05.png">}} -->
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part3/b2c/05.png" style="width:70%">
+  <img src="../images/part3/b2c/05.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
 実行すると下図のような画面が表示されるはずです。
 
-<!-- {{<figure src="/azure/azureadb2c/images/part3/b2c/06.png">}} -->
+<!-- {{<figure src="../images/part3/b2c/06.png">}} -->
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part3/b2c/06.png" style="width:70%">
+  <img src="../images/part3/b2c/06.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
@@ -233,7 +233,7 @@ test+hoge@sigmact.com
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part3/b2c/07.png" style="width:70%">
+  <img src="../images/part3/b2c/07.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
@@ -290,7 +290,7 @@ test+hoge@sigmact.com
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part3/b2c/08.png" style="width:70%">
+  <img src="../images/part3/b2c/08.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 ## メールプロバイダの変更
@@ -304,7 +304,7 @@ test+hoge@sigmact.com
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part3/b2c/09.png">
+  <img src="../images/part3/b2c/09.png">
 </figure>
 {{< /rawhtml >}}
 ### メールプロバイダ変更の実装例
@@ -313,7 +313,7 @@ test+hoge@sigmact.com
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part1/Diagram03.png" style="width:90%">
+  <img src="../images/part1/Diagram03.png" style="width:90%">
 </figure>
 {{< /rawhtml >}}
 
@@ -675,7 +675,7 @@ LocalAccountSignUpWithLogonEmail の TechnicalProfile 内にある InputClaims �
 
 {{< rawhtml >}}
 <figure style="text-align:center">
-  <img src="/azure/azureadb2c/images/part3/b2c/10.png" style="width:70%">
+  <img src="../images/part3/b2c/10.png" style="width:70%">
 </figure>
 {{< /rawhtml >}}
 
@@ -702,4 +702,4 @@ LocalAccountSignUpWithLogonEmail の TechnicalProfile 内にある InputClaims �
 - [公式ドキュメント](https://docs.microsoft.com/en-us/azure/active-directory-b2c/)
 - [サンプルコード](https://github.com/azure-ad-b2c/samples)
 
-[AAD B2C で API Management を保護するに続きます。](/azure/azureadb2c/azureadb2c-apimanagement)
+<!-- [AAD B2C で API Management を保護するに続きます。](/azure/azureadb2c/azureadb2c-apimanagement) -->
