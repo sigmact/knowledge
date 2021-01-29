@@ -27,7 +27,7 @@ Azure AD B2C を使うと迅速に認証や認可部分の機能を立ち上げ�
 ## AAD B2C とは
 
 AAD B2C の概要は、下記のような構造です。
-{{<figure src="/azure/azureadb2c/images/part1/azureadb2c-overview.png" caption="図1 AAD B2C の全体像" width="300">}}
+{{<figure src="../images/part1/azureadb2c-overview.png" caption="図1 AAD B2C の全体像" width="300">}}
 
 AAD B2C は、B2C 向けの Id 基盤を提供するサービスです。
 
@@ -230,7 +230,7 @@ Identity Server の情報は、下記のリンクから参照頂けます。
 
 ### 構成例1
 
-{{<figure src="/azure/azureadb2c/images/part1/Diagram01.png" title="構成例1" width="300">}}
+{{<figure src="../images/part1/Diagram01.png" title="構成例1" width="300">}}
 
 最もシンプルな構成図です。
 
@@ -240,7 +240,7 @@ Web アプリケーションの認証基盤として、AAD B2C を使用する�
 
 ### 構成例2
 
-{{<figure src="/azure/azureadb2c/images/part1/Diagram02.png" title="構成例2" width="300">}}
+{{<figure src="../images/part1/Diagram02.png" title="構成例2" width="300">}}
 
 外部ユーザーストアを使用した構成図です。
 
@@ -253,7 +253,7 @@ AAD B2C は、認証フローの途中で任意の REST API を呼び出すこ�
 
 ### 構成例3
 
-{{<figure src="/azure/azureadb2c/images/part1/Diagram03.png" title="構成例3" width="300">}}
+{{<figure src="../images/part1/Diagram03.png" title="構成例3" width="300">}}
 
 AAD B2C は、メールアドレス認証や登録完了時などにメールを送信する部分が存在します。
 ですが、デフォルトのメール文面は、内容が簡素であったり、Microsoft から送信されているという旨の記載があったりと
@@ -269,4 +269,4 @@ AAD B2C は、メールアドレス認証や登録完了時などにメールを
 本記事では、AAD B2C の基本的なことについて説明しました。
 次の記事以降で、具体的に AAD B2C による認証システムの構築方法を説明していきます。
 
-[ユーザーフローに続きます。](/azure/azureadb2c/azureadb2c-userflow)
+[ユーザーフローに続きます。](../azureadb2c-userflow)
