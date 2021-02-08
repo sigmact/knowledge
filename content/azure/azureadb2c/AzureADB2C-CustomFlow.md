@@ -6,7 +6,8 @@ authors:
   ]
 weight: 10
 date: 2021-01-26
-description: ""
+description: "Azure ADB2Cのカスタムポリシーとは、前回の記事で扱ったユーザーフローよりもより複雑な処理に対応するために用意されている機能です。XML を記述して AAD B2C のフローを構築していきます。
+ユーザーフローでも一部、外部 API 呼出し等の機能が用意され始めていますが、カスタムポリシーを使用すれば、より柔軟に外部 API 呼出しを差し込んだりといったことが可能になります。"
 type: "article"
 category : "azure"
 tags: ["Azure", "AADB2C", "Web Apps", "Azure AD B2C"]

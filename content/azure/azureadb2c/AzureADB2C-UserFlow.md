@@ -6,7 +6,10 @@ authors:
   ]
 weight: 10
 date: 2021-01-26
-description: ""
+description: "AAD B2C で認証システムを構築する場合、ユーザーフローで出来ること、
+・画面のカスタマイズ (HTML、CSS、js)
+・ユーザから収集したい情報の追加・削除 (フォームの入力項目)
+・一部フロー内での外部 API 呼出し (プレビュー)について、これから説明します。"
 type: "article"
 category : "azure"
 tags: ["Azure", "AADB2C", "Web Apps", "Azure AD B2C"]
