@@ -5,9 +5,11 @@ authors: [
 ]
 weight: 10
 date: 2021-03-09
-description: ""
+description: "dbdocsは、Holistics 社が開発する DB 定義管理、ビジュアライズツールです。DBMLと呼ばれる DSL を使用して DB 定義を記述することが出来、記述した定義をビジュアライズしてくれます。"
 type: "article"
+category : "azure"
 tags: ["Azure", "Azure DevOps", "Azure Pipelines", "dbdocs"]
+eyecatch: "images/eyecatch/deploy.png"
 draft: false
 ---
 
